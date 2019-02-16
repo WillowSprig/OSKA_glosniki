@@ -1,0 +1,3 @@
+[submodule "szablon"]
+	path = szablon
+	url = https://github.com/WillowSprig/OSKA_artykul
