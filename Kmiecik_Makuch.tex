@@ -166,7 +166,7 @@ backend=biber
 
 \section{Wstęp}
 
-	\color{orange} Co w ogóle robimy, po co, plus trochę teorii (w zależności, ile miejsca zajmie nam reszta...)
+	\color{orange} Co w ogóle robimy, po co (może coś w~stylu, że chcieliśmy bardziej projektować, a~wyszło, że bardziej mierzyliśmy), plus trochę teorii (w~zależności, ile miejsca zajmie nam reszta...)
 	\color{black}
 
 \section{Badany zestaw głośnikowy}
@@ -196,7 +196,41 @@ backend=biber
 			
 			Pomiary wykonano przy pomocy systemu Brüel\&Kjær PULSE, pozwalającego na pomiar charakterystyki impedancji oraz wyznaczenie na tej podstawie parametrów Thiele-Smalla.
 			
-			Do wyznaczenia tych parametrów wykorzystano metodę dodanej masy: wykonano pomiar impedancji głośnika, a~następnie do membrany przyklejono ciężarek o~masie $m=\,$\SI{10}{\gram} i~wykonano kolejny pomiar. Na podstawie porównania dwóch charakterystyk impedancji, za pomocą dedykowanego oprogramowania PULSE Thiele Small Parameters Calculation BZ-5604 wyznaczano parametry Thiele-Smalla~\cite{BK_pulse_TS}.
+			Do wyznaczenia tych parametrów wykorzystano metodę dodanej masy: wykonano pomiar impedancji głośnika, a~następnie do membrany przyklejono ciężarek o~masie $m=\,$\SI{10}{\gram} i~wykonano kolejny pomiar. Na podstawie porównania dwóch charakterystyk impedancji, za pomocą dedykowanego oprogramowania PULSE Thiele Small Parameters Calculation BZ-5604 wyznaczano parametry Thiele-Smalla~\cite{BK_pulse_TS}, opisane w~tabeli~\ref{t:TS_opis}.
+			
+			\begin{table}[h!]
+				\centering
+				\caption{Parametry Thiele-Smalla}
+				\label{t:TS_opis}
+				\begin{tabular}{|c|c|c|}
+				\hline
+					\textbf{Oznaczenie} & \textbf{Jednostka} & \textbf{Opis parametru}\\\hline\hline
+					\multicolumn{3}{|c|}{Parametry wyznaczane z pojedynczego pomiaru} \\\hline\hline
+					$F_s$ & Hz & Częstotliwość rezonansowa \\\hline
+					$Z_{max}$ & \si{\ohm} & Impedancja w~rezonansie \\\hline
+					$R_e$ & \si{\ohm} & Rezystancja dla napięcia stałego \\\hline
+					$r0=\frac{Z_{max}}{R_e}$ & --- & Stosunek impedancji cewki do rezystancji \\\hline
+					$S$ & \% & \makecell{Symetria rezonansu, wyznacznik wiarygodności\\obliczonych parametrów -- powinna wynosić najwyżej 3,5\%} \\\hline
+					\hline
+					$Q_{ms}$ & --- & Dobroć mechaniczna \\\hline
+					$Q_{es}$ & --- & Dobroć elektryczna \\\hline
+					$Q_{ts}=\frac{Q_{ms}\cdot Q_{es}}{Q_{ms}+Q_{es}}$ & --- & Dobroć całowita \\\hline
+					\hline
+					\multicolumn{3}{|c|}{Parametry wyznaczane z dwóch pomiarów (samej membrany i z dodaną masą)} \\\hline\hline
+					$V_{as}$ & \si{\litre} & Równoważna objętość podatności głośnika \\\hline
+					$M_{ms}$ & \si{\gram} & Masa mechaniczna membrany \\\hline
+					$C_{ms}$ & \si[per-mode=symbol]{\metre\per\newton} & Podatność mechaniczna zawieszenia \\\hline
+					$R_{ms}$ & \si[per-mode=symbol]{\metre\per\newton} & Rezystancja mechaniczna głośnika \\\hline
+					\hline
+					$M_{as}$ & \si[per-mode=symbol]{\kilo\gram\per\metre\tothe{4}} & Masa akustyczna membrany \\\hline
+					$C_{as}$ & \si[per-mode=symbol]{\metre\tothe{5}\per\newton} & Podatność akustyczna zawieszenia \\\hline
+					$R_{as}$ & \si[per-mode=symbol]{\newton\s\per\metre\tothe{5}} & Rezystancja akustyczna głośnika \\\hline
+					\hline
+					$\eta_0$ & \% & Sprawność głośnika \\\hline
+				\end{tabular}
+
+			\end{table}
+
 			
 			Sygnałem wykorzystanym w~pomiarze był sinus przestrajany w~zakresie \num{}--\num{}~\si{\Hz} co $1/24$~oktawy.
 			
@@ -210,7 +244,7 @@ backend=biber
 			
 			Wykonano dwie serie pomiarów, dla głośnika wysoko- i~niskotonowego. W~pierwszej serii zmierzono głośniki w~obudowie bez wypełnienia, w~drugiej -- wypełnione materiałem dźwiękochłonnym.
 			
-			Pomiar charakterystyki kierunkowości odbywał się w~komorze bezechowej przy użyciu stolika obrotowego, na którym umieszczony był zestaw głośnikowy. W~osi akustycznej mierzonego głośnika ustawiono mikrofon AE??; następnie głośnik obracano z~krokiem \SI{10}{\deg}, każdorazowo zatrzymując i~wykonując pomiar trwający \SI{3}{\s}. Sygnałem podawanym na głośnik był szum różowy, pomiar wykonano w~pasmach $1/6$~oktawy, w~zakresie \num{40}--\num{20000}~\si{\Hz}. \color{red} \textbf{Filtrowaliśmy???}\color{black}
+			Pomiar charakterystyki kierunkowości odbywał się w~komorze bezechowej przy użyciu stolika obrotowego, na którym umieszczony był zestaw głośnikowy. W~osi akustycznej mierzonego głośnika ustawiono mikrofon AE??; następnie głośnik obracano z~krokiem \SI{10}{\degree}, każdorazowo zatrzymując i~wykonując pomiar trwający \SI{3}{\s}. Sygnałem podawanym na głośnik był szum różowy, pomiar wykonano w~pasmach $1/6$~oktawy, w~zakresie \num{40}--\num{20000}~\si{\Hz}. \color{red} \textbf{Filtrowaliśmy???}\color{black}
 
 			
 		\subsubsection{Drgania obudowy}
