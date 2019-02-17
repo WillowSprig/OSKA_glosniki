@@ -118,10 +118,7 @@ backend=biber
 \setcounter{secnumdepth}{4}
 \brokenpenalty=10000\relax
 
-
 %---------------------------------------------------------------------------
-%polecenie do pisania pauzy przy podawaniu zakresu liczb
-\newcommand{\range}{~--~}
 
 %---------------------------------------------------------------------------
 
@@ -159,6 +156,14 @@ backend=biber
 % Nazwa pliku z bibliografią
 %---------------------------------------------------------
 \addbibresource{refs_OSKA.bib}
+%---------------------------------------------------------
+%polecenie do pisania pauzy przy podawaniu zakresu liczb
+%---------------------------------------------------------
+\newcommand{\range}{~--~}
+%---------------------------------------------------------
+%obrazki
+%---------------------------------------------------------
+\usepackage{adjustbox}
 \graphicspath{{./}{obrazki/}}
 
 
@@ -189,10 +194,10 @@ backend=biber
 	Przekrój zestawu w~płaszczyźnie poziomej ukazano na rysunku~\ref{r:przekroj}, a~fotografię na rysunku~\ref{r:zdjecie}.
 	
 	\begin{figure}[!h]
-	\centering
-	% 		\includegraphics{}
-	\caption{Przekrój modelu badanego zestawu głośnikowego w~płaszczyźnie poziomej wykonany w~programie Inventor}
-	\label{r:przekroj}
+		\centering
+		\adjincludegraphics[width=\textwidth,trim={{.1\width} {.25\height} {.17\width} {.12\height}},clip]{render_z_otworami_bez_tekstury.pdf}
+		\caption{Przekrój modelu badanego zestawu głośnikowego w~płaszczyźnie poziomej wykonany w~programie Inventor}
+		\label{r:przekroj}
 	\end{figure}
 	
 	\begin{figure}[!h]
@@ -232,7 +237,7 @@ backend=biber
 					$F_s$ & Hz & Częstotliwość rezonansowa \\\hline
 					$Z_{max}$ & \si{\ohm} & Impedancja w~rezonansie \\\hline
 					$R_e$ & \si{\ohm} & Rezystancja dla napięcia stałego \\\hline
-					$r0=\frac{Z_{max}}{R_e}$ & --- & Stosunek impedancji cewki do rezystancji \\\hline
+					$r_0=\frac{Z_{max}}{R_e}$ & --- & Stosunek impedancji cewki do rezystancji \\\hline
 					$S$ & \% & \makecell{Symetria rezonansu, wyznacznik wiarygodności\\obliczonych parametrów -- powinna wynosić najwyżej 3,5\%} \\\hline
 					\hline
 					$Q_{ms}$ & --- & Dobroć mechaniczna \\\hline
