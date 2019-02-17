@@ -148,9 +148,9 @@ backend=biber
 
 %--------------------------STRESZCZENIE------------------------
 
-\summaryPL{W procesie projektowania zestawu głośnikowego równie duże znaczenie, jak dobór przetworników, mają własności obudowy. Celem pracy było zbadanie wpływu różnych modyfikacji obudowy zestawu głośnikowego na jego parametry. W~związku z~tym wykonano pomiary impedancji elektrycznej, charakterystyk kierunkowości i~skuteczności zestawu, z~zastosowaniem różnych modyfikacji obudowy. Zarejestrowano także przebiegi drgań obudowy przy pomocy wibrometru laserowego. W~celu prowadzenia dalszych badań drogą symulacji, wykonano model komputerowy badanego zestawu przy użyciu metody elementów skończonych (MES).\\Podczas pomiarów zauważono znaczącą rozbieżność wyników z~danymi udostępnionymi przez producenta. W~związku z~tym przeprowadzono pomiary mające na celu weryfikację parametrów podanych w~karcie katalogowej.\\W~pracy zaprezentowano uzyskane wyniki, a~także spostrzeżenia związane z~wielokrotnym pomiarem i~zmiennością parametrów nowego przetwornika na skutek eksploatacji.}
+\summaryPL{W procesie projektowania zestawu głośnikowego równie duże znaczenie, jak dobór przetworników, mają własności obudowy. Celem pracy było zbadanie wpływu różnych modyfikacji obudowy zestawu głośnikowego na jego parametry. W~związku z~tym wykonano pomiary impedancji elektrycznej, charakterystyk kierunkowości i~skuteczności zestawu, z~zastosowaniem różnych modyfikacji obudowy. Zarejestrowano także przebiegi drgań obudowy przy pomocy wibrometru laserowego. W~celu prowadzenia dalszych badań drogą symulacji, wykonano model komputerowy badanego zestawu przy użyciu metody elementów skończonych (MES). Podczas pomiarów zauważono znaczącą rozbieżność wyników z~danymi udostępnionymi przez producenta. W~związku z~tym przeprowadzono pomiary mające na celu weryfikację parametrów podanych w~karcie katalogowej. W~pracy zaprezentowano uzyskane wyniki, a~także spostrzeżenia związane z~wielokrotnym pomiarem i~zmiennością parametrów nowego przetwornika na skutek eksploatacji.}
 
-\summaryEN{When designing a~loudspeaker, both the choice of transducers used and the cabinet characteristics are important. The authors’ aim was to investigate how different cabinet modifications influence the loudspeaker’s parameters. Therefore, loudspeakers' electric impedance, directivity characteristics and sensitivity were measured, covering various cabinet modifications. Vibrations of the cabinet were also recorded, using a laser vibrometer. In order to continue the research by simulation, a~computer model of the cabinet under inquiry was created using the finished elements method (FEM).\\During measurements, inconsistency between the obtained results and the producer’s data was discovered. Therefore, measurement aiming to verify parameters contained in data sheet was performed.\\The study presents obtained results and remarks on multiple measurement and fluctuation of a~new transducer’s parameters due to exploitation.}
+\summaryEN{When designing a~loudspeaker, both the choice of transducers used and the cabinet characteristics are important. The authors’ aim was to investigate how different cabinet modifications influence the loudspeaker’s parameters. Therefore, loudspeakers' electric impedance, directivity characteristics and sensitivity were measured, covering various cabinet modifications. Vibrations of the cabinet were also recorded, using a laser vibrometer. In order to continue the research by simulation, a~computer model of the cabinet under inquiry was created using the finished elements method (FEM). During measurements, inconsistency between the obtained results and the producer’s data was discovered. Therefore, measurement aiming to verify parameters contained in data sheet was performed. The study presents obtained results and remarks on multiple measurement and fluctuation of a~new transducer’s parameters due to exploitation.}
 
 %---------------------------------------------------------
 % Nazwa pliku z bibliografią
@@ -187,11 +187,12 @@ backend=biber
 
 \section{Badany zestaw głośnikowy}
 	
-	Zestaw, którego parametry zdecydowano się zbadać, i~który poddano modyfikacjom, jest docelowo elementem systemu liniowego. Składa się z~falowodu z~wysokotonowym głośnikiem ciśnieniowym B\&C~DE800 umieszczonego centralnie oraz dwóch głośników nisko-średniotonowych Beyma~10WR300 umieszczonych po bokach i~nachylonych pod kątem \SI{67}{\degree} do osi głośnika wysokotonowego. 
+	Zestaw, którego parametry zdecydowano się zbadać, i~który poddano modyfikacjom, jest docelowo elementem systemu liniowego. Składa się z~falowodu z~wysokotonowym głośnikiem ciśnieniowym B\&C~DE800 umieszczonego centralnie oraz dwóch głośników nisko-średniotonowych Beyma~10WR300 umieszczonych po bokach i~nachylonych pod kątem \SI{67}{\degree} do osi głównej zastawu. 
 	
-	Obudowa ma kształt typowy dla systemu liniowego -- przekrój boczny jest w~kształcie trapezu równoramiennego; konstrukcja wzorowana jest na rozwiązaniu stosowanym w~systemie liniowym uznanej firmy. Materiał korpusu to sklejka bałtycka o~grubości \SI{15}{\milli\metre}, dodatkowo z~przodu zamontowana jest maskownica ze stali o~grubości \SI{2}{\milli\metre}. Wnętrze obudowy jest połączone z~przestrzenią zewnętrzną półkolistymi otworami o~promieniu \SI{70}{\milli\metre} przy tylnej ściance. Objętość wnęki po odjęciu objętości głośników i~falowodu wynosi \SI{28,17}{\litre}.
+Obudowa ma kształt typowy dla systemu liniowego -- przekrój boczny jest w~kształcie trapezu równoramiennego; konstrukcja wzorowana jest na rozwiązaniu stosowanym w~systemie liniowym uznanej firmy. Materiał korpusu to sklejka bałtycka o~grubości \SI{15}{\milli\metre}, dodatkowo z~przodu zamontowana jest maskownica ze stali o~grubości \SI{2}{\milli\metre}. Obudowa jest obudową wentylowaną wyposażoną w~4 otwory o~kształcie ćwierćkolistym o~promieniu \SI{70}{\milli\metre} i~długości równej grubości ścianki. Otwory te mają swe ujście do przestrzeni przed głośnikiem, tak jak przestawiono to na rysunku~\ref{r:przekroj}. %Wnętrze obudowy jest połączone z~przestrzenią zewnętrzną półkolistymi otworami o~promieniu \SI{70}{\milli\metre} przy tylnej ściance.
+Objętość wnętrza obudowy po odjęciu objętości głośników i~falowodu wynosi \SI{28,17}{\litre}. Taki układ głośników i~otworów ma wpływ na charakterystyki w~płaszczyźnie horyzontalnej. \color{orange}W części teoretycznej wzorek na chke kierunkowości w zależności od odległości źródeł i omówić temat!!!\color{black}
 	
-	Przekrój zestawu w~płaszczyźnie poziomej ukazano na rysunku~\ref{r:przekroj}, a~fotografię na rysunku~\ref{r:zdjecie}.
+%	Przekrój zestawu w~płaszczyźnie poziomej ukazano na rysunku~\ref{r:przekroj}, a~fotografię na rysunku~\ref{r:zdjecie}.
 	
 	\begin{figure}[!h]
 		\centering
@@ -224,7 +225,7 @@ backend=biber
 			
 			Pomiary wykonano przy pomocy systemu Brüel\&Kjær PULSE, pozwalającego na pomiar charakterystyki impedancji oraz wyznaczenie na tej podstawie parametrów Thiele-Smalla.
 			
-			Do wyznaczenia tych parametrów wykorzystano metodę dodanej masy: wykonano pomiar impedancji głośnika, a~następnie do membrany przyklejono ciężarek o~masie $m=\,$\SI{10}{\gram} i~wykonano kolejny pomiar. Na podstawie porównania dwóch charakterystyk impedancji, za pomocą dedykowanego oprogramowania PULSE Thiele Small Parameters Calculation BZ-5604 wyznaczano parametry Thiele-Smalla~\cite{BK_pulse_TS}, opisane w~tabeli~\ref{t:TS_opis}.
+			Do wyznaczenia tych parametrów wykorzystano metodę dodanej masy: wykonano pomiar impedancji głośnika, a~następnie do membrany dodano masę $m=\,$\SI{10}{\gram} i~wykonano kolejny pomiar. Na podstawie porównania dwóch charakterystyk impedancji, za pomocą dedykowanego oprogramowania PULSE Thiele Small Parameters Calculation BZ-5604 wyznaczano parametry Thiele-Smalla~\cite{BK_pulse_TS}, opisane w~tabeli~\ref{t:TS_opis}.
 			
 			\begin{table}[!h]
 				\centering
@@ -259,7 +260,7 @@ backend=biber
 			\end{table}
 
 			
-			Sygnałem wykorzystanym w~pomiarze był sinus przestrajany w~zakresie \num{}\range\num{}~\si{\Hz} co $1/24$~oktawy.
+			Pomiar wykonano z~użyciem sygnału sinusoidalnego z~krokiem $1/24$~oktawy w~zakresie \num{}\range\num{}~\si{\Hz}.
 			
 			Zmierzono impedancję głośnika niskotonowego w~odgrodzie, jednego głośnika w~obudowie oraz obu głośników w~obudowie.
 			
