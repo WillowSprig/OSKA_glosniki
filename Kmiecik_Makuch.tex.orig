@@ -259,25 +259,28 @@ Objętość wnętrza obudowy po odjęciu objętości głośników i~falowodu wyn
 			\end{table}
 
 			
+<<<<<<< HEAD
+			Sygnałem wykorzystanym w~pomiarze był sinus przestrajany w~zakresie \range{0}{0}~\si{\Hz} co $1/24$~oktawy.
+=======
 			Pomiar wykonano z~użyciem sygnału sinusoidalnego z~krokiem $1/24$~oktawy w~zakresie \num{}\range\num{}~\si{\Hz}.
+>>>>>>> 2edeaabd147147fd8bdf161cf6918e4b9a5cab1a
 			
 			Zmierzono impedancję głośnika niskotonowego w~odgrodzie, jednego głośnika w~obudowie oraz obu głośników w~obudowie.
 			
 		\subsubsection{Charakterystyka skuteczności}
 			
-			Do pomiarów wykorzystano analizator SVAN 912~E; głośnik pobudzano szumem różowym z~generatora o~wartości skutecznej \SI{1}{\watt}. Analizę prowadzono w~odległości \SI{2}{\metre} w~pasmach $1/3$-oktawowych w~zakresie \num{25}\range\num{8000}~\si{\Hz}.
+			Do pomiarów wykorzystano analizator SVAN 912~E; głośnik pobudzano szumem różowym z~generatora o~wartości skutecznej \SI{1}{\watt}. Analizę prowadzono w~odległości \SI{2}{\metre} w~pasmach $1/3$-oktawowych w~zakresie \range{25}{8000}~\si{\Hz}.
 			
 		\subsubsection{Charakterystyki kierunkowości}
 			
 			Wykonano dwie serie pomiarów, dla głośnika wysoko- i~niskotonowego. W~pierwszej serii zmierzono głośniki w~obudowie bez wypełnienia, w~drugiej -- wypełnione materiałem dźwiękochłonnym.
 			
-			Pomiar charakterystyki kierunkowości odbywał się w~komorze bezechowej przy użyciu stolika obrotowego, na którym umieszczony był zestaw głośnikowy. W~osi akustycznej mierzonego głośnika ustawiono mikrofon AE??; następnie głośnik obracano z~krokiem \SI{10}{\degree}, każdorazowo zatrzymując i~wykonując pomiar trwający \SI{3}{\s}. Sygnałem podawanym na głośnik był szum różowy, pomiar wykonano w~pasmach $1/6$~oktawy, w~zakresie \num{40}\range\num{20000}~\si{\Hz}. \color{red} \textbf{Filtrowaliśmy???}\color{black}
+			Pomiar charakterystyki kierunkowości odbywał się w~komorze bezechowej przy użyciu stolika obrotowego, na którym umieszczony był zestaw głośnikowy. W~osi akustycznej mierzonego głośnika ustawiono mikrofon AE??; następnie głośnik obracano z~krokiem \SI{10}{\degree}, każdorazowo zatrzymując i~wykonując pomiar trwający \SI{3}{\s}. Sygnałem podawanym na głośnik był szum różowy, pomiar wykonano w~pasmach $1/6$~oktawy, w~zakresie \range{40}{20000}~\si{\Hz}. \comment{Filtrowaliśmy???}
 
 			
 		\subsubsection{Drgania obudowy}
 			
-			Pomiar drgań obudowy miał na celu sprawdzenie, w~jakim stopniu charakterystyka częstotliwościowa zestawu jest związana z~właściwościami obudowy. Badany zestaw głośnikowy umieszczono w~komorze bezechowej; w~wybranych punktach naklejono taśmę odblaskową, na którą padała wiązka lasera; zastosowanie taśmy było niezbędne dla uzyskania odpowiedniego odbicia światła od badanych powierzchni. %wibrometr umieszczono w~odpowiedniej odległości, tak aby uniknąć przesterowania sygnału. 
-			Sygnałem pomiarowym był szum różowy, rejestrowano jednocześnie przebieg drgań wibrometrem oraz sygnał akustyczny mikrofonem umieszczonym blisko głośnika (rys.~\ref{r:zdjecie_wibro}). \comment{Czy na pewno tak, ew. podać odległości/odległości a jak pamiętamy?} Wibrometr umieszczono poza przestrzenią komory celem zapewnienia stabilnego usadowienia wibrometru.
+			Pomiar drgań obudowy miał na celu sprawdzenie, w~jakim stopniu charakterystyka częstotliwościowa zestawu jest związana z~właściwościami obudowy. Badany zestaw głośnikowy umieszczono w~komorze bezechowej; w~wybranych punktach naklejono taśmę odblaskową, na którą padała wiązka lasera; wibrometr umieszczono w~odpowiedniej odległości, tak aby uniknąć przesterowania sygnału. Sygnałem pomiarowym był szum różowy, rejestrowano jednocześnie przebieg drgań wibrometrem oraz sygnał akustyczny mikrofonem umieszczonym blisko głośnika (rys.~\ref{r:zdjecie_wibro}). \comment{Czy na pewno tak, ew. podać odległości}
 			
 			\begin{figure}[!h]
 				\centering
@@ -291,8 +294,7 @@ Objętość wnętrza obudowy po odjęciu objętości głośników i~falowodu wyn
 
 \section{Modelowanie}
 
-	\color{orange} Opis modelu w Comsolu, co modelowaliśmy, metody (?). To pisze Michał...
-	\color{black}
+	\comment{Opis modelu w Comsolu, co modelowaliśmy, metody (?). To pisze Michał...}
 
 \section{Analiza wyników}
 
