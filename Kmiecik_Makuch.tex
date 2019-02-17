@@ -160,6 +160,7 @@ backend=biber
 %polecenie do pisania pauzy przy podawaniu zakresu liczb
 %---------------------------------------------------------
 \newcommand{\range}{~--~}
+% \newcommand{\someskip}{\\[\dimexpr-\normalbaselineskip+\smallskipamount]}
 %---------------------------------------------------------
 %obrazki
 %---------------------------------------------------------
@@ -237,12 +238,12 @@ backend=biber
 					$F_s$ & Hz & Częstotliwość rezonansowa \\\hline
 					$Z_{max}$ & \si{\ohm} & Impedancja w~rezonansie \\\hline
 					$R_e$ & \si{\ohm} & Rezystancja dla napięcia stałego \\\hline
-					$r_0=\frac{Z_{max}}{R_e}$ & --- & Stosunek impedancji cewki do rezystancji \\\hline
+					\gape{$r_0=\frac{Z_{max}}{R_e}$} & --- & Stosunek impedancji cewki do rezystancji \\\hline
 					$S$ & \% & \makecell{Symetria rezonansu, wyznacznik wiarygodności\\obliczonych parametrów -- powinna wynosić najwyżej 3,5\%} \\\hline
 					\hline
 					$Q_{ms}$ & --- & Dobroć mechaniczna \\\hline
 					$Q_{es}$ & --- & Dobroć elektryczna \\\hline
-					$Q_{ts}=\frac{Q_{ms}\cdot Q_{es}}{Q_{ms}+Q_{es}}$ & --- & Dobroć całowita \\\hline
+					\gape{$Q_{ts}=\frac{Q_{ms}\cdot Q_{es}}{Q_{ms}+Q_{es}}$} & --- & Dobroć całowita \\\hline
 					\hline
 					\multicolumn{3}{|c|}{Parametry wyznaczane z dwóch pomiarów (samej membrany i z dodaną masą)} \\\hline\hline
 					$V_{as}$ & \si{\litre} & Równoważna objętość podatności głośnika \\\hline
