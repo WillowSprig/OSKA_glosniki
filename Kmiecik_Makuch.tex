@@ -139,15 +139,13 @@ backend=biber
 
 \namei{Teresa}
 \surnamei{Makuch}
+
 \nameii{}
 \surnameii{}
-
 \nameiii{}
 \surnameiii{}
-
 \nameiiii{}
 \surnameiiii{}
-
 \nameiiiii{}
 \surnameiiiii{}
 
@@ -155,7 +153,7 @@ backend=biber
 
 \summaryPL{W procesie projektowania zestawu głośnikowego równie duże znaczenie, jak dobór przetworników, mają własności obudowy. Celem pracy było zbadanie wpływu różnych modyfikacji obudowy zestawu głośnikowego na jego parametry. W~związku z~tym wykonano pomiary impedancji elektrycznej, charakterystyk kierunkowości i~skuteczności zestawu, z~zastosowaniem różnych modyfikacji obudowy. Zarejestrowano także przebiegi drgań obudowy przy pomocy wibrometru laserowego. W~celu prowadzenia dalszych badań drogą symulacji, wykonano model komputerowy badanego zestawu przy użyciu metody elementów skończonych (MES).\\Podczas pomiarów zauważono znaczącą rozbieżność wyników z~danymi udostępnionymi przez producenta. W~związku z~tym przeprowadzono pomiary mające na celu weryfikację parametrów podanych w~karcie katalogowej.\\W~pracy zaprezentowano uzyskane wyniki, a~także spostrzeżenia związane z~wielokrotnym pomiarem i~zmiennością parametrów nowego przetwornika na skutek eksploatacji.}
 
-\summaryEN{When designing a~loudspeaker, both the choice of transducers used and the cabinet characteristics are important. The authors’ aim was to investigate how different cabinet modifications influence the loudspeaker’s parameters. Therefore, loudspeakers' electric impedance, directivity characteristics and sensitivity were measured, covering various cabinet modifications. Vibrations of the cabinet were also recorded, using a laser vibrometer. In order to continue the research by simulation, a~computer model of the cabinet under inquiry was created using the finished elements method (FEM).\\During measurements, inconsistency between the obtained results and the producer’s data was discovered. Therefore, measurement aiming to verify parameters contained in datasheet was performed.\\The study presents obtained results and remarks on multiple measurement and fluctuation of a~new transducer’s parameters due to exploitation.}
+\summaryEN{When designing a~loudspeaker, both the choice of transducers used and the cabinet characteristics are important. The authors’ aim was to investigate how different cabinet modifications influence the loudspeaker’s parameters. Therefore, loudspeakers' electric impedance, directivity characteristics and sensitivity were measured, covering various cabinet modifications. Vibrations of the cabinet were also recorded, using a laser vibrometer. In order to continue the research by simulation, a~computer model of the cabinet under inquiry was created using the finished elements method (FEM).\\During measurements, inconsistency between the obtained results and the producer’s data was discovered. Therefore, measurement aiming to verify parameters contained in data sheet was performed.\\The study presents obtained results and remarks on multiple measurement and fluctuation of a~new transducer’s parameters due to exploitation.}
 
 %---------------------------------------------------------
 % Nazwa pliku z bibliografią
@@ -172,18 +170,34 @@ backend=biber
 
 	\color{orange} Co w ogóle robimy, po co (może coś w~stylu, że chcieliśmy bardziej projektować, a~wyszło, że bardziej mierzyliśmy), plus trochę teorii (w~zależności, ile miejsca zajmie nam reszta...)
 	\color{black}
+	
+	\subsection{Wprowadzenie teoretyczne}
+	
+	\subsection{Cel pracy}
 
 \section{Badany zestaw głośnikowy}
-
-	\color{orange} Napisać, że wysokotonowy to DE800, a niskotonowy to Beyma 10WR300. Opisać konstrukcję, zastosowane modyfikacje obudowy.
-	\color{black}
-
-	\begin{figure}[h!]
+	
+	Zestaw, którego parametry zdecydowano się zbadać, i~który poddano modyfikacjom, jest docelowo elementem systemu liniowego. Składa się z~falowodu z~wysokotonowym głośnikiem ciśnieniowym B\&C~DE800 umieszczonego centralnie oraz dwóch głośników nisko-średniotonowych Beyma~10WR300 umieszczonych po bokach i~nachylonych pod kątem \SI{67}{\degree} do osi głośnika wysokotonowego. 
+	
+	Obudowa ma kształt typowy dla systemu liniowego -- przekrój boczny jest w~kształcie trapezu równoramiennego; konstrukcja wzorowana jest na rozwiązaniu stosowanym w~systemie liniowym uznanej firmy. Materiał korpusu to sklejka bałtycka o~grubości \SI{15}{\milli\metre}, dodatkowo z~przodu zamontowana jest maskownica ze stali o~grubości \SI{2}{\milli\metre}. Wnętrze obudowy jest połączone z~przestrzenią zewnętrzną półkolistymi otworami o~promieniu \SI{70}{\milli\metre} przy tylnej ściance. Objętość wnęki po odjęciu objętości głośników i~falowodu wynosi \SI{28,17}{\litre}.
+	
+	Przekrój zestawu w~płaszczyźnie poziomej ukazano na rysunku~\ref{r:przekroj}, a~fotografię na rysunku~\ref{r:zdjecie}.
+	
+	\begin{figure}[!h]
+	\centering
+	% 		\includegraphics{}
+	\caption{Przekrój modelu badanego zestawu głośnikowego w~płaszczyźnie poziomej wykonany w~programie Inventor}
+	\label{r:przekroj}
+	\end{figure}
+	
+	\begin{figure}[!h]
 		\centering
-% 		\includegraphics{}
+		% 		\includegraphics[width=.8\textwidth]{}
 		\caption{Fotografia badanego zestawu głośnikowego}
 		\label{r:zdjecie}
 	\end{figure}
+	
+	%modyfikacje
 
 
 \section{Metodyka pomiarów}
@@ -192,9 +206,9 @@ backend=biber
 	
 	Ze względu na zaobserwowane znaczące rozbieżności między wynikami uzyskanymi dla głośników niskotonowych, a~parametrami podanymi przez producenta w~karcie katalogowej, zdecydowano się na wykonanie dodatkowych pomiarów, uwzględniających zużycie głośnika; pomiary te opisano w~części~\ref{ss:dodatkowe}.
 	
-	Metodyka pomiarów opierała się na wytycznych zawartych w~normie EN 60268-5~\cite{norma}.
+	Metodyka pomiarów opierała się na wytycznych zawartych w~normie EN~60268-5~\cite{norma}. Natężenie prądu elektrycznego i~napięcie elektryczne tam, gdzie to było konieczne, monitorowano przy pomocy multimetrów Tektronix DMM~4040 oraz DMM~4050.
 
-	\subsection{Przyjęta metodyka}\label{ss:metodyka}
+	\subsection{Metodyka podstawowa}\label{ss:metodyka}
 	
 		\subsubsection{Impedancja elektryczna i parametry Thiele-Smalla}
 			
@@ -202,7 +216,7 @@ backend=biber
 			
 			Do wyznaczenia tych parametrów wykorzystano metodę dodanej masy: wykonano pomiar impedancji głośnika, a~następnie do membrany przyklejono ciężarek o~masie $m=\,$\SI{10}{\gram} i~wykonano kolejny pomiar. Na podstawie porównania dwóch charakterystyk impedancji, za pomocą dedykowanego oprogramowania PULSE Thiele Small Parameters Calculation BZ-5604 wyznaczano parametry Thiele-Smalla~\cite{BK_pulse_TS}, opisane w~tabeli~\ref{t:TS_opis}.
 			
-			\begin{table}[h!]
+			\begin{table}[!h]
 				\centering
 				\caption{Parametry Thiele-Smalla}
 				\label{t:TS_opis}
@@ -232,7 +246,6 @@ backend=biber
 					\hline
 					$\eta_0$ & \% & Sprawność głośnika \\\hline
 				\end{tabular}
-
 			\end{table}
 
 			
@@ -255,9 +268,9 @@ backend=biber
 			
 			Pomiar drgań obudowy miał na celu sprawdzenie, w~jakim stopniu charakterystyka częstotliwościowa zestawu jest związana z~właściwościami obudowy. Badany zestaw głośnikowy umieszczono w~komorze bezechowej; w~wybranych punktach naklejono taśmę odblaskową, na którą padała wiązka lasera; wibrometr umieszczono w~odpowiedniej odległości, tak aby uniknąć przesterowania sygnału. Sygnałem pomiarowym był szum różowy, rejestrowano jednocześnie przebieg drgań wibrometrem oraz sygnał akustyczny mikrofonem umieszczonym blisko głośnika (rys.~\ref{r:zdjecie_wibro}). \color{red} \textbf{Czy na pewno tak, ew. podać odległości} \color{black}
 			
-			\begin{figure}[h!]
+			\begin{figure}[!h]
 				\centering
-				\includegraphics[width=\textwidth]{zdjecie_wibro.jpg}
+				\includegraphics[width=.8\textwidth]{zdjecie_wibro.jpg}
 				\caption{Fotografia wykonana podczas przygotowań do pomiaru z~użyciem wibrometru}
 				\label{r:zdjecie_wibro}
 			\end{figure}
