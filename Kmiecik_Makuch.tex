@@ -185,32 +185,53 @@ backend=biber
 		Autorzy postawili sobie za cel określenie, jakie z~zastosowanych modyfikacji obudowy zestawu głośnikowego wywierają wpływ na jego mierzone parametry oraz wybór najbardziej optymalnej konfiguracji, a~także wyznaczenie optymalnego punktu podziału pasma częstotliwości między głośniki.
 
 \section{Badany zestaw głośnikowy}
-	
-	Zestaw, którego parametry zdecydowano się zbadać, i~który poddano modyfikacjom, jest docelowo elementem systemu liniowego. Składa się z~falowodu z~wysokotonowym głośnikiem ciśnieniowym B\&C~DE800 umieszczonego centralnie oraz dwóch głośników nisko-średniotonowych Beyma~10WR300 umieszczonych po bokach i~nachylonych pod kątem \SI{67}{\degree} do osi głównej zastawu. 
-	
-	Obudowa ma kształt typowy dla systemu liniowego -- przekrój boczny jest w~kształcie trapezu równoramiennego; konstrukcja wzorowana jest na rozwiązaniu stosowanym w~systemie liniowym uznanej firmy. Materiał korpusu to sklejka bałtycka o~grubości \SI{15}{\milli\metre}, dodatkowo z~przodu zamontowana jest maskownica ze stali o~grubości \SI{2}{\milli\metre}. Objętość wnętrza obudowy po odjęciu objętości głośników i~falowodu wynosi \SI{28,17}{\litre}.
-	
-	Obudowa jest obudową wentylowaną, wyposażoną w~4~otwory o~kształcie ćwierćkolistym i~promieniu \SI{70}{\milli\metre}. Otwory te mają swe ujście do przestrzeni przed głośnikiem, tak jak przestawiono na rysunku~\ref{r:przekroj}. %Wnętrze obudowy jest połączone z~przestrzenią zewnętrzną półkolistymi otworami o~promieniu \SI{70}{\milli\metre} przy tylnej ściance.
-	Taki układ głośników i~otworów ma wpływ na charakterystyki kierunkowości głośnika w~płaszczyźnie horyzontalnej~\cite{kmiecik_inz}. \comment{W części teoretycznej wzorek na chke kierunkowości w zależności od odległości źródeł i omówić temat!!!}
-	
-%	Przekrój zestawu w~płaszczyźnie poziomej ukazano na rysunku~\ref{r:przekroj}, a~fotografię na rysunku~\ref{r:zdjecie}.
-	
-	\begin{figure}[!h]
-		\centering
-		\adjincludegraphics[width=\textwidth,trim={{.1\width} {.25\height} {.17\width} {.12\height}},clip]{render_z_otworami_bez_tekstury.pdf}
-		\caption{Przekrój modelu badanego zestawu głośnikowego w~płaszczyźnie poziomej wykonany w~programie Inventor}
-		\label{r:przekroj}
-	\end{figure}
-	
-	\begin{figure}[!h]
-		\centering
-		% 		\includegraphics[width=.8\textwidth]{}
-		\caption{Fotografia badanego zestawu głośnikowego}
-		\label{r:zdjecie}
-	\end{figure}
-	
-	%modyfikacje
 
+	\subsection{Opis konstrukcji}\label{ss:opis}
+	
+		Zestaw, którego parametry zdecydowano się zbadać, i~który poddano modyfikacjom, jest docelowo elementem systemu liniowego. Składa się z~falowodu z~wysokotonowym głośnikiem ciśnieniowym B\&C~DE800 umieszczonego centralnie oraz dwóch głośników nisko-średniotonowych Beyma~10WR300 umieszczonych po bokach i~nachylonych pod kątem \SI{67}{\degree} do osi głównej zastawu. 
+		
+		Obudowa ma kształt typowy dla systemu liniowego -- przekrój boczny jest w~kształcie trapezu równoramiennego; konstrukcja wzorowana jest na rozwiązaniu stosowanym w~systemie liniowym uznanej firmy. Materiał korpusu to sklejka bałtycka o~grubości \SI{15}{\milli\metre}, dodatkowo z~przodu zamontowana jest maskownica ze stali o~grubości \SI{2}{\milli\metre}. Objętość wnętrza obudowy po odjęciu objętości głośników i~falowodu wynosi \SI{28,17}{\litre}.
+		
+		Obudowa jest obudową wentylowaną, wyposażoną w~4~otwory o~kształcie ćwierćkolistym i~promieniu \SI{70}{\milli\metre}. Otwory te mają swe ujście do przestrzeni przed głośnikiem, tak jak przestawiono na rysunku~\ref{r:przekroj}. %Wnętrze obudowy jest połączone z~przestrzenią zewnętrzną półkolistymi otworami o~promieniu \SI{70}{\milli\metre} przy tylnej ściance.
+		Taki układ głośników i~otworów ma wpływ na charakterystyki kierunkowości głośnika w~płaszczyźnie horyzontalnej~\cite{kmiecik_inz}. \comment{W części teoretycznej wzorek na chke kierunkowości w zależności od odległości źródeł i omówić temat!!!}
+		
+	%	Przekrój zestawu w~płaszczyźnie poziomej ukazano na rysunku~\ref{r:przekroj}, a~fotografię na rysunku~\ref{r:zdjecie}.
+		
+		\begin{figure}[!h]
+			\centering
+			\adjincludegraphics[width=\textwidth,trim={{.1\width} {.25\height} {.17\width} {.12\height}},clip]{render_z_otworami_bez_tekstury.pdf}
+			\caption{Przekrój modelu badanego zestawu głośnikowego w~płaszczyźnie poziomej wykonany w~programie Inventor}
+			\label{r:przekroj}
+		\end{figure}
+		
+		\begin{figure}[!h]
+			\centering
+			% 		\includegraphics[width=.8\textwidth]{}
+			\caption{Fotografia badanego zestawu głośnikowego}
+			\label{r:zdjecie}
+		\end{figure}
+	
+	\subsection{Modyfikacje obudowy}
+	
+		W~celu określenia wpływu konstrukcji obudowy na parametry zestawu głośnikowego zastosowano wybrane rodzaje jej modyfikacji. Wybrano modyfikacje możliwe do faktycznego zastosowania, a~jednocześnie takie, które są odwracalne.
+		
+		Oprócz modyfikacji obudowy, zmieniano także liczbę zamontowanych w~niej głośników, aby lepiej zbadać ich wzajemny wpływ. Wszystkie konfiguracje pomiarowe opisano w~tabeli~\ref{t:obudowa}.
+		
+		\begin{table}[!h]
+			\centering
+			\caption{Opis konfiguracji obudowy i~głośników wykorzystanych podczas pomiarów}
+			\label{t:obudowa}
+			\begin{tabular}{|c|c|m{.6\textwidth}|}
+				\hline
+				\textbf{L.p.} & \makecell{\textbf{Oznaczenie}\\\textbf{(na wykresach)}} & \centering\textbf{Opis} \tabularnewline\hline
+				1. & Pusta & Obudowa w~podstawowej wersji (opisanej w~części~\ref{ss:opis}), z~otworami, bez wypełnienia \\\hline
+				2. & Wypełniona & Wnnętrze obudowy wypełnione materiałem dźwiękochłonnym z~włókien poliestrowych umieszczonym na ściankach \\\hline
+				3. & Zabudowane & Ćwierćkoliste otwory zaślepione elementami ze sklejki o~grubości \SI{}{\milli\metre}, przyklejonymi do ścianki, w~której zamocowany jest głośnik niskotonowy\\\hline
+				\hline
+				4. & Jeden głośnik & Jeden głośnik niskotonowy zamocowany w~obudowie, otwór na drugi zaślepiony kołem ze sklejki; zamocowany głośnik wysokotonowy \\\hline
+				5. & Dwa głośniki & Obydwa głośniki niskotonowe oraz głośnik wysokotonowy zamocowane w~obudowie\\\hline
+			\end{tabular}
+		\end{table}
 
 \section{Metodyka pomiarów}
 
@@ -263,7 +284,8 @@ backend=biber
 			
 			Pomiar wykonano z~użyciem sygnału sinusoidalnego z~krokiem $1/24$~oktawy w~zakresie \range{}{}~\si{\Hz}.
 			
-			Zmierzono impedancję głośnika niskotonowego w~odgrodzie, jednego głośnika w~obudowie oraz obu głośników w~obudowie.
+% 			Zmierzono impedancję głośnika niskotonowego w~odgrodzie, jednego głośnika w~obudowie oraz obu głośników w~obudowie.
+			Zmierzono impedancję głośnika niskotonowego w~odgrodzie oraz głośników w~obudowie z~zastosowanymi różnymi modyfikacjami.
 			
 		\subsubsection{Charakterystyka skuteczności}
 			
