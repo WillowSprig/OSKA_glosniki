@@ -197,14 +197,14 @@ backend=biber
 		
 	%	Przekrój zestawu w~płaszczyźnie poziomej ukazano na rysunku~\ref{r:przekroj}, a~fotografię na rysunku~\ref{r:zdjecie}.
 		
-		\begin{figure}[!h]
+		\begin{figure}[!ht]
 			\centering
 			\adjincludegraphics[width=\textwidth,trim={{.1\width} {.25\height} {.17\width} {.12\height}},clip]{render_z_otworami_bez_tekstury.pdf}
 			\caption{Przekrój modelu badanego zestawu głośnikowego w~płaszczyźnie poziomej wykonany w~programie Inventor}
 			\label{r:przekroj}
 		\end{figure}
 		
-		\begin{figure}[!h]
+		\begin{figure}[!ht]
 			\centering
 % 			\includegraphics[width=.8\textwidth]{}
 			\caption{Fotografia badanego zestawu głośnikowego}
@@ -217,7 +217,7 @@ backend=biber
 		
 		Oprócz modyfikacji obudowy, zmieniano także liczbę zamontowanych w~niej głośników, aby lepiej zbadać ich wzajemny wpływ. Wszystkie konfiguracje pomiarowe opisano w~tabeli~\ref{t:obudowa}.
 		
-		\begin{table}[!h]
+		\begin{table}[!ht]
 			\centering
 			\caption{Opis konfiguracji obudowy i~głośników wykorzystanych podczas pomiarów}
 			\label{t:obudowa}
@@ -249,7 +249,7 @@ backend=biber
 			
 			Do wyznaczenia tych parametrów wykorzystano metodę dodanej masy: wykonano pomiar impedancji głośnika, a~następnie do membrany dodano masę $m=\,$\SI{10}{\gram} i~wykonano kolejny pomiar. Na podstawie porównania dwóch charakterystyk impedancji, za pomocą dedykowanego oprogramowania PULSE Thiele Small Parameters Calculation BZ-5604 wyznaczano parametry Thiele-Smalla~\cite{BK_pulse_TS}, opisane w~tabeli~\ref{t:TS_opis}.
 			
-			\begin{table}[!h]
+			\begin{table}[!ht]
 				\centering
 				\caption{Parametry Thiele-Smalla}
 				\label{t:TS_opis}
@@ -257,7 +257,7 @@ backend=biber
 				\hline
 					\textbf{Oznaczenie} & \textbf{Jednostka} & \textbf{Opis parametru}\\\hline\hline
 					\multicolumn{3}{|c|}{Parametry wyznaczane z pojedynczego pomiaru} \\\hline\hline
-					$F_s$ & Hz & Częstotliwość rezonansowa \\\hline
+					$F_s$ & \si{\Hz} & Częstotliwość rezonansowa \\\hline
 					$Z_{max}$ & \si{\ohm} & Impedancja w~rezonansie \\\hline
 					$R_e$ & \si{\ohm} & Rezystancja dla napięcia stałego \\\hline
 					\gape{$r_0=\frac{Z_{max}}{R_e}$} & --- & Stosunek impedancji cewki do rezystancji \\\hline
@@ -295,15 +295,15 @@ backend=biber
 			
 			Wykonano dwie serie pomiarów, dla głośnika wysoko- i~niskotonowego. W~pierwszej serii zmierzono głośniki w~obudowie bez wypełnienia, w~drugiej -- wypełnione materiałem dźwiękochłonnym.
 			
-			Pomiar charakterystyki kierunkowości odbywał się w~komorze bezechowej przy użyciu stolika obrotowego, na którym umieszczony był zestaw głośnikowy. W~osi akustycznej mierzonego głośnika ustawiono mikrofon AE??; następnie głośnik obracano z~krokiem \SI{10}{\degree}, każdorazowo zatrzymując i~wykonując pomiar trwający \SI{3}{\s}. Sygnałem podawanym na głośnik był szum różowy, pomiar wykonano w~pasmach $1/6$~oktawy, w~zakresie \range{40}{20000}~\si{\Hz}. \comment{Filtrowaliśmy???}
+			Pomiar charakterystyki kierunkowości odbywał się w~komorze bezechowej przy użyciu stolika obrotowego, na którym umieszczony był zestaw głośnikowy. W~osi akustycznej mierzonego głośnika ustawiono mikrofon \comment{AE??}; następnie głośnik obracano z~krokiem \SI{10}{\degree}, każdorazowo zatrzymując i~wykonując pomiar trwający \SI{3}{\s}. Sygnałem podawanym na głośnik był szum różowy, pomiar wykonano w~pasmach $1/6$~oktawy, w~zakresie \range{40}{20000}~\si{\Hz}. \comment{Filtrowaliśmy???}
 
 			
 		\subsubsection{Drgania obudowy}
 			
-			Pomiar drgań obudowy miał na celu sprawdzenie, w~jakim stopniu charakterystyka częstotliwościowa zestawu jest związana z~właściwościami obudowy. Badany zestaw głośnikowy umieszczono w~komorze bezechowej; w~wybranych punktach naklejono taśmę odblaskową, na którą padała wiązka lasera; zastosowanie taśmy było niezbędne dla uzyskania odpowiedniego odbicia światła od badanych powierzchni. %wibrometr umieszczono w~odpowiedniej odległości, tak aby uniknąć przesterowania sygnału. 
+			Pomiar drgań obudowy miał na celu sprawdzenie, w~jakim stopniu charakterystyka częstotliwościowa zestawu jest związana z~właściwościami obudowy. Badany zestaw głośnikowy umieszczono w~komorze bezechowej; w~wybranych punktach naklejono taśmę odblaskową, na którą padała wiązka lasera; zastosowanie taśmy było niezbędne dla uzyskania odpowiedniego odbicia światła od badanych powierzchni. %Wibrometr umieszczono w~odpowiedniej odległości, tak aby uniknąć przesterowania sygnału. 
 			Sygnałem pomiarowym był szum różowy, rejestrowano jednocześnie przebieg drgań wibrometrem oraz sygnał akustyczny mikrofonem umieszczonym blisko bieżącego punktu pomiarowego (rys.~\ref{r:zdjecie_wibro}). Wibrometr umieszczono poza przestrzenią komory celem zapewnienia jego stabilnego usadowienia.
 			
-			\begin{figure}[!h]
+			\begin{figure}[!ht]
 				\centering
 				\includegraphics[width=.8\textwidth]{zdjecie_wibro.jpg}
 				\caption{Fotografia wykonana podczas przygotowań do pomiaru z~użyciem wibrometru}
@@ -321,7 +321,7 @@ backend=biber
 
 	\subsection{Pomiary impedancji}
 		
-		\begin{figure}[!h]
+		\begin{figure}[!ht]
 			\centering
 			\includegraphics[width=\textwidth,trim={2cm .5cm 2cm 1cm},clip]{metody_2glosnik.pdf}
 			\caption{\comment{Czy ten rysunek nam jest potrzebny???}}
@@ -337,9 +337,41 @@ backend=biber
 			\label{r:wygrzewanie}
 		\end{figure}
 		
+		\begin{table}[!ht]
+			\centering
+			\caption{Porównanie parametrów Thiele-Smalla: odczytanych z~karty katalogowej oraz zmierzonych dla różnych etapów pracy głośnika}
+			\label{t:TS_opis}
+			\begin{tabular}{|c|c|c|c|c|}
+				\hline
+				\textbf{Parametr} & \textbf{Karta katalogowa} & \textbf{Pomiar fabryczny} & \textbf{Pomiar -- etap 1} & \textbf{Pomiar -- etap 2}\\\hline
+				\hline
+				$F_s$ [\si{\Hz}] & \num{47,0} & \num{71,5} & \num{57,0} & \num{50,7} \\\hline
+				$Z_{max}$ [\si{\ohm}] & \num{} & \num{54,2} & \num{55,7} & \num{64,0} \\\hline
+				$R_e$ [\si{\ohm}] & \num{6,1} & \num{10,4} & \num{10,0} & \num{10,2} \\\hline
+				$r_0$ & \num{} & \num{5,2} & \num{5,6} & \num{6,4} \\\hline
+				$S$ [\%] & \num{} & \num{3,44} & \num{3,35} & \num{0,55} \\\hline
+				\hline
+				$Q_{ms}$ & \num{3,9} & \num{3,3} & \num{2,7} & \num{2,8} \\\hline
+				$Q_{es}$ & \num{0,4} & \num{0,8} & \num{0,6} & \num{0,5} \\\hline
+				$Q_{ts}$ & \num{0,3} & \num{0,6} & \num{0,5} & \num{0,4} \\\hline
+				\hline
+				$V_{as}$ [\si{\litre}] & \num{50,9} & \num{23,5} & \num{34,5} & \num{41,4} \\\hline
+				$M_{ms}$ [\si{\gram}] & \num{39,0} & \num{36,1} & \num{38,5} & \num{40,6} \\\hline
+				$C_{ms}$ [\si[per-mode=symbol]{\metre\per\newton}] & \num{294e-6} & \num{138e-6} & \num{203e-6} & \num{243e-6} \\\hline
+				$R_{ms}$ [\si[per-mode=symbol]{\metre\per\newton}] & \num{2,9} & \num{5,0} & \num{5,2} & \num{4,6} \\\hline
+				\hline
+				$M_{as}$ [\si[per-mode=symbol]{\kilo\gram\per\metre\tothe{4}}] & \num{31,8} & \num{30,1} & \num{32,1} & \num{33,8} \\\hline
+				$C_{as}$ [\si[per-mode=symbol]{\metre\tothe{5}\per\newton}] & \num{0,4e-6} & \num{0,2e-6} & \num{0,2e-6} & \num{0,3e-6} \\\hline
+% 				$C_{as}$ [\si[per-mode=symbol]{\metre\tothe{5}\per\newton}] & \num{360e-9} & \num{165e-9} & \num{243e-9} & \num{292e-9} \\\hline
+				$R_{as}$ [\si[per-mode=symbol]{\newton\s\per\metre\tothe{5}}] & \num{2367} & \num{4123} & \num{4323} & \num{3790} \\\hline
+				\hline
+				$\eta_0$ [\%] & \num{1,5} & \num{1,08} & \num{1,07} & \num{1,00} \\\hline
+			\end{tabular}
+		\end{table}
+		
 		Ze względu na możliwe rozbieżności między parametrami różnych egzemplarzy tego samego modelu głośnika~\cite{aes_roznice} wykonano pomiary pozwalające na porównanie obu wykorzystywanych egzemplarzy. Krzywe impedancji obu głośników \comment{po wygrzaniu} w~odgrodzie przedstawiono na rysunku~\ref{r:2glosniki}.
 		
-		\begin{figure}[!h]
+		\begin{figure}[!ht]
 			\centering
 			\includegraphics[width=\textwidth,trim={2cm .5cm 2cm 1cm},clip]{porownanie_glosnikow.pdf}
 			\caption{Charakterystyki impedancji obu badanych głośników w~odgrodzie}
@@ -350,7 +382,7 @@ backend=biber
 	\subsection{Modyfikacje obudowy}
 	
 		
-		\begin{figure}[!h]
+		\begin{figure}[!ht]
 			\centering
 			\includegraphics[width=\textwidth,trim={2cm .5cm 2cm 1cm},clip]{obudowa_otwory.pdf}
 			\caption{}
