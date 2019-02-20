@@ -182,7 +182,7 @@ backend=biber
 	
 	\subsection{Cel pracy}
 	
-		Autorzy postawili sobie za cel określenie, jakie z~zastosowanych modyfikacji obudowy zestawu głośnikowego wywierają wpływ na jego mierzone parametry oraz wybór najbardziej optymalnej konfiguracji, a~także wyznaczenie optymalnego punktu podziału pasma częstotliwości między głośniki.
+		Autorzy postawili sobie za cel określenie, jakie z~zastosowanych modyfikacji obudowy zestawu głośnikowego wywierają wpływ na jego mierzone parametry oraz wybór najbardziej optymalnej konfiguracji, a~także wyznaczenie optymalnego punktu podziału pasma częstotliwości między głośniki. \comment{Zweryfikować, czy jest spełniony! Ew. włączyć do wstępu jako 1 części, bez podziału na podsekcje.}
 
 \section{Badany zestaw głośnikowy}
 
@@ -309,14 +309,14 @@ backend=biber
 			
 		\subsubsection{Drgania obudowy}
 			
-			Pomiar drgań obudowy miał na celu sprawdzenie, w~jakim stopniu charakterystyka częstotliwościowa zestawu jest związana z~właściwościami obudowy. Badany zestaw głośnikowy umieszczono w~komorze bezechowej; w~wybranych punktach naklejono taśmę odblaskową, na którą padała wiązka lasera; zastosowanie taśmy było niezbędne dla uzyskania odpowiedniego odbicia światła od badanych powierzchni. %Wibrometr umieszczono w~odpowiedniej odległości, tak aby uniknąć przesterowania sygnału. 
-			Sygnałem pomiarowym był szum różowy, rejestrowano jednocześnie przebieg drgań wibrometrem oraz sygnał akustyczny dwoma mikrofonami: jednym umieszczonym blisko bieżącego punktu pomiarowego (rys.~\ref{r:zdjecie_wibro}), a~drugim w~odległości~\SI{2}{\metre}. Wibrometr umieszczono poza przestrzenią komory celem zapewnienia jego stabilnego usadowienia.
+			Pomiar drgań obudowy miał na celu sprawdzenie, w~jakim stopniu charakterystyka częstotliwościowa zestawu jest związana z~właściwościami obudowy. Badany zestaw głośnikowy umieszczono w~komorze bezechowej; w~wybranych punktach (por.~\ref{r:wibro_pkt}) naklejono taśmę odblaskową, na którą padała wiązka lasera; zastosowanie taśmy było niezbędne dla uzyskania odpowiedniego odbicia światła od badanych powierzchni. %Wibrometr umieszczono w~odpowiedniej odległości, tak aby uniknąć przesterowania sygnału. 
+			Sygnałem pomiarowym był szum różowy, rejestrowano jednocześnie przebieg drgań wibrometrem oraz sygnał akustyczny dwoma mikrofonami: jednym umieszczonym blisko bieżącego punktu pomiarowego (rys.~\ref{r:wibro_zdjecie}), a~drugim w~odległości~\SI{2}{\metre}. Wibrometr umieszczono poza przestrzenią komory celem zapewnienia jego stabilnego usadowienia.
 			
 			\begin{figure}[!ht]
 				\centering
 				\includegraphics[width=.8\textwidth]{zdjecie_wibro.jpg}
 				\caption{Fotografia wykonana podczas przygotowań do pomiaru z~użyciem wibrometru}
-				\label{r:zdjecie_wibro}
+				\label{r:wibro_zdjecie}
 			\end{figure}
 
 	
@@ -458,10 +458,9 @@ backend=biber
 	\subsection{Drgania obudowy}
 		
 		%generalnie nie widać zależności
+		Analiza uzyskanych wyników nie dała podstaw do sformułowania zależności między obudową, a~charakterystykami amplitudowymi -- pomiędzy widmami sygnału z~wibrometru i~mikrofonów nie widać wyraźnych zależności. W~niektórych punktach pomiarowych można zauważyć zmiany kształtu charakterystyki dla tej samej częstotliwości, jednak są to raczej jednostkowe przypadki, na podstawie których nie można wysnuć ogólnych wniosków.
 		
-		Spośród zarejestrowanych jednocześnie przebiegów przemieszczeń oraz ciśnienia akustycznego wybrano te, w~których można dostrzec zależności i~przedstawiono je na rysunkach~\ref{r:wibrometr_1-4} i~\ref{r:wibrometr_5}.
-		
-		W~punktach \range{1}{4} (rys.~\ref{r:wibrometr_1-4}) wyraźnie widoczny jest wzrost amplitudy przemieszczeń w~paśmie \SI{260}{\hertz}; jednocześnie w~tym samym paśmie zauważalny jest spadek poziomu ciśnienia akustycznego.
+		Spośród zarejestrowanych przebiegów wybrano punkty \range{1}{4}, między którymi można dostrzec pewne zależności i~zestawiono je na rysunku~\ref{r:wibrometr_1-4}. W~punktach tych wyraźnie widoczny jest wzrost amplitudy przemieszczeń w~paśmie \SI{260}{\hertz}; jednocześnie w~tym samym paśmie zauważalny jest spadek poziomu ciśnienia akustycznego. Wybrane punkty zlokalizowane są na dwóch różnych ściankach obudowy, jak pokazano na rysunku~\ref{r:wibro_pkt} \comment{rozwinięcie myśli?}
 		
 		\begin{figure}[!ht]
 			\centering
@@ -470,7 +469,14 @@ backend=biber
 			\label{r:wibrometr_1-4}
 		\end{figure}
 		
-		Na charakterystyce z~punktu~\num{5} (rys.~\ref{r:wibrometr_5}) widoczne jest lokalne maksimum amplitudy przemieszczeń dla częstotliwości~\SI{400}{\hertz}, co jednak nie znajduje odzwierciedlenia w~widmie poziomu ciśnienia akustycznego -- mimo że podbicie tej częstotliwości jest widoczne w~charakterystykach skuteczności uzyskanych z~innych pomiarów~\ref{ss:w-skutecznosc}.
+		\begin{figure}[!ht]
+			\centering
+			\includegraphics[width=.8\textwidth,trim={5cm .3cm 5cm 2.7cm},clip]{wibrometr.pdf}
+			\caption{Rozmieszczenie punktów pomiarowych \range{1}{4} na obudowie}
+			\label{r:wibro_pkt}
+		\end{figure}
+		
+		Kolejnym punktem, dla którego zdecydowano się zaprezentować wyniki jest punkt~\num{5}, zlokalizowany na uchwycie (na rysunku~\ref{r:wibro_pkt} po prawej stronie). Na widmie przemieszczeń (rys.~\ref{r:wibrometr_5}) widoczne jest lokalne maksimum amplitudy dla częstotliwości~\SI{400}{\hertz}, co jednak nie znajduje odzwierciedlenia w~widmie poziomu ciśnienia akustycznego -- mimo że podbicie tej częstotliwości jest widoczne w~charakterystykach skuteczności uzyskanych z~innych pomiarów~\ref{ss:w-skutecznosc}.%Drgania obudowy mogą mieć wpływ na pole akustyczne wokół zestawu.
 		
 		\begin{figure}[!ht]
 		\centering
