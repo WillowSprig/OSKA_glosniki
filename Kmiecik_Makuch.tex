@@ -561,39 +561,66 @@ backend=biber
 		
 	\subsection{Symulacje}
 		
-		Dla wstępnie dostrojonego modelu przeprowadzono symulacje rozkładu ciśnienia akustycznego wokół zestawu oraz przemieszczenia membrany. Wyznaczono także charakterystykę skuteczności zestawu. Wyniki symulacji zestawiono na rysunku~\ref{r:Comsol}.
+		Dla wstępnie dostrojonego modelu przeprowadzono symulacje rozkładu ciśnienia akustycznego wokół zestawu oraz przemieszczenia membrany. Wyznaczono także charakterystykę skuteczności zestawu. 
+		
+		Na rysunku~\ref{r:Comsol} ukazano rozkłady ciśnienia akustycznego w~zestawieniu ze skutecznością zestawu. Podbicie charakterystyki w~okolicach \SI{500}{\hertz} znajduje odzwierciedlenie na rysunkach~\ref{r:C_500} i~\ref{r:C_560} -- fale dźwiękowe nakładają się w~taki sposób, że możliwa jest ich dalsza propagacja. Natomiast dla częstotliwości \SI{710}{\hertz}, dla której w~charakterystyce skuteczności widoczny jest nagły spadek, występuje zjawisko zwarcia akustycznego: głośnik i~otwór \textit{bass-reflex} emitują fale w~przeciwfazie, które wygaszają się wzajemnie przed głośnikiem.
 		
 		\begin{figure}[!ht]
 		\centering
-			\begin{subfigure}[b]{.48\textwidth}
+			\begin{subfigure}[b]{.49\textwidth}
 			\includegraphics[width=\textwidth,trim={1.25cm .5cm 2cm 1cm},clip]{skutecznosc_comsol.pdf}
 				\caption{Skuteczność zestawu}
 				\label{r:C_skutecznosc}
 			\end{subfigure}
 			~
-			\begin{subfigure}[b]{.48\textwidth}
-% 				\includegraphics[width=\textwidth]{skutecznosc_comsol.pdf}
+			\begin{subfigure}[b]{.49\textwidth}
+				\includegraphics[width=\textwidth]{pres_sig_500Hz.png}
 				\caption{Rozkład ciśnienia akustycznego dla częstotliwości \SI{500}{\hertz}}
 				\label{r:C_500}
 			\end{subfigure}
 			
-			\begin{subfigure}[b]{.48\textwidth}
-% 				\includegraphics[width=\textwidth]{skutecznosc_comsol.pdf}
+			\begin{subfigure}[b]{.49\textwidth}
+			\includegraphics[width=\textwidth]{pres_sig_560Hz.png}
 				\caption{Rozkład ciśnienia akustycznego dla częstotliwości \SI{560}{\hertz}}
 				\label{r:C_560}
 			\end{subfigure}
 			~
-			\begin{subfigure}[b]{.48\textwidth}
-% 				\includegraphics[width=\textwidth]{skutecznosc_comsol.pdf}
+			\begin{subfigure}[b]{.49\textwidth}
+			\includegraphics[width=\textwidth]{pres_sig_710Hz.png}
 				\caption{Rozkład ciśnienia akustycznego dla częstotliwości \SI{710}{\hertz}}
 				\label{r:C_710}
 			\end{subfigure}
-			\caption{Wyniki uzyskane z~symulacji w~środowisku Comsol}
+			
+% 			\caption{Wyniki uzyskane z~symulacji w~środowisku Comsol; dla rozkładów ciśnienia wartości powyżej \SI{1}{\pascal} i~poniżej \SI{-1}{\pascal} zostały zaokrąglone do tych wartości dla zwiększenia czytelności}
+			\caption{Wyniki uzyskane z~symulacji w~środowisku Comsol; dla rozkładów ciśnienia skala wyświetlania została zawężona do zakresu $[-1;1]$~\si{\pascal} w~celu zwiększenia czytelności}
 			\label{r:Comsol}
 		\end{figure}
 		
+		\begin{figure}[!ht]
+			\centering
+			\includegraphics[width=.6\textwidth]{disp_presure_1kHz.png}
+			\caption{Przemieszczenia membrany i~rozkład ciśnienia akustycznego (ciemne obszary oznaczają ujemne ciśnienie, jasne -- dodatnie)}
+			\label{r:C_przem_cisn}
+		\end{figure}
 		
-
+		\begin{figure}
+			\centering
+			\begin{subfigure}[b]{.49\textwidth}
+				\includegraphics[width=\textwidth]{absp_560Hz.png}
+				\caption{Częstotliwość \SI{560}{\hertz}}
+				\label{r:C_560iz}
+			\end{subfigure}
+			~
+			\begin{subfigure}[b]{.49\textwidth}
+			\includegraphics[width=\textwidth]{absp_710Hz.png}
+				\caption{Częstotliwość \SI{710}{\hertz}}
+				\label{r:C_710iz}
+			\end{subfigure}
+			
+			\caption{Izofony uzyskane z~symulacji w~środowisku Comsol}
+			\label{r:Comsol}
+		\end{figure}
+		
 \section{Podsumowanie}
 	
 	\subsection{Wnioski}
