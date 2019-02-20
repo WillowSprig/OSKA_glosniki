@@ -292,35 +292,11 @@ Szybki rozwój technologii oraz ciągły postęp w~dziedzinie przetwarzania sygn
 			
 			
 			
-		\subsection{Charakterystyka skuteczności}
+		\subsection{Charakterystyka skuteczności i~skuteczność}
 			
 			Do pomiarów wykorzystano analizator SVAN~912E; głośnik pobudzano szumem różowym z~generatora o~wartości skutecznej \SI{1}{\watt}. Analizę prowadzono w~odległości \SI{2}{\metre} w~pasmach $1/3$-oktawowych w~zakresie \range{50}{5000}~\si{\hertz}.
-			
-% 			\begin{table}[!ht]
-% 				\centering
-% 				\caption{Porównanie parametrów Thiele-Smalla: odczytanych z~karty katalogowej oraz zmierzonych metodą dodanej masy ($m=$~\SI{10}{\gram}) dla różnych etapów pracy głośnika}
-% 				\label{t:TS_karta_etapy}
-% 				\boldmath
-% 				\begin{tabular}{|c|c|c|c|c|}
-% 					\hline
-% 					\textbf{Parametr} & \makecell{\textbf{Karta katalogowa}\\ \textbf{($R=$~\SI{8}{\ohm})}} & \textbf{Fabryczny} & \textbf{Etap 1} & \textbf{Etap 2} \\\hline
-% 					\hline
-% 					$F_s$ [\si{\hertz}] & \num{47,0}  & \num{71,5} & \num{57,0} & \num{50,7}  \\\hline
-% 					$Z_{max}$ [\si{\ohm}] & --- & \num{54,2} & \num{55,7} & \num{64,0}  \\\hline
-% 					$R_e$ [\si{\ohm}] & \num{6,1}  & \num{10,4} & \num{10,0} & \num{10,2}  \\\hline
-% 					$r_0$ & ---  & \num{5,2} & \num{5,6} & \num{6,4} \\\hline
-% 					$S$ [\%] & ---  & \num{3,44}  & \num{3,35} & \num{0,55} \\\hline
-% 					\hline
-% 					$Q_{ms}$ & \num{3,9}  & \num{3,3} & \num{2,7} & \num{2,8} \\\hline
-% 					$Q_{es}$ & \num{0,4}  & \num{0,8} & \num{0,6} & \num{0,5} \\\hline
-% 					$Q_{ts}$ & \num{0,3}  & \num{0,6} & \num{0,5} & \num{0,4} \\\hline
-			
-		\subsection{Skuteczność}
-		
-			W celu weryfikacji skuteczności podawanej przez producenta wykonano pomiar poziomu dźwięku $L_{eq}$ w odległości \SI{2}{\metre}. 
-			
-		
-			\comment{ewentualnie w całość char + jednoliczbowa}
+
+			W celu weryfikacji skuteczności podawanej przez producenta wykonano też pomiar poziomu dźwięku $L_{eq}$ przy użyciu tego samego analizatora. 
 			
 		\subsection{Charakterystyki kierunkowości}
 			
@@ -352,6 +328,7 @@ Szybki rozwój technologii oraz ciągły postęp w~dziedzinie przetwarzania sygn
 	%Z~przyczyn technicznych parametry T-S dla tego pomiaru zostały obliczone na podstawie dostępnych materiałów (\cite{dobrucki},), a~nie wyznaczone przy pomocy systemu Pulse.
 		Parametry Thiele-Smalla zostały wyznaczone z~zarejestrowanych krzywych impedancji przy pomocy skryptu w~środowisku Matlab na podstawie~\cite{dobrucki}. Następnie działanie skryptu zostało zweryfikowane w~oparciu o~parametry wyznaczone w~narzędziu Pulse. 
 		
+		W~wynikach wszystkich pomiarów wykonanych w~odgrodzie widoczny jest wpływ odgrody, prawdopodobnie związany z~rezonansem płyty, który występuje ze względu na jej skończone wymiary.
 		
 		Na rysunku \ref{r:metody} przedstawione zostały przebiegi impedancji w~funkcji częstotliwości zmierzone dla obu metod. Widoczne jest przesunięcie częstotliwości rezonansowej w~dół po dodaniu masy i~w~górę po dodaniu objętości, natomiast w~tabeli~\ref{t:TS_metody} przedstawiono parametry Thiele-Smalla uzyskane obiema metodami (kolumna 4~i~5). Przyjmują one podobne wartości dla obu metod, nie widać też znaczących różnic w~symetrii $S$ -- dla obu pomiarów parametr ten jest wystarczająco niski.
 		
@@ -399,7 +376,7 @@ Szybki rozwój technologii oraz ciągły postęp w~dziedzinie przetwarzania sygn
 			\unboldmath
 		\end{table}
 		
-		Ze względu na rozbieżności między parametrami katalogowymi oraz różnych egzemplarzy tego samego modelu głośnika~\cite{aes_roznice} wykonano pomiary pozwalające na porównanie obu wykorzystywanych egzemplarzy oraz sprawdzenie, jak zmieniają się parametry głośnika podczas jego eksploatacji. Pomiary wykonano na fabrycznie nowym przetworniku oraz na tym samym egzemplarzu poddanym procesowi zużycia poprzez dostarczenie w dwóch etapach sygnału szumu różowego o~mocy \SI{60}{\watt} przez czas \SI{10}{\min}. Krzywe impedancji głośników w~odgrodzie po każdym etapie przedstawiono na rysunku~\ref{r:wygrzewanie}, a~parametry Thiele-Smalla w~tabeli~\ref{t:TS_karta_etapy}. Z~kolei porównanie obu głośników na etapie~1 przedstawiono na rysunku~\ref{r:2glosniki}.
+		Ze względu na rozbieżności między parametrami katalogowymi oraz różnych egzemplarzy tego samego modelu głośnika~\cite{aes_roznice} wykonano pomiary pozwalające na porównanie obu wykorzystywanych egzemplarzy oraz sprawdzenie, jak zmieniają się parametry głośnika podczas jego eksploatacji. Pomiary wykonano na fabrycznie nowym przetworniku oraz na tym samym egzemplarzu poddanym procesowi zużycia poprzez dostarczenie w dwóch etapach sygnału szumu różowego o~mocy \SI{60}{\watt} przez czas \SI{10}{\min}. Krzywe impedancji głośników w~odgrodzie po każdym etapie przedstawiono na rysunku~\ref{r:wygrzewanie}, a~parametry Thiele-Smalla w~tabeli~\ref{t:TS_karta_etapy}. Natomiast porównanie obu głośników na etapie~1 przedstawiono na rysunku~\ref{r:2glosniki}.
 		
 		\begin{figure}[H]
 			\centering
@@ -472,21 +449,23 @@ Szybki rozwój technologii oraz ciągły postęp w~dziedzinie przetwarzania sygn
 			\label{r:winisd}
 		\end{figure}
 		
+		
 	\subsection{Skuteczność}
 		
 		
 		
-		\begin{table}
+		\begin{table}[H]
 			\centering
 			\caption{Parametry pomiaru skuteczności}
 			\label{t:skutecznosc}
-			\begin{tabular}{|c|c|}
+			\begin{tabular}{|c|c|c|}
 				\hline
-				\makecell{Wartość skuteczna prądu\\$I_{RMS}$} & \SI{264,2}{\milli\ampere} \\\hline
-				\makecell{Wartość skuteczna napięcia\\$U_{RMS}$} & \SI{3,94}{\volt} \\\hline
-				\makecell{Moc elektryczna\\$P$} & \SI{1,04}{\watt} \\\hline
-				\makecell{Poziom ciśnienia akustycznego\\w odległości \SI{2}{\metre} $L_{p,2m}$} & \SI{88,8}{\decibel} \\\hline
-				\makecell{Poziom skuteczności\\$L_{s}$} & \SI{94,8}{\decibel} \\\hline
+				\textbf{Parametr} & \textbf{Oznaczenie} & \textbf{Wartość} \\\hline
+				Wartość skuteczna prądu & $I_{RMS}$ & \SI{264,2}{\milli\ampere} \\\hline
+				Wartość skuteczna napięcia & $U_{RMS}$ & \SI{3,94}{\volt} \\\hline
+				Moc elektryczna & $P$ & \SI{1,04}{\watt} \\\hline
+				\makecell{Poziom ciśnienia akustycznego\\w odległości \SI{2}{\metre}} & $L_{p,2m}$ & \SI{88,8}{\decibel} \\\hline
+				Poziom skuteczności & $L_{s}$ & \SI{94,8}{\decibel} \\\hline
 			\end{tabular}
 
 		\end{table}
