@@ -175,11 +175,19 @@ backend=biber
 
 \section{Wstęp}
 
-Szybki rozwój technologii oraz ciągły postęp w~dziedzinie przetwarzania sygnałów stwarza przed konstruktorami zestawów głośnikowych nowe wyzwania związane z ciągła poprawą jakości przetwarzania dźwięku ale daje również nowe możliwości w~zakresie prototypownia. Nowe technologi pozwalają nie tylko tworzyć coraz bardziej złożone modele komputerowe, dają możliwość tworzenia układów o~złożonych i~wymagających precyzji wykonania elementów konstrukcyjnych w technologii druku 3D czy obróbki CNC. Pojawiają się również nowe materiały o~parametrach, znacznie doskonalszych pod względem budowy przetworników elektroakustycznych. Główne pożądanymi cechami jest niska masa (gęstość) materiału przy jednoczesnym zachowaniu dużej sztywności. Dodatkowo układy zawieszenia wymagają zachowania liniowości funkcji sprężystości celem redukcji zniekształceń przetwarzania. Z pomocą przychodzą tutaj również optymalizacje kształtu elementów za mocą algorytmów optymalizacyjnych oraz możliwości analizy naprężeń ~metodami numerycznymi~\cite{naprezenia}. Obecnie bardzo dobrze poznane są modele akusto-mechano-elektryczne głośników i~obudów, pozwalają na osiągnięcie dobrych wyników dla konstrukcji typowych. Takich które da się w~porosty sposób przedstawić za pomocą parametrów skupionych jak masa, podatność, tarcie. Jednak opis układów mechano-akustycznych o~nietrywialnych kształtach i~połączeniach jest trudny, a często nawet niemożliwy z~praktycznego punktu widzenia. Niniejsza praca ma na celu przybliżenie czytelnikowi problemów, wyników, a także sposobów rozwiązania niektórych zagadnień, które autorzy napotkali na etapie analizy konstrukcji i~modelowania rzeczywistego zestawu głośnikowego. \comment{Co w ogóle robimy, po co (może coś w~stylu, że chcieliśmy bardziej projektować, a~wyszło, że bardziej mierzyliśmy), plus trochę teorii (w~zależności, ile miejsca zajmie nam reszta...)}
-	
+Szybki rozwój technologii oraz ciągły postęp w~dziedzinie przetwarzania sygnałów stawia przed konstruktorami zestawów głośnikowych nowe wyzwania związane z~ciągłą poprawą jakości przetwarzania dźwięku; daje również nowe możliwości w~zakresie prototypowania. 
+
+Nowe technologie nie tylko pozwalają tworzyć coraz bardziej złożone modele komputerowe, ale także dają możliwość tworzenia układów o~złożonych i~wymagających precyzji wykonania elementach konstrukcyjnych tworzonych w~technologii druku 3D czy obróbki CNC. Pojawiają się również nowe materiały o~parametrach znacznie doskonalszych pod kątem budowy przetworników elektroakustycznych. Najbardziej pożądaną cechą jest niska masa (gęstość) materiału przy jednoczesnym zachowaniu dużej sztywności. Dodatkowo, układy zawieszenia wymagają zachowania liniowości funkcji sprężystości celem redukcji zniekształceń przetwarzania. Z pomocą przychodzi tutaj \comment{czyli gdzie? przy projektowaniu ogólnie?} również optymalizacja kształtu elementów za pomocą algorytmów optymalizacyjnych oraz możliwość analizy naprężeń metodami numerycznymi~\cite{naprezenia}. 
+
+Obecnie bardzo dobrze poznane są modele akusto-mechano-elektryczne głośników i~obudów, które pozwalają na osiągnięcie dobrych wyników dla konstrukcji typowych -- takich które da się w~prosty sposób przedstawić za pomocą parametrów skupionych, jak masa, podatność, \comment{współczynnik} tarcie. Jednak opis układów mechano-akustycznych o~nietrywialnych kształtach i~połączeniach jest trudny, a~często nawet niemożliwy z~praktycznego punktu widzenia.
+
 	\subsection{Cel pracy}
-	
-		Autorzy postawili sobie za cel określenie, jakie z~zastosowanych modyfikacji obudowy zestawu głośnikowego wywierają wpływ na jego mierzone parametry oraz wybór najbardziej optymalnej konfiguracji, a~także wyznaczenie optymalnego punktu podziału pasma częstotliwości między głośniki.  Prace mają na celu udoskonalenie konstrukcji obudowy zestawu głośnikowego, będącego elementem systemu Line Array do wymagań jakie stawiają przed nią dobrane przetworniki. \comment{Zweryfikować, czy jest spełniony! Ew. włączyć do wstępu jako 1 części, bez podziału na podsekcje !!!!!}
+
+		Niniejsza praca ma na celu przybliżenie czytelnikowi problemów, wyników, a~także sposobów rozwiązania niektórych z~zagadnień napotkanych przez autorów na etapie analizy konstrukcji i~modelowania rzeczywistego zestawu głośnikowego.
+		
+		Autorzy postawili sobie za cel określenie, jakie z~zastosowanych modyfikacji obudowy zestawu głośnikowego wywierają wpływ na jego mierzone parametry oraz wybór najbardziej optymalnej konfiguracji, a~także wyznaczenie optymalnego punktu podziału pasma częstotliwości między głośniki.
+		
+		Prace mają na celu udoskonalenie konstrukcji obudowy zestawu głośnikowego będącego elementem systemu liniowego (ang.~\textit{line array system}) do wymagań, jakie stawiają przed nią dobrane przetworniki. \comment{Zweryfikować, czy jest spełniony!}
 		
 %	\subsection{Wprowadzenie teoretyczne}
 %\comment{O zależnościach (?) z inżynierki}
@@ -188,12 +196,12 @@ Szybki rozwój technologii oraz ciągły postęp w~dziedzinie przetwarzania sygn
 
 	\subsection{Opis konstrukcji}\label{ss:opis}
 	
-		Zestaw, którego parametry zdecydowano się zbadać, i~który poddano modyfikacjom, jest docelowo elementem systemu liniowego. Składa się z~falowodu z~wysokotonowym głośnikiem ciśnieniowym B\&C~DE800 umieszczonego centralnie oraz dwóch głośników nisko-średniotonowych Beyma~10WR300 umieszczonych po bokach i~nachylonych pod kątem \SI{67}{\degree} do osi głównej zastawu. 
+		Zestaw, którego parametry zdecydowano się zbadać, i~który poddano modyfikacjom, jest docelowo elementem systemu liniowego. Składa się z~falowodu z~wysokotonowym głośnikiem ciśnieniowym B\&C~DE800 umieszczonego centralnie oraz dwóch 16--\comment{omowych} głośników nisko-średniotonowych Beyma~10WR300 umieszczonych po bokach i~nachylonych pod kątem \SI{67}{\degree} do osi głównej zastawu.
 		
-		Obudowa ma kształt typowy dla systemu liniowego -- przekrój boczny jest w~kształcie trapezu równoramiennego; konstrukcja wzorowana jest na rozwiązaniu stosowanym w~systemie liniowym uznanej firmy. Materiał korpusu to sklejka bałtycka o~grubości \SI{15}{\milli\metre}, dodatkowo z~przodu zamontowana jest maskownica ze stali o~grubości \SI{2}{\milli\metre}. Objętość wnętrza obudowy po odjęciu objętości głośników i~falowodu wynosi \SI{28,17}{\litre}.
+		Kształt obudowy jest typowy dla systemu liniowego -- przekrój boczny ma kształt trapezu równoramiennego; konstrukcja wzorowana jest na rozwiązaniu stosowanym w~systemie liniowym uznanej firmy. Materiał korpusu to sklejka bałtycka o~grubości \SI{15}{\milli\metre}, dodatkowo z~przodu zamontowana jest maskownica ze stali o~grubości \SI{2}{\milli\metre}. Objętość wnętrza obudowy po odjęciu objętości głośników i~falowodu wynosi \SI{28,17}{\litre}.
 		
 		Obudowa jest obudową wentylowaną, wyposażoną w~4~otwory o~kształcie ćwierćkolistym i~promieniu \SI{70}{\milli\metre}. Otwory te mają swe ujście do przestrzeni przed głośnikiem, tak jak przestawiono na rysunku~\ref{r:przekroj}. %Wnętrze obudowy jest połączone z~przestrzenią zewnętrzną półkolistymi otworami o~promieniu \SI{70}{\milli\metre} przy tylnej ściance.
-		Taki układ głośników i~otworów ma wpływ na charakterystyki kierunkowości głośnika w~płaszczyźnie horyzontalnej~\cite{kmiecik_inz}. \comment{W części teoretycznej wzorek na chke kierunkowości w zależności od odległości źródeł i omówić temat!!!}
+		Taki układ głośników i~otworów ma wpływ na charakterystyki kierunkowości głośnika w~płaszczyźnie horyzontalnej~\cite{kmiecik_inz}. %\comment{W części teoretycznej wzorek na chke kierunkowości w zależności od odległości źródeł i omówić temat!!!}
 		
 	%	Przekrój zestawu w~płaszczyźnie poziomej ukazano na rysunku~\ref{r:przekroj}, a~fotografię na rysunku~\ref{r:zdjecie}.
 		
@@ -219,7 +227,7 @@ Szybki rozwój technologii oraz ciągły postęp w~dziedzinie przetwarzania sygn
 		
 		\begin{table}[H]
 			\centering
-			\caption{Opis konfiguracji obudowy i~głośników wykorzystanych podczas pomiarów}
+			\caption{Opis konfiguracji obudowy i~głośników wykorzystanych podczas pomiarów \comment{Zostawiamy tak?!}}
 			\label{t:obudowa}
 			\begin{tabular}{|c|c|m{.6\textwidth}|}
 				\hline
@@ -306,7 +314,7 @@ Szybki rozwój technologii oraz ciągły postęp w~dziedzinie przetwarzania sygn
 		\subsection{Drgania obudowy}
 			
 			Pomiar drgań obudowy miał na celu sprawdzenie, w~jakim stopniu charakterystyka częstotliwościowa zestawu jest związana z~właściwościami obudowy. Badany zestaw głośnikowy umieszczono w~komorze bezechowej; w~wybranych punktach (por.~\ref{r:wibro_pkt}) naklejono taśmę odblaskową, na którą padała wiązka lasera; zastosowanie taśmy było niezbędne dla uzyskania odpowiedniego odbicia światła od badanych powierzchni. %Wibrometr umieszczono w~odpowiedniej odległości, tak aby uniknąć przesterowania sygnału. 
-			Sygnałem pomiarowym był szum różowy, rejestrowano jednocześnie przebieg drgań wibrometrem oraz sygnał akustyczny dwoma mikrofonami: jednym umieszczonym blisko bieżącego punktu pomiarowego (rys.~\ref{r:wibro_zdjecie}), a~drugim w~odległości~\SI{2}{\metre}. Wibrometr umieszczono poza przestrzenią komory celem zapewnienia jego stabilnego usadowienia.
+			Sygnałem pomiarowym był szum różowy, rejestrowano jednocześnie przebieg drgań wibrometrem oraz sygnał akustyczny dwoma mikrofonami: jednym umieszczonym blisko bieżącego punktu pomiarowego (\range{6}{10}~\si{\cm} od punktu pomiaru -- rys.~\ref{r:wibro_zdjecie}), a~drugim w~odległości~\SI{2}{\metre}. Wibrometr umieszczono poza przestrzenią komory celem zapewnienia jego stabilnego usadowienia.
 			
 			\begin{figure}[H]
 				\centering
@@ -318,7 +326,7 @@ Szybki rozwój technologii oraz ciągły postęp w~dziedzinie przetwarzania sygn
 
 \section{Modelowanie}
 
-	\comment{Opis modelu w Comsolu, co modelowaliśmy, metody (?). To pisze Michał...}
+	\comment{Opis modelu w Comsolu, co modelowaliśmy, metody (?).}
 
 \section{Analiza wyników}
 
@@ -377,6 +385,8 @@ Szybki rozwój technologii oraz ciągły postęp w~dziedzinie przetwarzania sygn
 		
 		Ze względu na rozbieżności między parametrami katalogowymi oraz różnych egzemplarzy tego samego modelu głośnika~\cite{aes_roznice} wykonano pomiary pozwalające na porównanie obu wykorzystywanych egzemplarzy oraz sprawdzenie, jak zmieniają się parametry głośnika podczas jego eksploatacji. Pomiary wykonano na fabrycznie nowym przetworniku oraz na tym samym egzemplarzu poddanym procesowi zużycia poprzez dostarczenie w dwóch etapach sygnału szumu różowego o~mocy \SI{60}{\watt} przez czas \SI{10}{\min}. Krzywe impedancji głośników w~odgrodzie po każdym etapie przedstawiono na rysunku~\ref{r:wygrzewanie}, a~parametry Thiele-Smalla w~tabeli~\ref{t:TS_karta_etapy}. Natomiast porównanie obu głośników na etapie~1 przedstawiono na rysunku~\ref{r:2glosniki}.
 		
+		Należy zwrócić uwagę na fakt, że podane parametry z~karty katalogowej dotyczą głośnika o~rezystancji \SI{8}{\ohm}, podczas gdy badane egzemplarze mają rezystancję \SI{16}{\ohm}; autorom nie udało się jednak pozyskać karty katalogowej dla takiej wersji głośnika.
+		
 		\begin{figure}[H]
 			\centering
 			\includegraphics[width=.8\textwidth,trim={2cm .5cm 2cm 1cm},clip]{odgroda_wygrzewanie.pdf}
@@ -393,7 +403,7 @@ Szybki rozwój technologii oraz ciągły postęp w~dziedzinie przetwarzania sygn
 		
 		\begin{table}[H]
 			\centering
-			\caption{Porównanie parametrów Thiele-Smalla: odczytanych z~karty katalogowej oraz zmierzonych metodą dodanej masy ($m=$~\SI{10}{\gram}) dla różnych etapów pracy głośnika}
+			\caption{Porównanie parametrów Thiele-Smalla: odczytanych z~karty katalogowej~\cite{datasheet} oraz zmierzonych metodą dodanej masy ($m=$~\SI{10}{\gram}) dla różnych etapów pracy głośnika}
 			\label{t:TS_karta_etapy}
 			\boldmath
 			\begin{tabular}{|c|c|c|c|c|}
@@ -466,8 +476,9 @@ Szybki rozwój technologii oraz ciągły postęp w~dziedzinie przetwarzania sygn
 				\makecell{Poziom ciśnienia akustycznego\\w odległości \SI{2}{\metre}} & $L_{p,2m}$ & \SI{88,8}{\decibel} \\\hline
 				Poziom skuteczności & $L_{s}$ & \SI{94,8}{\decibel} \\\hline
 			\end{tabular}
-
 		\end{table}
+		
+		Uzyskany poziom skuteczności (\SI{94,8}{\decibel}) jest zbliżony do deklarowanego przez producenta (\SI{95}{\decibel}).
 		
 		\begin{figure}[H]
 			\centering
@@ -476,13 +487,15 @@ Szybki rozwój technologii oraz ciągły postęp w~dziedzinie przetwarzania sygn
 			\label{r:skutecznosc}
 		\end{figure}
 		
+		Na podstawie charakterystyk przedstawionych na rysunku~\ref{r:skutecznosc} można wyznaczyć punkt podziału częstotliwości między głośnik wysoko- i~niskotonowy -- proponowana wartość to \SI{500}{\hertz}.
+		
 	
 	\subsection{Drgania obudowy}
 		
 		%generalnie nie widać zależności
-		Analiza uzyskanych wyników nie dała podstaw do sformułowania zależności między obudową, a~charakterystykami amplitudowymi -- pomiędzy widmami sygnału z~wibrometru i~mikrofonów nie widać wyraźnych zależności. W~niektórych punktach pomiarowych można zauważyć zmiany kształtu charakterystyki dla tej samej częstotliwości, jednak są to raczej jednostkowe przypadki, na podstawie których nie można potwierdzić znaczącego wpływu na charakterystykę częsotliwościwą zestawu.
+		Analiza uzyskanych wyników nie dała podstaw do sformułowania zależności między obudową, a~charakterystykami amplitudowymi -- pomiędzy widmami sygnału z~wibrometru i~mikrofonów nie widać wyraźnych zależności. W~niektórych punktach pomiarowych można zauważyć zmiany kształtu charakterystyki dla tej samej częstotliwości, jednak są to raczej jednostkowe przypadki, na podstawie których nie można potwierdzić znaczącego wpływu na charakterystykę częsotliwościową zestawu.
 		
-		Spośród zarejestrowanych przebiegów wybrano punkty \range{1}{4}, między którymi można dostrzec pewne zależności i~zestawiono je na rysunku~\ref{r:wibrometr_1-4}. W~punktach tych wyraźnie widoczny jest wzrost amplitudy przemieszczeń bocznej płyty obudowy w~paśmie \SI{260}{\hertz}; jednocześnie w~tym samym paśmie zauważalny jest spadek poziomu ciśnienia akustycznego w~bliskim otoczeniu punktu. Mikrofon zlokalizowany \range{6}{10}~\si{\cm} od punktu pomiaru. Wybrane punkty zlokalizowane są na dwóch różnych ściankach obudowy, jak pokazano na rysunku~\ref{r:wibro_pkt}.  \comment{rozwinięcie myśli?}
+		Spośród zarejestrowanych przebiegów wybrano punkty \range{1}{4}, między którymi można dostrzec pewne zależności i~zestawiono je na rysunku~\ref{r:wibrometr_1-4}. W~punktach tych wyraźnie widoczny jest wzrost amplitudy przemieszczeń bocznej płyty obudowy w~paśmie \SI{260}{\hertz}; jednocześnie w~tym samym paśmie zauważalny jest spadek poziomu ciśnienia akustycznego w~bliskim otoczeniu punktu (\range{6}{10}~\si{\cm}). Wybrane punkty zlokalizowane są na dwóch różnych ściankach obudowy, jak pokazano na rysunku~\ref{r:wibro_pkt}.  \comment{rozwinięcie myśli?}
 		
 		\begin{figure}[H]
 			\centering
@@ -498,7 +511,7 @@ Szybki rozwój technologii oraz ciągły postęp w~dziedzinie przetwarzania sygn
 			\label{r:wibro_pkt}
 		\end{figure}
 		
-		Kolejnym punktem, dla którego zdecydowano się zaprezentować wyniki jest punkt~\num{5}, zlokalizowany na powierzchni wnęki uchwytu (na rysunku~\ref{r:wibro_pkt} po prawej stronie). Na widmie przemieszczeń (rys.~\ref{r:wibrometr_5}) widoczne jest lokalne maksimum amplitudy dla częstotliwości~\SI{400}{\hertz}, co jednak nie znajduje odzwierciedlenia w~widmie poziomu ciśnienia akustycznego -- mimo że podbicie tej częstotliwości jest widoczne w~charakterystykach skuteczności (por. rysunek~\ref{r:skutecznosc}).%Drgania obudowy mogą mieć wpływ na pole akustyczne wokół zestawu.
+		Kolejnym punktem, dla którego zdecydowano się zaprezentować wyniki jest punkt~\num{5}, zlokalizowany na powierzchni wnęki uchwytu (na rysunku~\ref{r:wibro_pkt} po prawej stronie). Na widmie przemieszczeń (rys.~\ref{r:wibrometr_5}) widoczne jest lokalne maksimum amplitudy dla częstotliwości~\SI{400}{\hertz}, co jednak nie znajduje odzwierciedlenia w~widmie poziomu ciśnienia akustycznego -- mimo że podbicie tej częstotliwości jest widoczne w~charakterystykach skuteczności (por. rys.~\ref{r:skutecznosc}).%Drgania obudowy mogą mieć wpływ na pole akustyczne wokół zestawu.
 		
 		\begin{figure}[H]
 		\centering
