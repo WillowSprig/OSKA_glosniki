@@ -124,7 +124,7 @@ backend=biber
 
 \titlePL{Wybrane aspekty modyfikacji obudowy zestawu głośnikowego}
 \titleEN{Selected Aspects of Loudspeaker Cabinet Modifications}
-\affiliation{Akademia Górniczo-Hutnicza im. S. Staszica w Krakowie}
+\affiliation{Akademia Górniczo-!htutnicza im. S. Staszica w Krakowie}
 
 %------------------------------------AUTORZY-----------------------
 
@@ -167,19 +167,32 @@ backend=biber
 \usepackage{adjustbox}
 \graphicspath{{./}{obrazki/}}
 
-\usepackage{float}
+%---------------------------------------------------------------------------
 
+%---------------------------------------------------------------------------
+%---------------------------------------------------------------------------
+
+%---------------------------------------------------------------------------
+
+%---------------------------------------------------------------------------
+%---------------------------------------------------------------------------
+
+%---------------------------------------------------------------------------
+%---------------------------------------------------------------------------
+
+%---------------------------------------------------------------------------
+%---------------------------------------------------------------------------
 \begin{document}
 
 \maketitles
 
 \section{Wstęp}
 
-Szybki rozwój technologii oraz ciągły postęp w~dziedzinie przetwarzania sygnałów stawia przed konstruktorami zestawów głośnikowych nowe wyzwania związane z~ciągłą poprawą jakości przetwarzania dźwięku; daje również nowe możliwości w~zakresie prototypowania. 
+	Szybki rozwój technologii oraz ciągły postęp w~dziedzinie przetwarzania sygnałów stawia przed konstruktorami zestawów głośnikowych nowe wyzwania związane z~ciągłą poprawą jakości przetwarzania dźwięku; daje również nowe możliwości w~zakresie prototypowania. 
 
-Nowe technologie nie tylko pozwalają tworzyć coraz bardziej złożone modele komputerowe, ale także dają możliwość tworzenia układów o~złożonych i~wymagających precyzji wykonania elementach konstrukcyjnych tworzonych w~technologii druku 3D czy obróbki CNC. Pojawiają się również nowe materiały o~parametrach znacznie doskonalszych pod kątem budowy przetworników elektroakustycznych. Najbardziej pożądaną cechą jest niska masa (gęstość) materiału przy jednoczesnym zachowaniu dużej sztywności. Dodatkowo, układy zawieszenia wymagają zachowania liniowości funkcji sprężystości celem redukcji zniekształceń przetwarzania. Z pomocą przychodzi również optymalizacja kształtu elementów za pomocą algorytmów optymalizacyjnych oraz możliwość analizy naprężeń metodami numerycznymi~\cite{naprezenia}.
+	Nowe technologie nie tylko pozwalają tworzyć coraz bardziej złożone modele komputerowe, ale także dają możliwość tworzenia układów o~złożonych i~wymagających precyzji wykonania elementach konstrukcyjnych tworzonych w~technologii druku 3D czy obróbki~CNC. Pojawiają się również nowe materiały o~parametrach znacznie doskonalszych pod kątem budowy przetworników elektroakustycznych. Najbardziej pożądaną cechą jest niska masa (gęstość) materiału przy jednoczesnym zachowaniu dużej sztywności. Dodatkowo, układy zawieszenia wymagają zachowania liniowości funkcji sprężystości celem redukcji zniekształceń przetwarzania. Z~pomocą przychodzi również optymalizacja kształtu elementów za pomocą algorytmów optymalizacyjnych oraz możliwość analizy naprężeń metodami numerycznymi~\cite{naprezenia}.
 
- Obecnie bardzo dobrze poznane są modele akusto-mechano-elektryczne głośników i~obudów, które pozwalają na osiągnięcie dobrych wyników dla konstrukcji typowych -- takich które da się w~prosty sposób przedstawić za pomocą parametrów skupionych, jak masa, podatność, współczynnik tarcia. Jednak opis układów mechano-akustycznych o~nietrywialnych kształtach i~połączeniach jest trudny, a~często nawet niemożliwy z~praktycznego punktu widzenia.
+	Obecnie bardzo dobrze poznane są modele akusto-mechano-elektryczne głośników i~obudów, które pozwalają na osiągnięcie dobrych wyników dla konstrukcji typowych -- takich które da się w~prosty sposób przedstawić za pomocą parametrów skupionych, jak masa, podatność, współczynnik tarcia. Jednak opis układów mechano-akustycznych o~nietrywialnych kształtach i~połączeniach jest trudny, a~często nawet niemożliwy z~praktycznego punktu widzenia.
 
 	\subsection{Cel pracy}
 
@@ -205,14 +218,14 @@ Nowe technologie nie tylko pozwalają tworzyć coraz bardziej złożone modele k
 		
 	%	Przekrój zestawu w~płaszczyźnie poziomej ukazano na rysunku~\ref{r:przekroj}, a~fotografię na rysunku~\ref{r:zdjecie}.
 		
-		\begin{figure}[H]
+		\begin{figure}[!ht]
 		\centering
 		\includegraphics[width=.8\textwidth]{zdjecie.jpg}
 		\caption{Fotografia badanego zestawu głośnikowego}
 		\label{r:zdjecie}
 		\end{figure}
 		
-		\begin{figure}[H]
+		\begin{figure}[!ht]
 			\centering
 			\adjincludegraphics[width=\textwidth,trim={{.1\width} {.25\height} {.17\width} {.12\height}},clip]{render_z_otworami_bez_tekstury.pdf}
 			\caption{Przekrój modelu badanego zestawu głośnikowego w~płaszczyźnie poziomej}
@@ -227,17 +240,16 @@ Nowe technologie nie tylko pozwalają tworzyć coraz bardziej złożone modele k
 		
 		\begin{table}[!ht]
 			\centering
-			\caption{Opis konfiguracji obudowy i~głośników wykorzystanych podczas pomiarów \comment{Zostawiamy tak?!}}
+			\caption{Opis konfiguracji obudowy i~głośników wykorzystanych podczas pomiarów}
 			\label{t:obudowa}
 			\begin{tabular}{|c|c|m{.6\textwidth}|}
 				\hline
 				\textbf{L.p.} & \makecell{\textbf{Oznaczenie}\\\textbf{(na wykresach)}} & \centering\textbf{Opis} \tabularnewline\hline
 				1. & Podstawowa & Obudowa w~podstawowej wersji (opisanej w~części~\ref{ss:opis}), z~otworami, bez wypełnienia \\\hline
-				2. & Wypełniona & Wnętrze obudowy wypełnione materiałem dźwiękochłonnym z~włókien poliestrowych umieszczonym na ściankach \\\hline
-				3. & Zaślepiona & Ćwierćkoliste otwory zaślepione elementami ze sklejki o~grubości \SI{6,4}{\milli\metre}, przyklejonymi do ścianki, w~której zamocowany jest głośnik niskotonowy\\\hline
+				2. & Zaślepiona & Ćwierćkoliste otwory zaślepione elementami ze sklejki o~grubości \SI{6,4}{\milli\metre}, przyklejonymi do ścianki, w~której zamocowany jest głośnik niskotonowy\\\hline
 				\hline
-				4. & Jeden głośnik & Jeden głośnik niskotonowy zamocowany w~obudowie, otwór na drugi zaślepiony kołem ze sklejki; zamocowany głośnik wysokotonowy \\\hline
-				5. & Dwa głośniki & Obydwa głośniki niskotonowe oraz głośnik wysokotonowy zamocowane w~obudowie\\\hline
+				3. & Jeden głośnik & Jeden głośnik niskotonowy zamocowany w~obudowie, otwór na drugi zaślepiony kołem ze sklejki; zamocowany głośnik wysokotonowy \\\hline
+				4. & Dwa głośniki & Obydwa głośniki niskotonowe oraz głośnik wysokotonowy zamocowane w~obudowie\\\hline
 			\end{tabular}
 		\end{table}
 
@@ -294,14 +306,13 @@ Nowe technologie nie tylko pozwalają tworzyć coraz bardziej złożone modele k
 			
 			Pomiar wykonano z~użyciem sygnału sinusoidalnego z~krokiem $1/48$~oktawy w~zakresie \range{20}{8000}~\si{\hertz}.
 			
-% 			Zmierzono impedancję głośnika niskotonowego w~odgrodzie, jednego głośnika w~obudowie oraz obu głośników w~obudowie.
 			Zmierzono impedancję głośnika niskotonowego w~odgrodzie oraz głośników w~obudowie z~zastosowanymi różnymi modyfikacjami. 
 			
 			
 			
 		\subsection{Charakterystyka skuteczności i~skuteczność}
 			
-			Do pomiarów wykorzystano analizator SVAN~912E; głośnik pobudzano szumem różowym z~generatora o~wartości skutecznej \SI{1}{\watt}. Analizę prowadzono w~odległości \SI{2}{\metre} w~pasmach $1/3$-oktawowych w~zakresie \range{50}{5000}~\si{\hertz}.
+			Do pomiarów wykorzystano analizator SVAN 912E; głośnik pobudzano szumem różowym z~generatora o~wartości skutecznej \SI{1}{\watt}. Analizę prowadzono w~odległości \SI{2}{\metre} w~pasmach $1/3$-oktawowych w~zakresie \range{50}{5000}~\si{\hertz}.
 
 			W celu weryfikacji skuteczności podawanej przez producenta wykonano też pomiar poziomu dźwięku $L_{eq}$ przy użyciu tego samego analizatora. 
 			
@@ -313,10 +324,10 @@ Nowe technologie nie tylko pozwalają tworzyć coraz bardziej złożone modele k
 			
 		\subsection{Drgania obudowy}
 			
-			Pomiar drgań obudowy miał na celu sprawdzenie, w~jakim stopniu charakterystyka częstotliwościowa zestawu jest związana z~właściwościami obudowy. Badany zestaw głośnikowy umieszczono w~komorze bezechowej; w~wybranych punktach (por.~\ref{r:wibro_pkt}) naklejono taśmę odblaskową, na którą padała wiązka lasera; zastosowanie taśmy było niezbędne dla uzyskania odpowiedniego odbicia światła od badanych powierzchni. %Wibrometr umieszczono w~odpowiedniej odległości, tak aby uniknąć przesterowania sygnału. 
+			Pomiar drgań obudowy miał na celu sprawdzenie, w~jakim stopniu charakterystyka częstotliwościowa zestawu jest związana z~właściwościami obudowy. Badany zestaw głośnikowy umieszczono w~komorze bezechowej; w~wybranych punktach (por. rys.~\ref{r:wibro_pkt}) naklejono taśmę odblaskową, na którą padała wiązka lasera; zastosowanie taśmy było niezbędne dla uzyskania odpowiedniego odbicia światła od badanych powierzchni. %Wibrometr umieszczono w~odpowiedniej odległości, tak aby uniknąć przesterowania sygnału. 
 			Sygnałem pomiarowym był szum różowy, rejestrowano jednocześnie przebieg drgań wibrometrem oraz sygnał akustyczny dwoma mikrofonami: jednym umieszczonym blisko bieżącego punktu pomiarowego (\range{6}{10}~\si{\cm} od punktu pomiaru -- rys.~\ref{r:wibro_zdjecie}), a~drugim w~odległości~\SI{2}{\metre}. Wibrometr umieszczono poza przestrzenią komory celem zapewnienia jego stabilnego usadowienia.
 			
-			\begin{figure}[H]
+			\begin{figure}[!ht]
 				\centering
 				\includegraphics[width=.8\textwidth]{zdjecie_wibro.jpg}
 				\caption{Fotografia wykonana podczas przygotowań do pomiaru z~użyciem wibrometru}
@@ -332,7 +343,14 @@ Nowe technologie nie tylko pozwalają tworzyć coraz bardziej złożone modele k
 		
 		Jednak tworzenie skomplikowanych modeli wykorzystujących sprzężenie pomiędzy domeną mechaniczną opisującą zachowanie membrany i~zawieszenia głośnika, a~domeną akustyczną opisującą propagację dźwięku w~powietrzu, wymaga poznania właściwości materiałów, z których zbudowane są wszystkie elementy. Parametry materiałowe, takie jak moduł Younga, współczynnik Poissona \comment{co jeszcze}, ciężko jest zmierzyć dla każdego elementu modelu, a~jednocześnie odpowiadają za jego właściwości mechaniczne, a~co za tym idzie -- pośrednio -- akustyczne. W~praktyce zazwyczaj wykorzystuje się jako bazę właściwości materiałów dostępne w~literaturze~\cite{modelowanie}, a~następnie przeprowadza strojenie modelu -- dla znanego przypadku wykonuje się symulacje, zmieniając parametry tak, aby wyniki otrzymane w~modelu komputerowym były jak najbardziej zbliżone do wyników pomiaru.
 		
-		Dodatkowo problematyczne staje się stworzenie geometrii, dla której możliwe byłoby wygenerowanie siatki elementów, przy jednoczesnym odwzorowaniu kształtu w~sposób zapewniający rzeczywiste zachowanie elementów modelu. Na taki problem natknęli się autorzy przy tworzeniu kształtu zawieszenia.
+		Dodatkowo problematyczne staje się stworzenie geometrii, dla której możliwe byłoby wygenerowanie siatki elementów, przy jednoczesnym odwzorowaniu kształtu w~sposób zapewniający rzeczywiste zachowanie elementów modelu. Na taki problem natknęli się autorzy przy tworzeniu kształtu zawieszenia, co można zaobserwować na rysunku~\ref{r:zawieszenie}, przedstawiającym przemieszczenia w~symulacji dla częstotliwości \SI{50}{\hertz}.
+		
+		\begin{figure}[!ht]
+		\centering
+		\includegraphics[width=.8\textwidth]{disp_factor5_f50_02.png}
+		\caption{Przemieszczenia górnego zawieszenia w~symulacji dla częstotliwości \SI{50}{\hertz}}
+		\label{r:zawieszenie}
+		\end{figure}
 		
 	\subsection{Wykonany model}
 	
@@ -350,7 +368,7 @@ Nowe technologie nie tylko pozwalają tworzyć coraz bardziej złożone modele k
 		
 		Na rysunku \ref{r:metody} przedstawione zostały przebiegi impedancji w~funkcji częstotliwości zmierzone dla obu metod. Widoczne jest przesunięcie częstotliwości rezonansowej w~dół po dodaniu masy i~w~górę po dodaniu objętości, natomiast w~tabeli~\ref{t:TS_metody} przedstawiono parametry Thiele-Smalla uzyskane obiema metodami (kolumna 4~i~5). Przyjmują one podobne wartości dla obu metod, nie widać też znaczących różnic w~symetrii $S$ -- dla obu pomiarów parametr ten jest wystarczająco niski.
 		
-		\begin{figure}[H]
+		\begin{figure}[!ht]
 			\centering
 			\includegraphics[width=.8\textwidth,trim={2cm .5cm 2cm 1cm},clip]{metody_2glosnik.pdf}
 			\caption{Charakterystyki impedancji głośnika w~odgrodzie oraz głośnika przy pomiarze każdą z~metod (dodanej masy i~dodanej objętości)}
@@ -398,23 +416,21 @@ Nowe technologie nie tylko pozwalają tworzyć coraz bardziej złożone modele k
 		
 		Należy zwrócić uwagę na fakt, że podane parametry z~karty katalogowej dotyczą głośnika o~rezystancji \SI{8}{\ohm}, podczas gdy badane egzemplarze mają rezystancję \SI{16}{\ohm}; autorom nie udało się jednak pozyskać karty katalogowej dla takiej wersji głośnika.
 		
-		\begin{figure}[H]
+		\begin{figure}[!ht]
 			\centering
 			\includegraphics[width=.8\textwidth,trim={2cm .5cm 2cm 1cm},clip]{odgroda_wygrzewanie.pdf}
 			\caption{Charakterystyki impedancji głośnika na różnych etapach zużycia}
 			\label{r:wygrzewanie}
 		\end{figure}
 		
-		Wyraźnie widoczny jest spadek częstotliwości rezonansowej głośnika wraz z~jego zużyciem, maleje również sprawność referencyjna $\eta_0$ oraz symetria $S$, pomiar jest więc bardziej miarodajny; rośnie natomiast indeks siły $Bl$.
+		Wyraźnie widoczny jest spadek częstotliwości rezonansowej głośnika wraz z~jego zużyciem, maleje również sprawność referencyjna $\eta_0$ oraz symetria $S$, pomiar jest więc bardziej miarodajny; rośnie natomiast indeks siły $Bl$. Porównanie obu głośników na tym samym etapie nie ukazuje wyraźnych różnic pomiędzy nimi.
 		
-		\begin{figure}[H]
+		\begin{figure}[!ht]
 			\centering
 			\includegraphics[width=.8\textwidth,trim={2cm .5cm 2cm 1cm},clip]{porownanie_glosnikow.pdf}
 			\caption{Charakterystyki impedancji obu badanych głośników w~odgrodzie}
 			\label{r:2glosniki}
 		\end{figure}
-		
-		Porównanie obu głośników na tym samym etapie nie ukazuje wyraźnych różnic pomiędzy nimi.
 		
 		\begin{table}[!ht]
 			\centering
@@ -452,26 +468,32 @@ Nowe technologie nie tylko pozwalają tworzyć coraz bardziej złożone modele k
 			\unboldmath
 		\end{table}
 		
-		W~celu sprawdzenia wpływu modyfikacji obudowy na charakterystyki impedancji wykonano pomiar dla obudowy w~wariancie „podstawowym” (opisanym w~części~\ref{ss:opis}) oraz z~zaślepionymi otworami (por. tabela~\ref{t:obudowa}). Wyniki przedstawiono na rysunku~\ref{r:obudowa_otwory}; dodatkowo, dla porównania zasymulowano obie obudowy w~programie WinISD -- krzywe otrzymane z~tego programu znajdują się na rysunku~\ref{r:winisd}.
+		W~celu sprawdzenia wpływu modyfikacji obudowy na charakterystyki impedancji wykonano pomiar dla obudowy w~wariancie „podstawowym” (opisanym w~części~\ref{ss:opis}) oraz z~zaślepionymi otworami (por. tab.~\ref{t:obudowa}). Wyniki przedstawiono na rysunku~\ref{r:obudowa_otwory}. 
 		
-		\begin{figure}[H]
+		Dodatkowo, dla porównania zasymulowano obie obudowy w~programie WinISD, przy czym zaślepienie otworów zostało zamodelowane jako obudowa zamknięta. Otrzymane charakterystyki znajdują się na rysunku~\ref{r:winisd}.
+		
+		\begin{figure}[!ht]
 			\centering
 			\includegraphics[width=.8\textwidth,trim={2cm .5cm 2cm 1cm},clip]{obudowa_otwory.pdf}
-			\caption{Charakterystyki impedancji dwóch głośników w~obudowie z~otworami i~zaślepionej}
+			\caption{Charakterystyki impedancji głośników w~obudowie z~otworami i~zaślepionej}
 			\label{r:obudowa_otwory}
 		\end{figure}
 		
-		\begin{figure}[H]
+		\begin{figure}[!ht]
 			\centering
-			\includegraphics[width=.8\textwidth]{obrazki/winisd_screen.png}\\
+			\includegraphics[width=.73\textwidth]{obrazki/winisd_screen2.png}\\
 				\setlength{\unitlength}{1mm}
 			\begin{picture}(0,0)
-				\put(-6,4){\texttt{$f$ [Hz]}}
-				\put(-70,40){\rotatebox{90}{$Z_e [\Omega]$}}
+				\put(-6,4){\texttt{f [!htz]}}
+				\put(-65,35){\rotatebox{90}{\texttt{Z$_e [\Omega]$}}}
 			\end{picture}
-			\caption{Wyniki symulacji impedancji dwóch głośników w~obudowie w~programie WinISD; \color{Green}zielony\color{Black} -- obudowa z~otworami; \color{Blue}niebieski\color{Black} -- zaślepione otwory}
+			\caption{Wyniki symulacji impedancji dwóch głośników w~obudowie w~programie WinISD; \color{BrickRed}czerwony\color{Black}~--~dwa głośniki, obudowa z~otworami; \color{Dandelion}żółty\color{Black}~--~dwa głośniki, zaślepiona obudowa; \color{RoyalBlue}niebieski\color{Black}~--~jeden głośnik, obudowa z~otworami}
 			\label{r:winisd}
 		\end{figure}
+		
+		Na wykresach dla dwóch głośników w~obudowie z~otworami widoczne są dwa rezonanse: pierwszy z~nich to rezonans powietrza w~obudowie, charakterystyczny dla obudowy typu \textit{bass-reflex}; drugi to rezonans głośnika, przesunięty w~kierunku wyższych częstotliwości.
+		
+		Połączenie dwóch głośników oprócz spadku impedancji spowodowało obniżenie pierwszej częstotliwości rezonansowej, a~wzrost drugiej. \comment{coś o tych objętościach} Symulacje wskazują, że zamiana obudowy na zamkniętą powinna skutkować obniżeniem częstotliwości drugiego rezonansu i~wyeliminowaniem pierwszego. W~wynikach pomiarów faktycznie można zauważyć zanik pierwszego rezonansu. Częstotliwość drugiego obniża się bardzo nieznacznie, co może być spowodowane niewystarczająco szczelnym połączeniem zaślepek z~obudową.
 		
 		
 	\subsection{Skuteczność}
@@ -497,40 +519,37 @@ Nowe technologie nie tylko pozwalają tworzyć coraz bardziej złożone modele k
 		
 		Rysunek~\ref{r:skutecznosc} przedstawia charakterystyki głośnika niskotonowego w~odgrodzie oraz głośników nisko- i~wysokotonowego na osi akustycznej zestawu, w~pasmach $1/6$~oktawy. Na ich podstawie charakterystyk można wyznaczyć punkt podziału częstotliwości między głośnik wysoko- i~niskotonowy -- proponowana wartość to \SI{500}{\hertz}.
 		
-		\begin{figure}[H]
+		\begin{figure}[!ht]
 			\centering
 			\includegraphics[width=.8\textwidth,trim={2cm .5cm 2cm 1cm},clip]{skutecznosci_stolik.pdf}
 			\caption{Charakterystyki skuteczności głośników z~badanego zestawu oraz głośnika niskotonowego w~odgrodzie}
 			\label{r:skutecznosc}
 		\end{figure}
 		
-		
-		
 	
 	\subsection{Drgania obudowy}
 		
-		%generalnie nie widać zależności
-		Analiza uzyskanych wyników nie dała podstaw do sformułowania zależności między obudową, a~charakterystykami amplitudowymi -- pomiędzy widmami sygnału z~wibrometru i~mikrofonów nie widać wyraźnych zależności. W~niektórych punktach pomiarowych można zauważyć zmiany kształtu charakterystyki dla tej samej częstotliwości, jednak są to raczej jednostkowe przypadki, na podstawie których nie można potwierdzić znaczącego wpływu na charakterystykę częsotliwościową zestawu.
+		Analiza uzyskanych wyników nie dała podstaw do sformułowania zależności między obudową, a~charakterystykami amplitudowymi -- pomiędzy widmami sygnału z~wibrometru i~mikrofonów nie widać wyraźnych zależności. W~niektórych punktach pomiarowych można zauważyć zmiany kształtu charakterystyki dla tej samej częstotliwości, jednak są to raczej jednostkowe przypadki, na podstawie których nie można potwierdzić znaczącego wpływu na charakterystykę częstotliwościową zestawu.
 		
 		Spośród zarejestrowanych przebiegów wybrano punkty \range{1}{4}, między którymi można dostrzec pewne zależności i~zestawiono je na rysunku~\ref{r:wibrometr_1-4}. W~punktach tych wyraźnie widoczny jest wzrost amplitudy przemieszczeń bocznej płyty obudowy w~paśmie \SI{260}{\hertz}; jednocześnie w~tym samym paśmie zauważalny jest spadek poziomu ciśnienia akustycznego w~bliskim otoczeniu punktu (\range{6}{10}~\si{\cm}). Wybrane punkty zlokalizowane są na dwóch różnych ściankach obudowy, jak pokazano na rysunku~\ref{r:wibro_pkt}.  \comment{rozwinięcie myśli?}
 		
-		\begin{figure}[H]
+		\begin{figure}[!ht]
 			\centering
 			\adjincludegraphics[width=.8\textwidth,trim={2cm .5cm 2cm 1cm},clip]{pkt1_4.pdf}
 			\caption{Znormalizowane widma amplitudy przemieszczeń obudowy (góra) oraz poziomu ciśnienia akustycznego w~niewielkiej odległości od zestawu w~punktach pomiarowych~\range{1}{4}}
 			\label{r:wibrometr_1-4}
 		\end{figure}
 		
-		\begin{figure}[H]
+		\begin{figure}[!ht]
 			\centering
 			\includegraphics[width=.8\textwidth,trim={5cm .3cm 5cm 2.7cm},clip]{wibrometr.pdf}
 			\caption{Rozmieszczenie punktów pomiarowych \range{1}{4} na obudowie (widok tylnej i~górnej ścianki)}
 			\label{r:wibro_pkt}
 		\end{figure}
 		
-		Kolejnym punktem, dla którego zdecydowano się zaprezentować wyniki jest punkt~\num{5}, zlokalizowany na powierzchni wnęki uchwytu (na rysunku~\ref{r:wibro_pkt} po prawej stronie). Na widmie przemieszczeń (rys.~\ref{r:wibrometr_5}) widoczne jest lokalne maksimum amplitudy dla częstotliwości~\SI{400}{\hertz}, co jednak nie znajduje odzwierciedlenia w~widmie poziomu ciśnienia akustycznego -- mimo że podbicie tej częstotliwości jest widoczne w~charakterystykach skuteczności (por. rys.~\ref{r:skutecznosc}).%Drgania obudowy mogą mieć wpływ na pole akustyczne wokół zestawu.
+		Kolejnym punktem, dla którego zdecydowano się zaprezentować wyniki jest punkt~\num{5}, zlokalizowany na powierzchni wnęki uchwytu (na rysunku~\ref{r:wibro_pkt} po prawej stronie). Na widmie przemieszczeń (rysunek~\ref{r:wibrometr_5}) widoczne jest lokalne maksimum amplitudy dla częstotliwości~\SI{400}{\hertz}, co jednak nie znajduje odzwierciedlenia w~widmie poziomu ciśnienia akustycznego -- mimo że podbicie tej częstotliwości jest widoczne w~charakterystykach skuteczności (por. rys.~\ref{r:skutecznosc}).%Drgania obudowy mogą mieć wpływ na pole akustyczne wokół zestawu.
 		
-		\begin{figure}[H]
+		\begin{figure}[!ht]
 		\centering
 		\adjincludegraphics[width=.8\textwidth,trim={2cm .5cm 2cm 1cm},clip]{pkt5.pdf}
 		\caption{Znormalizowane widma amplitudy przemieszczeń obudowy (góra) oraz poziomu ciśnienia akustycznego w~niewielkiej odległości od zestawu w~punkcie pomiarowym~\num{5}}
@@ -538,6 +557,10 @@ Nowe technologie nie tylko pozwalają tworzyć coraz bardziej złożone modele k
 		\end{figure}
 		
 		Otrzymane wyniki nie dają podstaw do jednoznacznego wskazania wpływu drgań obudowy na charakterystykę częstotliwościową zestawu. Jednocześnie do dalszej analizy tej zależności wskazane jest wykonanie pomiarów w~większej liczbie punktów oraz obliczeń statystycznych.
+		
+	\subsection{Symulacje}
+	
+		
 
 \section{Podsumowanie}
 
