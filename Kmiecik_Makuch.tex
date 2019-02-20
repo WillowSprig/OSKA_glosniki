@@ -335,7 +335,7 @@ Obecnie bardzo dobrze poznane są modele akusto-mechano-elektryczne głośników
 	%Z~przyczyn technicznych parametry T-S dla tego pomiaru zostały obliczone na podstawie dostępnych materiałów (\cite{dobrucki},), a~nie wyznaczone przy pomocy systemu Pulse.
 		Parametry Thiele-Smalla zostały wyznaczone z~zarejestrowanych krzywych impedancji przy pomocy skryptu w~środowisku Matlab na podstawie~\cite{dobrucki}. Następnie działanie skryptu zostało zweryfikowane w~oparciu o~parametry wyznaczone w~narzędziu Pulse. 
 		
-		W~wynikach wszystkich pomiarów wykonanych w~odgrodzie widoczny jest wpływ odgrody, prawdopodobnie związany z~rezonansem płyty, który występuje ze względu na jej skończone wymiary.
+		W~wynikach wszystkich pomiarów wykonanych w~odgrodzie widoczny jest wpływ odgrody -- charakterystyka załamuje się w~okolicach częstotliwości \SI{54}{\hertz}. Prawdopodobnie związane jest to z~rezonansem płyty, występującym ze względu na jej skończone wymiary.
 		
 		Na rysunku \ref{r:metody} przedstawione zostały przebiegi impedancji w~funkcji częstotliwości zmierzone dla obu metod. Widoczne jest przesunięcie częstotliwości rezonansowej w~dół po dodaniu masy i~w~górę po dodaniu objętości, natomiast w~tabeli~\ref{t:TS_metody} przedstawiono parametry Thiele-Smalla uzyskane obiema metodami (kolumna 4~i~5). Przyjmują one podobne wartości dla obu metod, nie widać też znaczących różnic w~symetrii $S$ -- dla obu pomiarów parametr ten jest wystarczająco niski.
 		
@@ -394,6 +394,8 @@ Obecnie bardzo dobrze poznane są modele akusto-mechano-elektryczne głośników
 			\label{r:wygrzewanie}
 		\end{figure}
 		
+		Wyraźnie widoczny jest spadek częstotliwości rezonansowej głośnika wraz z~jego zużyciem, maleje również sprawność referencyjna $\eta_0$ oraz symetria $S$, pomiar jest więc bardziej miarodajny; rośnie natomiast indeks siły $Bl$.
+		
 		\begin{figure}[H]
 			\centering
 			\includegraphics[width=.8\textwidth,trim={2cm .5cm 2cm 1cm},clip]{porownanie_glosnikow.pdf}
@@ -401,7 +403,9 @@ Obecnie bardzo dobrze poznane są modele akusto-mechano-elektryczne głośników
 			\label{r:2glosniki}
 		\end{figure}
 		
-		\begin{table}[H]
+		Porównanie obu głośników na tym samym etapie nie ukazuje wyraźnych różnic pomiędzy nimi.
+		
+		\begin{table}[h]
 			\centering
 			\caption{Porównanie parametrów Thiele-Smalla: odczytanych z~karty katalogowej~\cite{datasheet} oraz zmierzonych metodą dodanej masy ($m=$~\SI{10}{\gram}) dla różnych etapów pracy głośnika}
 			\label{t:TS_karta_etapy}
