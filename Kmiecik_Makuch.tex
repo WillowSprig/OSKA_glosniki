@@ -353,16 +353,18 @@ backend=biber
 		
 	\subsection{Wykonany model}
 	
-		Aby zyskać możliwość wprowadzania modyfikacji obudowy, zdecydowano się na wykonanie modelu badanego zestawu. Geometrię przygotowano w~programie Autodesk Inventor; obliczenia prowadzono za pomocą metody elementów skończonych (MES) w~środowisku Comsol Mulitphysics, z~wykorzystaniem modułu akustycznego i~mechanicznego. Elementowi cewki przypisywano wartość siły obliczonej na podstawie \comment{uzupełnić,sprawdzić}. W~oparciu o~te dane program wyznacza przemieszczenia membrany, które dzięki sprzężeniu pomiędzy modułem akustycznym i~mechanicznym pozwalają na wyznaczenie rozkładu ciśnienia akustycznego w~powietrzu.
+		Aby zyskać możliwość wprowadzania modyfikacji obudowy, zdecydowano się na wykonanie modelu badanego zestawu. Geometrię przygotowano w~programie Autodesk Inventor; obliczenia prowadzono za pomocą metody elementów skończonych (MES) w~środowisku Comsol Mulitphysics, z~wykorzystaniem modułu akustycznego i~mechanicznego. Elementowi cewki przypisywano wartość siły obliczonej na podstawie zależności~\eqref{eq:sila}:
 		
 		\begin{equation}
-			F_e=\frac{BlV_0}{Z_b}-\nu\frac{(Bl)^2}{Z_b} \quad. \label{eq:sila}
+			F_e=\frac{BlV_0}{Z_b}-\nu\frac{(Bl)^2}{Z_b} \quad, \label{eq:sila}
 		\end{equation}
 
 		
-		W~oparciu o~te dane program wyznaczał rozkład ciśnienia akustycznego i~przemieszczenia membrany.
+		\noindent gdzie $Bl$ jest indeksem siły (por. tab.~\ref{t:TS_opis}), $V_0$ napięciem zasilania głośnika, $Z_b$ impedancją zablokowanej cewki, a~$\nu$ prędkością cewki. 
 		
-		Ze względu na brak możliwości zdobycia parametrów materiałów użytych przez producenta głośników. Zdecydowano się na próbę empirycznego skorygowania parametrów zaczerpniętych z~literatury \cite{modelowanie} poprzez dostrojenie modelu. Wszystko to w~celu najlepszego odzwierciedlenia właściwości badanego zestawu. Proces ten nie został jeszcze zakończony.
+		W~oparciu o~te dane program wyznacza przemieszczenia membrany, które dzięki sprzężeniu pomiędzy modułem akustycznym i~mechanicznym pozwalają na wyznaczenie rozkładu ciśnienia akustycznego w~powietrzu.
+		
+		Ze względu na brak możliwości zdobycia parametrów materiałów użytych przez producenta głośników, zdecydowano się na próbę empirycznego skorygowania parametrów zaczerpniętych z~literatury \cite{modelowanie} poprzez dostrojenie modelu. Wszystko to w~celu najlepszego odzwierciedlenia właściwości badanego zestawu. Proces ten nie został jeszcze zakończony.
 		
 		
 		

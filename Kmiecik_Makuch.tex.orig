@@ -317,7 +317,7 @@ backend=biber
 			
 		\subsection{Charakterystyki kierunkowości}
 			
-			Wykonano dwie serie pomiarów, dla głośnika wysoko- i~niskotonowego. W~pierwszej serii zmierzono głośniki w~obudowie bez wypełnienia, w~drugiej -- wypełnione materiałem dźwiękochłonnym.
+% 			Wykonano dwie serie pomiarów, dla głośnika wysoko- i~niskotonowego. W~pierwszej serii zmierzono głośniki w~obudowie bez wypełnienia, w~drugiej -- wypełnione materiałem dźwiękochłonnym.
 			
 			Pomiar charakterystyki kierunkowości odbywał się w~komorze bezechowej przy użyciu stolika obrotowego, na którym umieszczony był zestaw głośnikowy. W~osi akustycznej mierzonego głośnika ustawiono mikrofon GRAS 46AE; następnie głośnik obracano z~krokiem \SI{10}{\degree}, każdorazowo zatrzymując i~wykonując pomiar trwający \SI{3}{\s}. Sygnałem podawanym na głośnik był szum różowy, pomiar wykonano w~pasmach $1/6$~oktawy, w~zakresie \range{40}{20000}~\si{\hertz}.
 			
@@ -340,13 +340,7 @@ backend=biber
 	
 		Dzięki stworzeniu modelu komputerowego możliwe jest łatwe i~niewymagające wysokich kosztów testowanie różnych rozwiązań metodami numerycznymi. Takie rozwiązanie pozwala również na dużo prostszą obserwację zjawisk akustycznych i~mechanicznych zachodzących w~konstrukcji i~nie wymaga użycia zaplecza technicznego takiego jak np. komora bezechowa. 
 		
-<<<<<<< HEAD
-		Jednak tworzenie skomplikowanych modeli wykorzystujących sprzężenie pomiędzy domeną mechaniczną opisującą zachowanie membrany i~zawieszenia głośnika, a~domeną akustyczną opisującą propagację dźwięku w~powietrzu, wymaga poznania właściwości materiałów, z których zbudowane są wszystkie elementy. Parametry materiałowe, takie jak moduł Younga czy współczynnik Poissona, ciężko jest zmierzyć dla każdego elementu modelu, a~jednocześnie odpowiadają za jego właściwości mechaniczne, a~co za tym idzie -- pośrednio -- akustyczne. W~praktyce zazwyczaj wykorzystuje się jako bazę właściwości materiałów dostępne w~literaturze~\cite{modelowanie}, a~następnie przeprowadza strojenie modelu -- dla znanego przypadku wykonuje się symulacje, zmieniając parametry tak, aby wyniki otrzymane w~modelu komputerowym były jak najbardziej zbliżone do wyników pomiaru.
-||||||| merged common ancestors
-		Jednak tworzenie skomplikowanych modeli wykorzystujących sprzężenie pomiędzy domeną mechaniczną opisującą zachowanie membrany i~zawieszenia głośnika, a~domeną akustyczną opisującą propagację dźwięku w~powietrzu, wymaga poznania właściwości materiałów, z których zbudowane są wszystkie elementy. Parametry materiałowe, takie jak moduł Younga, współczynnik Poissona \comment{co jeszcze}, ciężko jest zmierzyć dla każdego elementu modelu, a~jednocześnie odpowiadają za jego właściwości mechaniczne, a~co za tym idzie -- pośrednio -- akustyczne. W~praktyce zazwyczaj wykorzystuje się jako bazę właściwości materiałów dostępne w~literaturze~\cite{modelowanie}, a~następnie przeprowadza strojenie modelu -- dla znanego przypadku wykonuje się symulacje, zmieniając parametry tak, aby wyniki otrzymane w~modelu komputerowym były jak najbardziej zbliżone do wyników pomiaru.
-=======
 		Jednak tworzenie skomplikowanych modeli wykorzystujących sprzężenie pomiędzy domeną mechaniczną opisującą zachowanie membrany i~zawieszenia głośnika, a~domeną akustyczną opisującą propagację dźwięku w~powietrzu, wymaga poznania właściwości materiałów, z których zbudowane są wszystkie elementy. Parametry materiałowe, takie jak moduł Younga, współczynnik Poisson, gęstość \comment{co jeszcze}, ciężko jest zmierzyć dla każdego elementu modelu, a~jednocześnie odpowiadają za jego właściwości mechaniczne, a~co za tym idzie -- pośrednio -- akustyczne. W~praktyce zazwyczaj wykorzystuje się jako bazę właściwości materiałów dostępne w~literaturze~\cite{modelowanie}, a~następnie przeprowadza strojenie modelu -- dla znanego przypadku wykonuje się symulacje, zmieniając parametry tak, aby wyniki otrzymane w~modelu komputerowym były jak najbardziej zbliżone do wyników pomiaru.
->>>>>>> 9359e2f34d81e018f38241be37c8c6c3ce5f7522
 		
 		Dodatkowo problematyczne staje się stworzenie geometrii, dla której możliwe byłoby wygenerowanie siatki elementów, przy jednoczesnym odwzorowaniu kształtu w~sposób zapewniający rzeczywiste zachowanie elementów modelu. Na taki problem natknęli się autorzy przy tworzeniu kształtu zawieszenia, co można zaobserwować na rysunku~\ref{r:zawieszenie}, przedstawiającym przemieszczenia w~symulacji dla częstotliwości \SI{50}{\hertz}. Problem rozmiarów elementów siatki jest związany z~czasem obliczeń modelu. Dla wysokich częstotliwości i dużych modeli ilość węzłów staje się na tyle duża, że czas obliczeń nawet na komputerach dużych mocy jest bardzo długi przez co model jest bezużyteczny.
 		
@@ -359,6 +353,7 @@ backend=biber
 		
 	\subsection{Wykonany model}
 	
+<<<<<<< HEAD
 		Aby zyskać możliwość wprowadzania modyfikacji obudowy, zdecydowano się na wykonanie modelu badanego zestawu. Geometrię przygotowano w~programie Autodesk Inventor; obliczenia prowadzono za pomocą metody elementów skończonych (MES) w~środowisku Comsol Mulitphysics, z~wykorzystaniem modułu akustycznego i~mechanicznego. Membranie przypisywano wartość siły obliczonej na podstawie zależności~\eqref{eq:sila}:
 		
 		\begin{equation}
@@ -367,8 +362,13 @@ backend=biber
 
 		
 		W~oparciu o~te dane program wyznaczał rozkład ciśnienia akustycznego i~przemieszczenia membrany.
+||||||| merged common ancestors
+		Aby zyskać możliwość wprowadzania modyfikacji obudowy, zdecydowano się na wykonanie modelu badanego zestawu. Geometrię przygotowano w~programie Autodesk Inventor; obliczenia prowadzono za pomocą metody elementów skończonych (MES) w~środowisku Comsol Mulitphysics, z~wykorzystaniem modułu akustycznego i~mechanicznego. Membranie przypisywano wartość siły obliczonej na podstawie \comment{uzupełnić,sprawdzić}. W~oparciu o~te dane program wyznaczał rozkład ciśnienia akustycznego i~przemieszczenia membrany.
+=======
+		Aby zyskać możliwość wprowadzania modyfikacji obudowy, zdecydowano się na wykonanie modelu badanego zestawu. Geometrię przygotowano w~programie Autodesk Inventor; obliczenia prowadzono za pomocą metody elementów skończonych (MES) w~środowisku Comsol Mulitphysics, z~wykorzystaniem modułu akustycznego i~mechanicznego. Elementowi cewki przypisywano wartość siły obliczonej na podstawie \comment{uzupełnić,sprawdzić}. W~oparciu o~te dane program wyznacza przemieszczenia membrany, które dzięki sprzężeniu pomiędzy modułem akustycznym i~mechanicznym pozwalają na wyznaczenie rozkładu ciśnienia akustycznego w~powietrzu.
+>>>>>>> a399445e945c15da8549ccc3d879cb1fca0bd1b8
 		
-		Parametry materiałowe modelu są korygowane w~procesie strojenia, celem jak najlepszego odzwierciedlenia właściwości badanego zestawu. Proces ten nie został jeszcze zakończony.
+		Ze względu na brak możliwości zdobycia parametrów materiałów użytych przez producenta głośników. Zdecydowano się na próbę empirycznego skorygowania parametrów zaczerpniętych z~literatury \cite{modelowanie} poprzez dostrojenie modelu. Wszystko to w~celu najlepszego odzwierciedlenia właściwości badanego zestawu. Proces ten nie został jeszcze zakończony.
 		
 		
 		
@@ -378,7 +378,7 @@ backend=biber
 	\subsection{Pomiary impedancji}
 		
 	%Z~przyczyn technicznych parametry T-S dla tego pomiaru zostały obliczone na podstawie dostępnych materiałów (\cite{dobrucki},), a~nie wyznaczone przy pomocy systemu Pulse.
-		Parametry Thiele-Smalla zostały wyznaczone z~zarejestrowanych krzywych impedancji przy pomocy skryptu w~środowisku Matlab na podstawie~\cite{dobrucki}. Następnie działanie skryptu zostało zweryfikowane w~oparciu o~parametry wyznaczone w~narzędziu Pulse. 
+		Parametry Thiele-Smalla zostały wyznaczone z~zarejestrowanych krzywych impedancji przy pomocy skryptu w~środowisku Matlab na podstawie~\cite{dobrucki}. Następnie działanie skryptu zostało zweryfikowane w~oparciu o~parametry wyznaczone w~narzędziu B&K Pulse. 
 		
 		W~wynikach wszystkich pomiarów wykonanych w~odgrodzie widoczny jest wpływ odgrody -- charakterystyka załamuje się w~okolicach częstotliwości \SI{54}{\hertz}. Prawdopodobnie związane jest to z~rezonansem płyty, występującym ze względu na jej skończone wymiary.
 		
@@ -428,7 +428,7 @@ backend=biber
 			\unboldmath
 		\end{table}
 		
-		Ze względu na rozbieżności między parametrami katalogowymi oraz różnych egzemplarzy tego samego modelu głośnika~\cite{aes_roznice} wykonano pomiary pozwalające na porównanie obu wykorzystywanych egzemplarzy oraz sprawdzenie, jak zmieniają się parametry głośnika podczas jego eksploatacji. Pomiary wykonano na fabrycznie nowym przetworniku oraz na tym samym egzemplarzu poddanym procesowi zużycia poprzez dostarczenie w dwóch etapach sygnału szumu różowego o~mocy \SI{60}{\watt} przez czas \SI{10}{\min}. Krzywe impedancji głośników w~odgrodzie po każdym etapie przedstawiono na rysunku~\ref{r:wygrzewanie}, a~parametry Thiele-Smalla w~tabeli~\ref{t:TS_karta_etapy}. Natomiast porównanie obu głośników na etapie~1 przedstawiono na rysunku~\ref{r:2glosniki}.
+		Ze względu na rozbieżności między parametrami katalogowymi oraz różnych egzemplarzy tego samego modelu głośnika~\cite{aes_roznice} wykonano pomiary pozwalające na porównanie obu wykorzystywanych egzemplarzy oraz sprawdzenie, jak zmieniają się parametry głośnika podczas jego eksploatacji. Pomiary wykonano na fabrycznie nowym przetworniku oraz na tym samym egzemplarzu poddanym procesowi zużycia poprzez dostarczenie w dwóch etapach sygnału szumu różowego o~mocy \SI{40}{\watt} przez czas \SI{2}{\h} w pierwszym etapie i~\SI{60}{\watt} przez czas \SI{10}{\min} w drugim etapie. Krzywe impedancji głośników w~odgrodzie po każdym etapie przedstawiono na rysunku~\ref{r:wygrzewanie}, a~parametry Thiele-Smalla w~tabeli~\ref{t:TS_karta_etapy}. Natomiast porównanie obu głośników na etapie~1 przedstawiono na rysunku~\ref{r:2glosniki}.
 		
 		Należy zwrócić uwagę na fakt, że podane parametry z~karty katalogowej dotyczą głośnika o~rezystancji \SI{8}{\ohm}, podczas gdy badane egzemplarze mają rezystancję \SI{16}{\ohm}; autorom nie udało się jednak pozyskać karty katalogowej dla takiej wersji głośnika.
 		
@@ -500,7 +500,7 @@ backend=biber
 			\includegraphics[width=.73\textwidth]{obrazki/winisd_screen2.png}\\
 				\setlength{\unitlength}{1mm}
 			\begin{picture}(0,0)
-				\put(-6,4){\texttt{f [!htz]}}
+				\put(-6,4){\texttt{f [Hz]}}
 				\put(-65,35){\rotatebox{90}{\texttt{Z$_e [\Omega]$}}}
 			\end{picture}
 			\caption{Wyniki symulacji impedancji dwóch głośników w~obudowie w~programie WinISD; \color{BrickRed}czerwony\color{Black}~--~dwa głośniki, obudowa z~otworami; \color{Dandelion}żółty\color{Black}~--~dwa głośniki, zaślepiona obudowa; \color{RoyalBlue}niebieski\color{Black}~--~jeden głośnik, obudowa z~otworami}
@@ -543,13 +543,14 @@ backend=biber
 		\end{figure}
 		
 	\subsection{Charakterystyki kierunkowości}
+	
+		Otrzymane charakterystyki kierunkowości przedstawiono na rysunku~\ref{r:kierunkowosc}. Ze względu na kształt obudowy kąt promieniowania w~płaszczyźnie pionowej jest większy, niż w~płaszczyźnie poziomej -- jest to widoczne dla pasma \range{250}{1000}~\si{\hertz}. Widoczne są też niepożądane listki boczne w~paśmie \SI{2000}{\hertz}.
 		
 		\begin{figure}[!ht]
 			\centering
-			\begin{subfigure}[b]{.49\textwidth}
-				
-			\end{subfigure}
-
+			\includegraphics[width=\textwidth,trim={0 .5cm 0 1.7cm},clip]{kierunkowosc.png}
+			\caption{Charakterystyki kierunkowości głośnika niskotonowego w~obudowie (lewa -- w~poziomie, prawa -- w~pionie)}
+			\label{r:kierunkowosc}
 		\end{figure}
 
 	
