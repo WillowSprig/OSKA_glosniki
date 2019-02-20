@@ -236,13 +236,15 @@ backend=biber
 
 \section{Metodyka pomiarów}
 
-	W~celu możliwie dokładnego zbadania parametrów zestawu, ze szczególnym uwzględnieniem obudowy, zaplanowano szereg pomiarów: impedancji elektrycznej głośnika w~odgrodzie z~wyznaczeniem parametrów Thiele-Smalla, charakterystyki skuteczności, charakterystyk kierunkowości oraz pomiar drgań obudowy przy pomocy wibrometru laserowego.
+	W~celu możliwie dokładnego zbadania parametrów zestawu, ze szczególnym uwzględnieniem obudowy, zaplanowano szereg pomiarów: impedancji elektrycznej głośnika w~odgrodzie z~wyznaczeniem parametrów Thiele-Smalla, charakterystyki skuteczności, charakterystyk kierunkowości oraz pomiar drgań obudowy przy pomocy wibrometru laserowego -- metodykę wymienionych pomiarów opisano w~części~\ref{ss:metodyka}.
 	
-	Ze względu na zaobserwowane znaczące rozbieżności między wynikami uzyskanymi dla głośników niskotonowych, a~parametrami podanymi przez producenta w~karcie katalogowej, zdecydowano się na wykonanie dodatkowych pomiarów, uwzględniających zużycie głośnika.
+	Ze względu na zaobserwowane znaczące rozbieżności między wynikami uzyskanymi dla głośników niskotonowych, a~parametrami podanymi przez producenta w~karcie katalogowej, zdecydowano się na wykonanie dodatkowych pomiarów, uwzględniających zużycie głośnika; pomiary te opisano w~części~\ref{ss:dodatkowe}.
 	
 	Metodyka pomiarów opierała się na wytycznych zawartych w~normie EN~60268-5~\cite{norma}. Natężenie prądu elektrycznego i~napięcie elektryczne tam, gdzie to było konieczne, monitorowano przy pomocy multimetrów Tektronix DMM~4040 oraz DMM~4050.
+
+	\subsection{Metodyka podstawowa}\label{ss:metodyka}
 	
-		\subsection{Impedancja elektryczna i parametry Thiele-Smalla}
+		\subsubsection{Impedancja elektryczna i parametry Thiele-Smalla}
 			
 			Pomiary wykonano przy pomocy systemu Brüel\&Kjær Pulse, pozwalającego na pomiar charakterystyki impedancji oraz wyznaczenie na tej podstawie parametrów Thiele-Smalla.
 			
@@ -252,8 +254,8 @@ backend=biber
 			
 			\begin{table}[H]
 				\centering
-				\caption{Porównanie parametrów Thiele-Smalla: odczytanych z~karty katalogowej oraz zmierzonych metodą dodanej masy ($m=$~\SI{10}{\gram}) dla różnych etapów pracy głośnika}
-				\label{t:TS_opis}
+				\caption{Wyznaczenie skuteczności}
+				\label{t:Skuteczność}
 				\begin{tabular}{|c|c|c|}
 				\hline
 					\textbf{Oznaczenie} & \textbf{Jednostka} & \textbf{Opis parametru}\\\hline\hline
@@ -292,43 +294,43 @@ backend=biber
 			
 			
 			
-		\subsection{Charakterystyka skuteczności}
+		\subsubsection{Charakterystyka skuteczności}
 			
 			Do pomiarów wykorzystano analizator SVAN~912~E; głośnik pobudzano szumem różowym z~generatora o~wartości skutecznej \SI{1}{\watt}. Analizę prowadzono w~odległości \SI{2}{\metre} w~pasmach $1/3$-oktawowych w~zakresie \range{50}{5000}~\si{\hertz}.
 			
-% 			\begin{table}[!ht]
-% 				\centering
-% 				\caption{Porównanie parametrów Thiele-Smalla: odczytanych z~karty katalogowej oraz zmierzonych metodą dodanej masy ($m=$~\SI{10}{\gram}) dla różnych etapów pracy głośnika}
-% 				\label{t:TS_karta_etapy}
-% 				\boldmath
-% 				\begin{tabular}{|c|c|c|c|c|}
-% 					\hline
-% 					\textbf{Parametr} & \makecell{\textbf{Karta katalogowa}\\ \textbf{($R=$~\SI{8}{\ohm})}} & \textbf{Fabryczny} & \textbf{Etap 1} & \textbf{Etap 2} \\\hline
-% 					\hline
-% 					$F_s$ [\si{\hertz}] & \num{47,0}  & \num{71,5} & \num{57,0} & \num{50,7}  \\\hline
-% 					$Z_{max}$ [\si{\ohm}] & --- & \num{54,2} & \num{55,7} & \num{64,0}  \\\hline
-% 					$R_e$ [\si{\ohm}] & \num{6,1}  & \num{10,4} & \num{10,0} & \num{10,2}  \\\hline
-% 					$r_0$ & ---  & \num{5,2} & \num{5,6} & \num{6,4} \\\hline
-% 					$S$ [\%] & ---  & \num{3,44}  & \num{3,35} & \num{0,55} \\\hline
-% 					\hline
-% 					$Q_{ms}$ & \num{3,9}  & \num{3,3} & \num{2,7} & \num{2,8} \\\hline
-% 					$Q_{es}$ & \num{0,4}  & \num{0,8} & \num{0,6} & \num{0,5} \\\hline
-% 					$Q_{ts}$ & \num{0,3}  & \num{0,6} & \num{0,5} & \num{0,4} \\\hline
+			\begin{table}[!ht]
+				\centering
+				\caption{Porównanie parametrów Thiele-Smalla: odczytanych z~karty katalogowej oraz zmierzonych metodą dodanej masy ($m=$~\SI{10}{\gram}) dla różnych etapów pracy głośnika}
+				\label{t:TS_karta_etapy}
+				\boldmath
+				\begin{tabular}{|c|c|c|c|c|}
+					\hline
+					\textbf{Parametr} & \makecell{\textbf{Karta katalogowa}\\ \textbf{($R=$~\SI{8}{\ohm})}} & \textbf{Fabryczny} & \textbf{Etap 1} & \textbf{Etap 2} \\\hline
+					\hline
+					$F_s$ [\si{\hertz}] & \num{47,0}  & \num{71,5} & \num{57,0} & \num{50,7}  \\\hline
+					$Z_{max}$ [\si{\ohm}] & --- & \num{54,2} & \num{55,7} & \num{64,0}  \\\hline
+					$R_e$ [\si{\ohm}] & \num{6,1}  & \num{10,4} & \num{10,0} & \num{10,2}  \\\hline
+					$r_0$ & ---  & \num{5,2} & \num{5,6} & \num{6,4} \\\hline
+					$S$ [\%] & ---  & \num{3,44}  & \num{3,35} & \num{0,55} \\\hline
+					\hline
+					$Q_{ms}$ & \num{3,9}  & \num{3,3} & \num{2,7} & \num{2,8} \\\hline
+					$Q_{es}$ & \num{0,4}  & \num{0,8} & \num{0,6} & \num{0,5} \\\hline
+					$Q_{ts}$ & \num{0,3}  & \num{0,6} & \num{0,5} & \num{0,4} \\\hline
 			
-		\subsection{Skuteczność}
+		\subsubsection{Skuteczność}
 		
-			W celu weryfikacji skuteczności podawanej przez producenta wykonano pomiar poziomu dźwięku $L_{eq}$ w odległości \SI{2}{\metre}. 
+			W celu weryfikacji skuteczności podawanej przez producenta wykonano pomiar poziomu dźwięku L_eq w odległości \si{2}{\m}. 
 			
 		
 			\comment{ewentualnie w całość char + jednoliczbowa}
 			
-		\subsection{Charakterystyki kierunkowości}
+		\subsubsection{Charakterystyki kierunkowości}
 			
 			Wykonano dwie serie pomiarów, dla głośnika wysoko- i~niskotonowego. W~pierwszej serii zmierzono głośniki w~obudowie bez wypełnienia, w~drugiej -- wypełnione materiałem dźwiękochłonnym.
 			
 			Pomiar charakterystyki kierunkowości odbywał się w~komorze bezechowej przy użyciu stolika obrotowego, na którym umieszczony był zestaw głośnikowy. W~osi akustycznej mierzonego głośnika ustawiono mikrofon GRAS 46AE; następnie głośnik obracano z~krokiem \SI{10}{\degree}, każdorazowo zatrzymując i~wykonując pomiar trwający \SI{3}{\s}. Sygnałem podawanym na głośnik był szum różowy, pomiar wykonano w~pasmach $1/6$~oktawy, w~zakresie \range{40}{20000}~\si{\hertz}.
 			
-		\subsection{Drgania obudowy}
+		\subsubsection{Drgania obudowy}
 			
 			Pomiar drgań obudowy miał na celu sprawdzenie, w~jakim stopniu charakterystyka częstotliwościowa zestawu jest związana z~właściwościami obudowy. Badany zestaw głośnikowy umieszczono w~komorze bezechowej; w~wybranych punktach (por.~\ref{r:wibro_pkt}) naklejono taśmę odblaskową, na którą padała wiązka lasera; zastosowanie taśmy było niezbędne dla uzyskania odpowiedniego odbicia światła od badanych powierzchni. %Wibrometr umieszczono w~odpowiedniej odległości, tak aby uniknąć przesterowania sygnału. 
 			Sygnałem pomiarowym był szum różowy, rejestrowano jednocześnie przebieg drgań wibrometrem oraz sygnał akustyczny dwoma mikrofonami: jednym umieszczonym blisko bieżącego punktu pomiarowego (rys.~\ref{r:wibro_zdjecie}), a~drugim w~odległości~\SI{2}{\metre}. Wibrometr umieszczono poza przestrzenią komory celem zapewnienia jego stabilnego usadowienia.
@@ -340,6 +342,8 @@ backend=biber
 				\label{r:wibro_zdjecie}
 			\end{figure}
 
+	
+% 	\subsection{Dodatkowe pomiary}\label{ss:dodatkowe}
 
 \section{Modelowanie}
 
@@ -349,9 +353,64 @@ backend=biber
 
 	\subsection{Pomiary impedancji}
 		
-	%Z~przyczyn technicznych parametry T-S dla tego pomiaru zostały obliczone na podstawie dostępnych materiałów (\cite{dobrucki},), a~nie wyznaczone przy pomocy systemu Pulse.
-		Parametry Thiele-Smalla zostały wyznaczone z~zarejestrowanych krzywych impedancji przy pomocy skryptu w~środowisku Matlab na podstawie~\cite{dobrucki}. Następnie działanie skryptu zostało zweryfikowane w~oparciu o~parametry wyznaczone w~narzędziu Pulse. 
 		
+		\begin{figure}[H]
+			\centering
+			\includegraphics[width=.9\textwidth]{obrazki/winisd_screen.png}\\
+			\setlength{\unitlength}{1mm}
+			\begin{picture}(0,0)
+				\put(-6,4){\texttt{$f$ [Hz]}}
+				\put(-78,40){\rotatebox{90}{$Z_e [\Omega]$}}
+			\end{picture}
+			\caption{Wyniki symulacji impedancji dwóch głośników w~obudowie w~programie WinISD; \color{Green}zielony\color{Black} -- obudowa z~otworami; \color{Blue}niebieski\color{Black} -- zaślepione otwory}
+			\label{r:winisd}
+		\end{figure}
+		
+		\begin{figure}[H]
+			\centering
+			\includegraphics[width=.8\textwidth,trim={2cm .5cm 2cm 1cm},clip]{odgroda_wygrzewanie.pdf}
+			\caption{}
+			\label{r:wygrzewanie}
+		\end{figure}
+		
+	%Z~przyczyn technicznych parametry T-S dla tego pomiaru zostały obliczone na podstawie dostępnych materiałów (\cite{dobrucki},), a~nie wyznaczone przy pomocy systemu Pulse.
+	 Parametry Thiele-Smalla zostały wyznaczone przy pomocy skryptu w~środowisku MATLAB na podstawie (\cite{dobrucki},). Następnie działanie skryptu zostało zweryfikowane w~oparciu o parametry wyznaczone w~narzędziu PULSE. 
+		
+		\begin{table}[H]
+			\centering
+			\caption{Porównanie parametrów Thiele-Smalla: odczytanych z~karty katalogowej oraz zmierzonych metodą dodanej masy ($m=$~\SI{10}{\gram}) dla różnych etapów pracy głośnika}
+			\label{t:TS_karta_etapy}
+			\boldmath
+			\begin{tabular}{|c|c|c|c|c|}
+				\hline
+				\textbf{Parametr} & \makecell{\textbf{Karta katalogowa}\\ \textbf{($R=$~\SI{8}{\ohm})}} & \textbf{Fabryczny} & \textbf{Etap 1} & \textbf{Etap 2} \\\hline
+				\hline
+				$F_s$ [\si{\hertz}] & \num{47,0}  & \num{71,5} & \num{57,0} & \num{50,7}  \\\hline
+				$Z_{max}$ [\si{\ohm}] & --- & \num{54,2} & \num{55,7} & \num{64,0}  \\\hline
+				$R_e$ [\si{\ohm}] & \num{6,1}  & \num{10,4} & \num{10,0} & \num{10,2}  \\\hline
+				$r_0$ & ---  & \num{5,2} & \num{5,6} & \num{6,4} \\\hline
+				$S$ [\%] & ---  & \num{3,44}  & \num{3,35} & \num{0,55} \\\hline
+				\hline
+				$Q_{ms}$ & \num{3,9}  & \num{3,3} & \num{2,7} & \num{2,8} \\\hline
+				$Q_{es}$ & \num{0,4}  & \num{0,8} & \num{0,6} & \num{0,5} \\\hline
+				$Q_{ts}$ & \num{0,3}  & \num{0,6} & \num{0,5} & \num{0,4} \\\hline
+				\hline
+				$V_{as}$ [\si{\litre}] 								& \num{50,9}  & \num{23,5} & \num{34,5} & \num{41,4} \\\hline
+				$M_{ms}$ [\si{\gram}] 								& \num{39,0}  & \num{36,1}  & \num{38,5} & \num{40,6} \\\hline
+				$C_{ms}$ [\si[per-mode=symbol]{\metre\per\newton}] 	& \num{294e-6}  & \num{138e-6}  & \num{203e-6} & \num{243e-6} \\\hline
+				$R_{ms}$ [\si[per-mode=symbol]{\metre\per\newton}] 	& \num{2,9}  & \num{5,0}  & \num{5,2} & \num{4,6} \\\hline
+				\hline
+				$M_{as}$ [\si[per-mode=symbol]{\kilo\gram\per\metre\tothe{4}}] 	& \num{31,8}  & \num{30,1}  & \num{32,1} & \num{33,8} \\\hline
+				$C_{as}$ [\si[per-mode=symbol]{\metre\tothe{5}\per\newton}] 	& \num{0,4e-6}  & \num{0,2e-6} & \num{0,2e-6} & \num{0,3e-6}  \\\hline
+% 				$C_{as}$ [\si[per-mode=symbol]{\metre\tothe{5}\per\newton}] & \num{360e-9} & \num{165e-9} & \num{243e-9} & \num{292e-9} \\\hline
+				$R_{as}$ [\si[per-mode=symbol]{\newton\s\per\metre\tothe{5}}] 	& \num{2367}  & \num{4123}  & \num{4323} & \num{3790} \\\hline
+				\hline
+				$\eta_0$ [\%] & \num{1,5}  & \num{1,08} & \num{1,07} & \num{1,00}   \\\hline
+				$Bl$ [\si{\tesla\metre}] & \num{14,2} & \num{14,7} & \num{15,4} & \num{15,7}\\\hline
+				$L_{e} (1\si{\kilo\hertz})$ [\si{\henry}] & \num{1e-3} & \num{1,984e-3} & \num{880e-6} & \num{911e-6} \\\hline
+			\end{tabular}
+			\unboldmath
+		\end{table}
 		
 		Na rysunku \ref{r:metody} przedstawione zostały przebiegi impedancji w~funkcji częstotliwości zmierzone dla obu metod. Widoczne jest przesunięcie częstotliwości rezonansowej w~dół po dodaniu masy i~w~górę po dodaniu objętości, natomiast w~tabeli~\ref{t:TS_metody} przedstawiono parametry Thiele-Smalla uzyskane obiema metodami (kolumna 4~i~5). Przyjmują one podobne wartości dla obu metod, nie widać też znaczących różnic w~symetrii $S$ -- dla obu pomiarów parametr ten jest wystarczająco niski.
 		
@@ -399,14 +458,7 @@ backend=biber
 			\unboldmath
 		\end{table}
 		
-		Ze względu na rozbieżności między parametrami katalogowymi oraz różnych egzemplarzy tego samego modelu głośnika~\cite{aes_roznice} wykonano pomiary pozwalające na porównanie obu wykorzystywanych egzemplarzy oraz sprawdzenie, jak zmieniają się parametry głośnika podczas jego eksploatacji. Pomiary wykonano na fabrycznie nowym przetworniku oraz na tym samym egzemplarzu poddanym procesowi zużycia poprzez dostarczenie w dwóch etapach sygnału szumu różowego o~mocy \SI{60}{\watt} przez czas \SI{10}{\min}. Krzywe impedancji głośników w~odgrodzie po każdym etapie przedstawiono na rysunku~\ref{r:wygrzewanie}, a~parametry Thiele-Smalla w~tabeli~\ref{t:TS_karta_etapy}. Z~kolei porównanie obu głośników na etapie~1 przedstawiono na rysunku~\ref{r:2glosniki}.
-		
-		\begin{figure}[H]
-			\centering
-			\includegraphics[width=.8\textwidth,trim={2cm .5cm 2cm 1cm},clip]{odgroda_wygrzewanie.pdf}
-			\caption{}
-			\label{r:wygrzewanie}
-		\end{figure}
+		Ze względu na rozbieżności między parametrami katalogowymi oraz różnych egzemplarzy tego samego modelu głośnika~\cite{aes_roznice} wykonano pomiary pozwalające na porównanie obu wykorzystywanych egzemplarzy. Pomiary wykonano na fabrycznie nowym przetworniku oraz na tym samym egzemplarzu poddanym procesowi zużycia. Poprzez dostarczenie w dwóch etapach sygnału szumu różowego o~mocy \SI{60}{\watt} przez czas \SI{10}{\min}. Krzywe impedancji głośników w~odgrodzie po każdym etapie przedstawiono na rysunku~\ref{r:2glosniki}. \comment{TO NIE JEST TEN WYKRES !!!}
 		
 		\begin{figure}[H]
 			\centering
@@ -415,44 +467,6 @@ backend=biber
 			\label{r:2glosniki}
 		\end{figure}
 		
-		\begin{table}[H]
-			\centering
-			\caption{Porównanie parametrów Thiele-Smalla: odczytanych z~karty katalogowej oraz zmierzonych metodą dodanej masy ($m=$~\SI{10}{\gram}) dla różnych etapów pracy głośnika}
-			\label{t:TS_karta_etapy}
-			\boldmath
-			\begin{tabular}{|c|c|c|c|c|}
-				\hline
-				\textbf{Parametr} & \makecell{\textbf{Karta katalogowa}\\ \textbf{($R=$~\SI{8}{\ohm})}} & \textbf{Fabryczny} & \textbf{Etap 1} & \textbf{Etap 2} \\\hline
-				\hline
-				$F_s$ [\si{\hertz}] & \num{47,0}  & \num{71,5} & \num{57,0} & \num{50,7}  \\\hline
-				$Z_{max}$ [\si{\ohm}] & --- & \num{54,2} & \num{55,7} & \num{64,0}  \\\hline
-				$R_e$ [\si{\ohm}] & \num{6,1}  & \num{10,4} & \num{10,0} & \num{10,2}  \\\hline
-				$r_0$ & ---  & \num{5,2} & \num{5,6} & \num{6,4} \\\hline
-				$S$ [\%] & ---  & \num{3,44}  & \num{3,35} & \num{0,55} \\\hline
-				\hline
-				$Q_{ms}$ & \num{3,9}  & \num{3,3} & \num{2,7} & \num{2,8} \\\hline
-				$Q_{es}$ & \num{0,4}  & \num{0,8} & \num{0,6} & \num{0,5} \\\hline
-				$Q_{ts}$ & \num{0,3}  & \num{0,6} & \num{0,5} & \num{0,4} \\\hline
-				\hline
-				$V_{as}$ [\si{\litre}] 								& \num{50,9}  & \num{23,5} & \num{34,5} & \num{41,4} \\\hline
-				$M_{ms}$ [\si{\gram}] 								& \num{39,0}  & \num{36,1}  & \num{38,5} & \num{40,6} \\\hline
-				$C_{ms}$ [\si[per-mode=symbol]{\metre\per\newton}] 	& \num{294e-6}  & \num{138e-6}  & \num{203e-6} & \num{243e-6} \\\hline
-				$R_{ms}$ [\si[per-mode=symbol]{\metre\per\newton}] 	& \num{2,9}  & \num{5,0}  & \num{5,2} & \num{4,6} \\\hline
-				\hline
-				$M_{as}$ [\si[per-mode=symbol]{\kilo\gram\per\metre\tothe{4}}] 	& \num{31,8}  & \num{30,1}  & \num{32,1} & \num{33,8} \\\hline
-				$C_{as}$ [\si[per-mode=symbol]{\metre\tothe{5}\per\newton}] 	& \num{0,4e-6}  & \num{0,2e-6} & \num{0,2e-6} & \num{0,3e-6}  \\\hline
-				% 				$C_{as}$ [\si[per-mode=symbol]{\metre\tothe{5}\per\newton}] & \num{360e-9} & \num{165e-9} & \num{243e-9} & \num{292e-9} \\\hline
-				$R_{as}$ [\si[per-mode=symbol]{\newton\s\per\metre\tothe{5}}] 	& \num{2367}  & \num{4123}  & \num{4323} & \num{3790} \\\hline
-				\hline
-				$\eta_0$ [\%] & \num{1,5}  & \num{1,08} & \num{1,07} & \num{1,00}   \\\hline
-				$Bl$ [\si{\tesla\metre}] & \num{14,2} & \num{14,7} & \num{15,4} & \num{15,7}\\\hline
-				$L_{e} (1\si{\kilo\hertz})$ [\si{\henry}] & \num{1e-3} & \num{1,984e-3} & \num{880e-6} & \num{911e-6} \\\hline
-			\end{tabular}
-			\unboldmath
-		\end{table}
-		
-		W~celu sprawdzenia wpływu modyfikacji obudowy na charakterystyki impedancji wykonano pomiar dla obudowy w~wariancie „podstawowym” (opisanym w~części~\ref{ss:opis}) oraz z~zaślepionymi otworami (por. tabela~\ref{t:obudowa}). Wyniki przedstawiono na rysunku~\ref{r:obudowa_otwory}; dodatkowo, dla porównania zasymulowano obie obudowy w~programie WinISD -- krzywe otrzymane z~tego programu znajdują się na rysunku~\ref{r:winisd}.
-		
 		\begin{figure}[H]
 			\centering
 			\includegraphics[width=.8\textwidth,trim={2cm .5cm 2cm 1cm},clip]{obudowa_otwory.pdf}
@@ -460,28 +474,26 @@ backend=biber
 			\label{r:obudowa_otwory}
 		\end{figure}
 		
-		\begin{figure}[H]
-			\centering
-			\includegraphics[width=.8\textwidth]{obrazki/winisd_screen.png}\\
-				\setlength{\unitlength}{1mm}
-			\begin{picture}(0,0)
-				\put(-6,4){\texttt{$f$ [Hz]}}
-				\put(-70,40){\rotatebox{90}{$Z_e [\Omega]$}}
-			\end{picture}
-			\caption{Wyniki symulacji impedancji dwóch głośników w~obudowie w~programie WinISD; \color{Green}zielony\color{Black} -- obudowa z~otworami; \color{Blue}niebieski\color{Black} -- zaślepione otwory}
-			\label{r:winisd}
-		\end{figure}
-		
 	\subsection{Skuteczność}
-		
+<<<<<<< HEAD
 		
 		\begin{figure}[H]
+||||||| merged common ancestors
+		
+		\begin{figure}[!ht]
+=======
+		W 
+		\begin{figure}[!ht]
+>>>>>>> 809cbfd596815bd010749b10eeb7293c5b84a6d8
 			\centering
 			\includegraphics[width=.8\textwidth,trim={2cm .5cm 2cm 1cm},clip]{skutecznosci_stolik.pdf}
 			\caption{}
 			\label{r:skutecznosc}
 		\end{figure}
 		
+
+		
+		% + kierunkowość, skuteczność
 	
 	\subsection{Drgania obudowy}
 		
@@ -504,7 +516,7 @@ backend=biber
 			\label{r:wibro_pkt}
 		\end{figure}
 		
-		Kolejnym punktem, dla którego zdecydowano się zaprezentować wyniki jest punkt~\num{5}, zlokalizowany na powierzchni wnęki uchwytu (na rysunku~\ref{r:wibro_pkt} po prawej stronie). Na widmie przemieszczeń (rys.~\ref{r:wibrometr_5}) widoczne jest lokalne maksimum amplitudy dla częstotliwości~\SI{400}{\hertz}, co jednak nie znajduje odzwierciedlenia w~widmie poziomu ciśnienia akustycznego -- mimo że podbicie tej częstotliwości jest widoczne w~charakterystykach skuteczności (por. rysunek~\ref{r:skutecznosc}).%Drgania obudowy mogą mieć wpływ na pole akustyczne wokół zestawu.
+		Kolejnym punktem, dla którego zdecydowano się zaprezentować wyniki jest punkt~\num{5}, zlokalizowany na powierzchni wnęki uchwytu (na rysunku~\ref{r:wibro_pkt} po prawej stronie). Na widmie przemieszczeń (rys.~\ref{r:wibrometr_5}) widoczne jest lokalne maksimum amplitudy dla częstotliwości~\SI{400}{\hertz}, co jednak nie znajduje odzwierciedlenia w~widmie poziomu ciśnienia akustycznego -- mimo że podbicie tej częstotliwości jest widoczne w~charakterystykach skuteczności uzyskanych z~innych pomiarów~\ref{ss:w-skutecznosc}.%Drgania obudowy mogą mieć wpływ na pole akustyczne wokół zestawu.
 		
 		\begin{figure}[H]
 		\centering
