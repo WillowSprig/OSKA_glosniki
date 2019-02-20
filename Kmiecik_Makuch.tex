@@ -245,9 +245,9 @@ backend=biber
 	
 		\subsubsection{Impedancja elektryczna i parametry Thiele-Smalla}
 			
-			Pomiary wykonano przy pomocy systemu Brüel\&Kjær PULSE, pozwalającego na pomiar charakterystyki impedancji oraz wyznaczenie na tej podstawie parametrów Thiele-Smalla.
+			Pomiary wykonano przy pomocy systemu Brüel\&Kjær Pulse, pozwalającego na pomiar charakterystyki impedancji oraz wyznaczenie na tej podstawie parametrów Thiele-Smalla.
 			
-			Do wyznaczenia tych parametrów wykorzystano metodę dodanej masy: wykonano pomiar impedancji głośnika, a~następnie do membrany dodano masę $m=\,$\SI{10}{\gram} i~wykonano kolejny pomiar. Na podstawie porównania dwóch charakterystyk impedancji, za pomocą dedykowanego oprogramowania PULSE Thiele Small Parameters Calculation BZ-5604 wyznaczano parametry Thiele-Smalla~\cite{BK_pulse_TS}, opisane w~tabeli~\ref{t:TS_opis}.
+			Do wyznaczenia tych parametrów wykorzystano metodę dodanej masy: wykonano pomiar impedancji głośnika, a~następnie do membrany dodano masę $m=\,$\SI{10}{\gram} i~wykonano kolejny pomiar. Na podstawie porównania dwóch charakterystyk impedancji, za pomocą dedykowanego oprogramowania Pulse Thiele Small Parameters Calculation BZ-5604 wyznaczano parametry Thiele-Smalla~\cite{BK_pulse_TS}, opisane w~tabeli~\ref{t:TS_opis}.
 			
 			Istnieją dwie metody pomiaru parametrów Thiele-Smalla: metoda dodanej masy oraz metoda dodanej objętości. Ze względów praktycznych zdecydowano się na wykonywanie większości pomiarów metodą dodanej masy, dla porównania wykonano też jeden pomiar metodą dodanej objętości.
 			
@@ -280,6 +280,8 @@ backend=biber
 					$R_{as}$ & \si[per-mode=symbol]{\newton\s\per\metre\tothe{5}} & Rezystancja akustyczna głośnika \\\hline
 					\hline
 					$\eta_0$ & \% & Sprawność głośnika \\\hline
+					$Bl$ & \si{\tesla\metre} & \makecell{Współczynnik przetwarzania elektromechanicznego\\(indeks siły)} \\\hline
+					$L_{e} (1\si{\kilo\hertz})$ & \si{\henry} & Indukcyjność cewki dla częstotliwości \SI{1}{\kilo\hertz} \\\hline
 				\end{tabular}
 			\end{table}
 
@@ -356,6 +358,8 @@ backend=biber
 			\label{r:wygrzewanie}
 		\end{figure}
 		
+		Z~przyczyn technicznych parametry T-S dla tego pomiaru zostały obliczone na podstawie dostępnych materiałów (\cite{dobrucki},), a~nie wyznaczone przy pomocy systemu Pulse.
+		
 		\begin{table}[!ht]
 			\centering
 			\caption{Porównanie parametrów Thiele-Smalla: odczytanych z~karty katalogowej oraz zmierzonych metodą dodanej masy ($m=$~\SI{10}{\gram}) dla różnych etapów pracy głośnika}
@@ -363,7 +367,7 @@ backend=biber
 			\boldmath
 			\begin{tabular}{|c|c|c|c|c|}
 				\hline
-				\textbf{Parametr} & \makecell{\textbf{Karta katalogowa}\\ \textbf{($R=$~\SI{8}{\ohm})}} & \makecell{\textbf{Fabryczny}} & \textbf{Etap 1} & \textbf{Etap 2} \\\hline
+				\textbf{Parametr} & \makecell{\textbf{Karta katalogowa}\\ \textbf{($R=$~\SI{8}{\ohm})}} & \textbf{Fabryczny} & \textbf{Etap 1} & \textbf{Etap 2} \\\hline
 				\hline
 				$F_s$ [\si{\hertz}] & \num{47,0}  & \num{71,5} & \num{57,0} & \num{50,7}  \\\hline
 				$Z_{max}$ [\si{\ohm}] & --- & \num{54,2} & \num{55,7} & \num{64,0}  \\\hline
@@ -386,43 +390,47 @@ backend=biber
 				$R_{as}$ [\si[per-mode=symbol]{\newton\s\per\metre\tothe{5}}] 	& \num{2367}  & \num{4123}  & \num{4323} & \num{3790} \\\hline
 				\hline
 				$\eta_0$ [\%] & \num{1,5}  & \num{1,08} & \num{1,07} & \num{1,00}   \\\hline
+				$Bl$ [\si{\tesla\metre}] & \num{14,2} & \num{14,7} & \num{15,4} & \num{15,7}\\\hline
+				$L_{e} (1\si{\kilo\hertz})$ [\si{\henry}] & \num{1e-3} & \num{1,984e-3} & \num{880e-6} & \num{911e-6} \\\hline
 			\end{tabular}
 			\unboldmath
 		\end{table}
 		
 		\begin{table}[!ht]
-		\centering
-		\caption{Porównanie metod pomiaru parametrów Thiele-Smalla: dodanej masy oraz objętości}
-		\label{t:TS_metody}
-		\boldmath
-		\begin{tabular}{|c|c|c||c|c|}
-		\hline
-		\multirow{2}{*}{\textbf{Parametr}} & \multicolumn{2}{c|}{\textbf{Etap 1, głośnik 1}} & \multicolumn{2}{|c|}{\textbf{Etap 2, głośnik 2}}\\\cline{2-5}
-		& \textbf{Masa \SI{5}{\gram}} & \multicolumn{2}{c|}{\textbf{Masa \SI{10}{\gram}}} & \textbf{Obudowa \SI{80}{\litre}}\\\hline
-		\hline
-		$F_s$ [\si{\hertz}] 		& \num{56,5} & \num{57,0} & \num{49,2} & \num{50,1} \\\hline
-		$Z_{max}$ [\si{\ohm}] 	& \num{57,2} & \num{55,7} & \num{77,5} & \num{73,7} \\\hline
-		$R_e$ [\si{\ohm}] 		& \num{10,0}  & \num{10,0} & \num{10,1} & \num{10,1} \\\hline
-		$r_0$ 					& \num{5,7} & \num{5,6} & \num{7,8} & \num{7,4}\\\hline
-		$S$ [\%]				& \num{4,29} & \num{3,35}  & \num{0,80} & \num{0,56}\\\hline
-		\hline
-		$Q_{ms}$ & \num{2,7} & \num{2,7} & \num{3,7} & \num{3,5}\\\hline
-		$Q_{es}$ & \num{0,58} & \num{0,58} & \num{0,55} & \num{0,55}\\\hline
-		$Q_{ts}$ & \num{0,48} & \num{,048} & \num{0,48} & \num{0,48}\\\hline
-		\hline
-		$V_{as}$ [\si{\litre}] 								& \num{34,5} & \num{34,5} & \num{45,6} & \num{42,8}\\\hline
-		$M_{ms}$ [\si{\gram}] 								& \num{39,1} & \num{38,5}  & \num{39,1} & \num{40,2}\\\hline
-		$C_{ms}$ [\si[per-mode=symbol]{\metre\per\newton}] 	& \num{203e-6} & \num{203e-6} & \num{267e-6} & \num{251e-6}\\\hline
-		$R_{ms}$ [\si[per-mode=symbol]{\metre\per\newton}] 	& \num{5,1} & \num{5,2}  & \num{3,3} & \num{3,6}\\\hline
-		\hline
-		$M_{as}$ [\si[per-mode=symbol]{\kilo\gram\per\metre\tothe{4}}] 	& \num{32,6} & \num{32,1}  & \num{32,6} & \num{33,5}\\\hline
-		$C_{as}$ [\si[per-mode=symbol]{\metre\tothe{5}\per\newton}] 	& \num{0,2e-6} & \num{0,2e-6} & \num{0,3e-6} & \num{0,3e-6} \\\hline
-		% 				$C_{as}$ [\si[per-mode=symbol]{\metre\tothe{5}\per\newton}] & \num{360e-9} & \num{165e-9} & \num{243e-9} & \num{292e-9} \\\hline
-		$R_{as}$ [\si[per-mode=symbol]{\newton\s\per\metre\tothe{5}}] 	& \num{4254} & \num{4323} & \num{2726} & \num{3011}\\\hline
-		\hline
-		$\eta_0$ [\%] & \num{1,06} & \num{1,07} & \num{0,96} & \num{0,96}  \\\hline
-		\end{tabular}
-		\unboldmath
+			\centering
+			\caption{Porównanie metod pomiaru parametrów Thiele-Smalla: dodanej masy oraz objętości}
+			\label{t:TS_metody}
+			\boldmath
+			\begin{tabular}{|c|c|c||c|c|}
+				\hline
+				\multirow{2}{*}{\textbf{Parametr}} & \multicolumn{2}{c|}{\textbf{Etap 1, głośnik 1}} & \multicolumn{2}{|c|}{\textbf{Etap 2, głośnik 2}}\\\cline{2-5}
+				& \textbf{Masa \SI{5}{\gram}} & \multicolumn{2}{c|}{\textbf{Masa \SI{10}{\gram}}} & \textbf{Obudowa \SI{80}{\litre}}\\\hline
+				\hline
+				$F_s$ [\si{\hertz}] 	& \num{56,5} & \num{57,0} & \num{49,2} & \num{50,1} \\\hline
+				$Z_{max}$ [\si{\ohm}] 	& \num{57,2} & \num{55,7} & \num{77,5} & \num{73,7} \\\hline
+				$R_e$ [\si{\ohm}] 		& \num{10,0}  & \num{10,0} & \num{10,1} & \num{10,1} \\\hline
+				$r_0$ 					& \num{5,7} & \num{5,6} & \num{7,8} & \num{7,4}\\\hline
+				$S$ [\%]				& \num{4,29} & \num{3,35}  & \num{0,80} & \num{0,56}\\\hline
+				\hline
+				$Q_{ms}$ & \num{2,7} & \num{2,7} & \num{3,7} & \num{3,5}\\\hline
+				$Q_{es}$ & \num{0,58} & \num{0,58} & \num{0,55} & \num{0,55}\\\hline
+				$Q_{ts}$ & \num{0,48} & \num{,048} & \num{0,48} & \num{0,48}\\\hline
+				\hline
+				$V_{as}$ [\si{\litre}] 								& \num{34,5} & \num{34,5} & \num{45,6} & \num{42,8}\\\hline
+				$M_{ms}$ [\si{\gram}] 								& \num{39,1} & \num{38,5}  & \num{39,1} & \num{40,2}\\\hline
+				$C_{ms}$ [\si[per-mode=symbol]{\metre\per\newton}] 	& \num{203e-6} & \num{203e-6} & \num{267e-6} & \num{251e-6}\\\hline
+				$R_{ms}$ [\si[per-mode=symbol]{\metre\per\newton}] 	& \num{5,1} & \num{5,2}  & \num{3,3} & \num{3,6}\\\hline
+				\hline
+				$M_{as}$ [\si[per-mode=symbol]{\kilo\gram\per\metre\tothe{4}}] 	& \num{32,6} & \num{32,1}  & \num{32,6} & \num{33,5}\\\hline
+				$C_{as}$ [\si[per-mode=symbol]{\metre\tothe{5}\per\newton}] 	& \num{0,2e-6} & \num{0,2e-6} & \num{0,3e-6} & \num{0,3e-6} \\\hline
+				% 				$C_{as}$ [\si[per-mode=symbol]{\metre\tothe{5}\per\newton}] & \num{360e-9} & \num{165e-9} & \num{243e-9} & \num{292e-9} \\\hline
+				$R_{as}$ [\si[per-mode=symbol]{\newton\s\per\metre\tothe{5}}] 	& \num{4254} & \num{4323} & \num{2726} & \num{3011}\\\hline
+				\hline
+				$\eta_0$ [\%] & \num{1,06} & \num{1,07} & \num{0,96} & \num{0,96}  \\\hline
+				$Bl$ [\si{\tesla\metre}] & \num{15,5} & \num{15,4} & \num{14,9} & \num{15,2}\\\hline
+				$L_{e} (1\si{\kilo\hertz})$ [\si{\henry}] & \num{890e-6} & \num{880e-6} & \num{853e-6} & \num{845e-6} \\\hline
+			\end{tabular}
+			\unboldmath
 		\end{table}
 		
 		Ze względu na możliwe rozbieżności między parametrami różnych egzemplarzy tego samego modelu głośnika~\cite{aes_roznice} wykonano pomiary pozwalające na porównanie obu wykorzystywanych egzemplarzy. Krzywe impedancji obu głośników \comment{po wygrzaniu} w~odgrodzie przedstawiono na rysunku~\ref{r:2glosniki}.
@@ -450,6 +458,7 @@ backend=biber
 	\subsection{Drgania obudowy}
 		
 		%generalnie nie widać zależności
+		
 		Spośród zarejestrowanych jednocześnie przebiegów przemieszczeń oraz ciśnienia akustycznego wybrano te, w~których można dostrzec zależności i~przedstawiono je na rysunkach~\ref{r:wibrometr_1-4} i~\ref{r:wibrometr_5}.
 		
 		W~punktach \range{1}{4} (rys.~\ref{r:wibrometr_1-4}) wyraźnie widoczny jest wzrost amplitudy przemieszczeń w~paśmie \SI{260}{\hertz}; jednocześnie w~tym samym paśmie zauważalny jest spadek poziomu ciśnienia akustycznego.
@@ -461,7 +470,7 @@ backend=biber
 			\label{r:wibrometr_1-4}
 		\end{figure}
 		
-		Na charakterystyce z~punktu~\num{5} (rys.~\ref{r:wibrometr_5}) widoczne jest lokalne maksimum amplitudy przemieszczeń dla częstotliwości~\SI{400}{\hertz}, co jednak nie znajduje odzwierciedlenia w~widmie poziomu ciśnienia akustycznego.
+		Na charakterystyce z~punktu~\num{5} (rys.~\ref{r:wibrometr_5}) widoczne jest lokalne maksimum amplitudy przemieszczeń dla częstotliwości~\SI{400}{\hertz}, co jednak nie znajduje odzwierciedlenia w~widmie poziomu ciśnienia akustycznego -- mimo że podbicie tej częstotliwości jest widoczne w~charakterystykach skuteczności uzyskanych z~innych pomiarów~\ref{ss:w-skutecznosc}.
 		
 		\begin{figure}[!ht]
 		\centering
