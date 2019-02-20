@@ -317,7 +317,7 @@ backend=biber
 			
 		\subsection{Charakterystyki kierunkowości}
 			
-			Wykonano dwie serie pomiarów, dla głośnika wysoko- i~niskotonowego. W~pierwszej serii zmierzono głośniki w~obudowie bez wypełnienia, w~drugiej -- wypełnione materiałem dźwiękochłonnym.
+% 			Wykonano dwie serie pomiarów, dla głośnika wysoko- i~niskotonowego. W~pierwszej serii zmierzono głośniki w~obudowie bez wypełnienia, w~drugiej -- wypełnione materiałem dźwiękochłonnym.
 			
 			Pomiar charakterystyki kierunkowości odbywał się w~komorze bezechowej przy użyciu stolika obrotowego, na którym umieszczony był zestaw głośnikowy. W~osi akustycznej mierzonego głośnika ustawiono mikrofon GRAS 46AE; następnie głośnik obracano z~krokiem \SI{10}{\degree}, każdorazowo zatrzymując i~wykonując pomiar trwający \SI{3}{\s}. Sygnałem podawanym na głośnik był szum różowy, pomiar wykonano w~pasmach $1/6$~oktawy, w~zakresie \range{40}{20000}~\si{\hertz}.
 			
@@ -354,6 +354,13 @@ backend=biber
 	\subsection{Wykonany model}
 	
 		Aby zyskać możliwość wprowadzania modyfikacji obudowy, zdecydowano się na wykonanie modelu badanego zestawu. Geometrię przygotowano w~programie Autodesk Inventor; obliczenia prowadzono za pomocą metody elementów skończonych (MES) w~środowisku Comsol Mulitphysics, z~wykorzystaniem modułu akustycznego i~mechanicznego. Elementowi cewki przypisywano wartość siły obliczonej na podstawie \comment{uzupełnić,sprawdzić}. W~oparciu o~te dane program wyznacza przemieszczenia membrany, które dzięki sprzężeniu pomiędzy modułem akustycznym i~mechanicznym pozwalają na wyznaczenie rozkładu ciśnienia akustycznego w~powietrzu.
+		
+		\begin{equation}
+			F_e=\frac{BlV_0}{Z_b}-\nu\frac{(Bl)^2}{Z_b} \quad. \label{eq:sila}
+		\end{equation}
+
+		
+		W~oparciu o~te dane program wyznaczał rozkład ciśnienia akustycznego i~przemieszczenia membrany.
 		
 		Ze względu na brak możliwości zdobycia parametrów materiałów użytych przez producenta głośników. Zdecydowano się na próbę empirycznego skorygowania parametrów zaczerpniętych z~literatury \cite{modelowanie} poprzez dostrojenie modelu. Wszystko to w~celu najlepszego odzwierciedlenia właściwości badanego zestawu. Proces ten nie został jeszcze zakończony.
 		
@@ -487,7 +494,7 @@ backend=biber
 			\includegraphics[width=.73\textwidth]{obrazki/winisd_screen2.png}\\
 				\setlength{\unitlength}{1mm}
 			\begin{picture}(0,0)
-				\put(-6,4){\texttt{f [!htz]}}
+				\put(-6,4){\texttt{f [Hz]}}
 				\put(-65,35){\rotatebox{90}{\texttt{Z$_e [\Omega]$}}}
 			\end{picture}
 			\caption{Wyniki symulacji impedancji dwóch głośników w~obudowie w~programie WinISD; \color{BrickRed}czerwony\color{Black}~--~dwa głośniki, obudowa z~otworami; \color{Dandelion}żółty\color{Black}~--~dwa głośniki, zaślepiona obudowa; \color{RoyalBlue}niebieski\color{Black}~--~jeden głośnik, obudowa z~otworami}
@@ -529,6 +536,17 @@ backend=biber
 			\label{r:skutecznosc}
 		\end{figure}
 		
+	\subsection{Charakterystyki kierunkowości}
+	
+		Otrzymane charakterystyki kierunkowości przedstawiono na rysunku~\ref{r:kierunkowosc}. Ze względu na kształt obudowy kąt promieniowania w~płaszczyźnie pionowej jest większy, niż w~płaszczyźnie poziomej -- jest to widoczne dla pasma \range{250}{1000}~\si{\hertz}. Widoczne są też niepożądane listki boczne w~paśmie \SI{2000}{\hertz}.
+		
+		\begin{figure}[!ht]
+			\centering
+			\includegraphics[width=\textwidth,trim={0 .5cm 0 1.7cm},clip]{kierunkowosc.png}
+			\caption{Charakterystyki kierunkowości głośnika niskotonowego w~obudowie (lewa -- w~poziomie, prawa -- w~pionie)}
+			\label{r:kierunkowosc}
+		\end{figure}
+
 	
 	\subsection{Drgania obudowy}
 		
