@@ -167,6 +167,7 @@ backend=biber
 \usepackage{adjustbox}
 \graphicspath{{./}{obrazki/}}
 
+\usepackage{float}
 
 \begin{document}
 
@@ -197,18 +198,18 @@ backend=biber
 		
 	%	Przekrój zestawu w~płaszczyźnie poziomej ukazano na rysunku~\ref{r:przekroj}, a~fotografię na rysunku~\ref{r:zdjecie}.
 		
-		\begin{figure}[!ht]
-			\centering
-			\adjincludegraphics[width=\textwidth,trim={{.1\width} {.25\height} {.17\width} {.12\height}},clip]{render_z_otworami_bez_tekstury.pdf}
-			\caption{Przekrój modelu badanego zestawu głośnikowego w~płaszczyźnie poziomej wykonany w~programie Inventor}
-			\label{r:przekroj}
+		\begin{figure}[H]
+		\centering
+		\includegraphics[width=.8\textwidth]{zdjecie.jpg}
+		\caption{Fotografia badanego zestawu głośnikowego}
+		\label{r:zdjecie}
 		\end{figure}
 		
-		\begin{figure}[!ht]
+		\begin{figure}[H]
 			\centering
-% 			\includegraphics[width=.8\textwidth]{}
-			\caption{Fotografia badanego zestawu głośnikowego}
-			\label{r:zdjecie}
+			\adjincludegraphics[width=\textwidth,trim={{.1\width} {.25\height} {.17\width} {.12\height}},clip]{render_z_otworami_bez_tekstury.pdf}
+			\caption{Przekrój modelu badanego zestawu głośnikowego w~płaszczyźnie poziomej}
+			\label{r:przekroj}
 		\end{figure}
 	
 	\subsection{Modyfikacje obudowy}
@@ -217,7 +218,7 @@ backend=biber
 		
 		Oprócz modyfikacji obudowy, zmieniano także liczbę zamontowanych w~niej głośników, aby lepiej zbadać ich wzajemny wpływ. Wszystkie konfiguracje pomiarowe opisano w~tabeli~\ref{t:obudowa}.
 		
-		\begin{table}[!ht]
+		\begin{table}[H]
 			\centering
 			\caption{Opis konfiguracji obudowy i~głośników wykorzystanych podczas pomiarów}
 			\label{t:obudowa}
@@ -251,7 +252,7 @@ backend=biber
 			
 			Istnieją dwie metody pomiaru parametrów Thiele-Smalla: metoda dodanej masy oraz metoda dodanej objętości. Ze względów praktycznych zdecydowano się na wykonywanie większości pomiarów metodą dodanej masy, dla porównania wykonano też jeden pomiar metodą dodanej objętości.
 			
-			\begin{table}[!ht]
+			\begin{table}[H]
 				\centering
 				\caption{Parametry Thiele-Smalla}
 				\label{t:TS_opis}
@@ -312,7 +313,7 @@ backend=biber
 			Pomiar drgań obudowy miał na celu sprawdzenie, w~jakim stopniu charakterystyka częstotliwościowa zestawu jest związana z~właściwościami obudowy. Badany zestaw głośnikowy umieszczono w~komorze bezechowej; w~wybranych punktach (por.~\ref{r:wibro_pkt}) naklejono taśmę odblaskową, na którą padała wiązka lasera; zastosowanie taśmy było niezbędne dla uzyskania odpowiedniego odbicia światła od badanych powierzchni. %Wibrometr umieszczono w~odpowiedniej odległości, tak aby uniknąć przesterowania sygnału. 
 			Sygnałem pomiarowym był szum różowy, rejestrowano jednocześnie przebieg drgań wibrometrem oraz sygnał akustyczny dwoma mikrofonami: jednym umieszczonym blisko bieżącego punktu pomiarowego (rys.~\ref{r:wibro_zdjecie}), a~drugim w~odległości~\SI{2}{\metre}. Wibrometr umieszczono poza przestrzenią komory celem zapewnienia jego stabilnego usadowienia.
 			
-			\begin{figure}[!ht]
+			\begin{figure}[H]
 				\centering
 				\includegraphics[width=.8\textwidth]{zdjecie_wibro.jpg}
 				\caption{Fotografia wykonana podczas przygotowań do pomiaru z~użyciem wibrometru}
@@ -331,7 +332,7 @@ backend=biber
 	\subsection{Pomiary impedancji}
 		
 		
-		\begin{figure}[!ht]
+		\begin{figure}[H]
 			\centering
 			\includegraphics[width=.9\textwidth]{obrazki/winisd_screen.png}\\
 			\setlength{\unitlength}{1mm}
@@ -343,7 +344,7 @@ backend=biber
 			\label{r:winisd}
 		\end{figure}
 		
-		\begin{figure}[!ht]
+		\begin{figure}[H]
 			\centering
 			\includegraphics[width=.8\textwidth,trim={2cm .5cm 2cm 1cm},clip]{odgroda_wygrzewanie.pdf}
 			\caption{}
@@ -352,7 +353,7 @@ backend=biber
 		
 		Z~przyczyn technicznych parametry T-S dla tego pomiaru zostały obliczone na podstawie dostępnych materiałów (\cite{dobrucki},), a~nie wyznaczone przy pomocy systemu Pulse.
 		
-		\begin{table}[!ht]
+		\begin{table}[H]
 			\centering
 			\caption{Porównanie parametrów Thiele-Smalla: odczytanych z~karty katalogowej oraz zmierzonych metodą dodanej masy ($m=$~\SI{10}{\gram}) dla różnych etapów pracy głośnika}
 			\label{t:TS_karta_etapy}
@@ -390,14 +391,14 @@ backend=biber
 		
 		Na rysunku \ref{r:metody} przedstawione zostały przebiegi impedancji w~funkcji częstotliwości zmierzone dla obu metod. Widoczne jest przesunięcie częstotliwości rezonansowej w~dół po dodaniu masy i~w~górę po dodaniu objętości, natomiast w~tabeli~\ref{t:TS_metody} przedstawiono parametry Thiele-Smalla uzyskane obiema metodami (kolumna 4~i~5). Przyjmują one podobne wartości dla obu metod, nie widać też znaczących różnic w~symetrii $S$ -- dla obu pomiarów jest ona niska.
 		
-		\begin{figure}[!ht]
+		\begin{figure}[H]
 			\centering
 			\includegraphics[width=.8\textwidth,trim={2cm .5cm 2cm 1cm},clip]{metody_2glosnik.pdf}
 			\caption{Impedancje głośnika w~odgrodzie oraz głośnika przy pomiarze każdą z~metod (dodanej masy i~dodanej objętości)}
 			\label{r:metody}
 		\end{figure}
 		
-		\begin{table}[!ht]
+		\begin{table}[H]
 			\centering
 			\caption{Porównanie metod pomiaru parametrów Thiele-Smalla: dodanej masy oraz objętości}
 			\label{t:TS_metody}
@@ -436,14 +437,14 @@ backend=biber
 		
 		Ze względu na możliwe rozbieżności między parametrami różnych egzemplarzy tego samego modelu głośnika~\cite{aes_roznice} wykonano pomiary pozwalające na porównanie obu wykorzystywanych egzemplarzy. Krzywe impedancji obu głośników \comment{po wygrzaniu} w~odgrodzie przedstawiono na rysunku~\ref{r:2glosniki}.
 		
-		\begin{figure}[!ht]
+		\begin{figure}[H]
 			\centering
 			\includegraphics[width=.8\textwidth,trim={2cm .5cm 2cm 1cm},clip]{porownanie_glosnikow.pdf}
 			\caption{Charakterystyki impedancji obu badanych głośników w~odgrodzie}
 			\label{r:2glosniki}
 		\end{figure}
 		
-		\begin{figure}[!ht]
+		\begin{figure}[H]
 			\centering
 			\includegraphics[width=.8\textwidth,trim={2cm .5cm 2cm 1cm},clip]{obudowa_otwory.pdf}
 			\caption{}
@@ -452,7 +453,7 @@ backend=biber
 		
 	\subsection{Skuteczność}
 		
-		\begin{figure}[!ht]
+		\begin{figure}[H]
 			\centering
 			\includegraphics[width=.8\textwidth,trim={2cm .5cm 2cm 1cm},clip]{skutecznosci_stolik.pdf}
 			\caption{}
@@ -470,14 +471,14 @@ backend=biber
 		
 		Spośród zarejestrowanych przebiegów wybrano punkty \range{1}{4}, między którymi można dostrzec pewne zależności i~zestawiono je na rysunku~\ref{r:wibrometr_1-4}. W~punktach tych wyraźnie widoczny jest wzrost amplitudy przemieszczeń w~paśmie \SI{260}{\hertz}; jednocześnie w~tym samym paśmie zauważalny jest spadek poziomu ciśnienia akustycznego. Wybrane punkty zlokalizowane są na dwóch różnych ściankach obudowy, jak pokazano na rysunku~\ref{r:wibro_pkt} \comment{rozwinięcie myśli?}
 		
-		\begin{figure}[!ht]
+		\begin{figure}[H]
 			\centering
 			\adjincludegraphics[width=.8\textwidth,trim={2cm .5cm 2cm 1cm},clip]{pkt1_4.pdf}
 			\caption{Znormalizowane widma amplitudy przemieszczeń obudowy (góra) oraz poziomu ciśnienia akustycznego w~niewielkiej odległości od zestawu w~punktach pomiarowych~\range{1}{4}}
 			\label{r:wibrometr_1-4}
 		\end{figure}
 		
-		\begin{figure}[!ht]
+		\begin{figure}[H]
 			\centering
 			\includegraphics[width=.8\textwidth,trim={5cm .3cm 5cm 2.7cm},clip]{wibrometr.pdf}
 			\caption{Rozmieszczenie punktów pomiarowych \range{1}{4} na obudowie (widok tylnej i~górnej ścianki)}
@@ -486,7 +487,7 @@ backend=biber
 		
 		Kolejnym punktem, dla którego zdecydowano się zaprezentować wyniki jest punkt~\num{5}, zlokalizowany na uchwycie (na rysunku~\ref{r:wibro_pkt} po prawej stronie). Na widmie przemieszczeń (rys.~\ref{r:wibrometr_5}) widoczne jest lokalne maksimum amplitudy dla częstotliwości~\SI{400}{\hertz}, co jednak nie znajduje odzwierciedlenia w~widmie poziomu ciśnienia akustycznego -- mimo że podbicie tej częstotliwości jest widoczne w~charakterystykach skuteczności uzyskanych z~innych pomiarów~\ref{ss:w-skutecznosc}.%Drgania obudowy mogą mieć wpływ na pole akustyczne wokół zestawu.
 		
-		\begin{figure}[!ht]
+		\begin{figure}[H]
 		\centering
 		\adjincludegraphics[width=.8\textwidth,trim={2cm .5cm 2cm 1cm},clip]{pkt5.pdf}
 		\caption{Znormalizowane widma amplitudy przemieszczeń obudowy (góra) oraz poziomu ciśnienia akustycznego w~niewielkiej odległości od zestawu w~punkcie pomiarowym~\num{5}}
