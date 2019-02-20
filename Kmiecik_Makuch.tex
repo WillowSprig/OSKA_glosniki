@@ -285,7 +285,7 @@ backend=biber
 			\end{table}
 
 			
-			Pomiar wykonano z~użyciem sygnału sinusoidalnego z~krokiem $1/24$~oktawy w~zakresie \range{}{}~\si{\hertz}.
+			Pomiar wykonano z~użyciem sygnału sinusoidalnego z~krokiem $1/48$~oktawy w~zakresie \range{20}{8000}~\si{\hertz}.
 			
 % 			Zmierzono impedancję głośnika niskotonowego w~odgrodzie, jednego głośnika w~obudowie oraz obu głośników w~obudowie.
 			Zmierzono impedancję głośnika niskotonowego w~odgrodzie oraz głośników w~obudowie z~zastosowanymi różnymi modyfikacjami. 
@@ -294,7 +294,7 @@ backend=biber
 			
 		\subsection{Charakterystyka skuteczności}
 			
-			Do pomiarów wykorzystano analizator SVAN~912~E; głośnik pobudzano szumem różowym z~generatora o~wartości skutecznej \SI{1}{\watt}. Analizę prowadzono w~odległości \SI{2}{\metre} w~pasmach $1/3$-oktawowych w~zakresie \range{50}{5000}~\si{\hertz}.
+			Do pomiarów wykorzystano analizator SVAN~912E; głośnik pobudzano szumem różowym z~generatora o~wartości skutecznej \SI{1}{\watt}. Analizę prowadzono w~odległości \SI{2}{\metre} w~pasmach $1/3$-oktawowych w~zakresie \range{50}{5000}~\si{\hertz}.
 			
 % 			\begin{table}[!ht]
 % 				\centering
@@ -358,7 +358,7 @@ backend=biber
 		\begin{figure}[H]
 			\centering
 			\includegraphics[width=.8\textwidth,trim={2cm .5cm 2cm 1cm},clip]{metody_2glosnik.pdf}
-			\caption{Impedancje głośnika w~odgrodzie oraz głośnika przy pomiarze każdą z~metod (dodanej masy i~dodanej objętości)}
+			\caption{Charakterystyki impedancji głośnika w~odgrodzie oraz głośnika przy pomiarze każdą z~metod (dodanej masy i~dodanej objętości)}
 			\label{r:metody}
 		\end{figure}
 		
@@ -404,7 +404,7 @@ backend=biber
 		\begin{figure}[H]
 			\centering
 			\includegraphics[width=.8\textwidth,trim={2cm .5cm 2cm 1cm},clip]{odgroda_wygrzewanie.pdf}
-			\caption{}
+			\caption{Charakterystyki impedancji głośnika na różnych etapach zużycia}
 			\label{r:wygrzewanie}
 		\end{figure}
 		
@@ -456,7 +456,7 @@ backend=biber
 		\begin{figure}[H]
 			\centering
 			\includegraphics[width=.8\textwidth,trim={2cm .5cm 2cm 1cm},clip]{obudowa_otwory.pdf}
-			\caption{}
+			\caption{Charakterystyki impedancji dwóch głośników w~obudowie z~otworami i~zaślepionej}
 			\label{r:obudowa_otwory}
 		\end{figure}
 		
@@ -475,10 +475,26 @@ backend=biber
 	\subsection{Skuteczność}
 		
 		
+		
+		\begin{table}
+			\centering
+			\caption{Parametry pomiaru skuteczności}
+			\label{t:skutecznosc}
+			\begin{tabular}{|c|c|}
+				\hline
+				\makecell{Wartość skuteczna prądu\\$I_{RMS}$} & \SI{264,2}{\milli\ampere} \\\hline
+				\makecell{Wartość skuteczna napięcia\\$U_{RMS}$} & \SI{3,94}{\volt} \\\hline
+				\makecell{Moc elektryczna\\$P$} & \SI{1,04}{\watt} \\\hline
+				\makecell{Poziom ciśnienia akustycznego\\w odległości \SI{2}{\metre} $L_{p,2m}$} & \SI{88,8}{\decibel} \\\hline
+				\makecell{Poziom skuteczności\\$L_{s}$} & \SI{94,8}{\decibel} \\\hline
+			\end{tabular}
+
+		\end{table}
+		
 		\begin{figure}[H]
 			\centering
 			\includegraphics[width=.8\textwidth,trim={2cm .5cm 2cm 1cm},clip]{skutecznosci_stolik.pdf}
-			\caption{}
+			\caption{Charakterystyki skuteczności głośników z~badanego zestawu oraz głośnika niskotonowego w~odgrodzie}
 			\label{r:skutecznosc}
 		\end{figure}
 		
