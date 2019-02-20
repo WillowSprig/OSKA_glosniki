@@ -225,8 +225,8 @@ backend=biber
 				\hline
 				\textbf{L.p.} & \makecell{\textbf{Oznaczenie}\\\textbf{(na wykresach)}} & \centering\textbf{Opis} \tabularnewline\hline
 				1. & Pusta & Obudowa w~podstawowej wersji (opisanej w~części~\ref{ss:opis}), z~otworami, bez wypełnienia \\\hline
-				2. & Wypełniona & Wnnętrze obudowy wypełnione materiałem dźwiękochłonnym z~włókien poliestrowych umieszczonym na ściankach \\\hline
-				3. & Zabudowane & Ćwierćkoliste otwory zaślepione elementami ze sklejki o~grubości \SI{}{\milli\metre}, przyklejonymi do ścianki, w~której zamocowany jest głośnik niskotonowy\\\hline
+				2. & Wypełniona & Wnętrze obudowy wypełnione materiałem dźwiękochłonnym z~włókien poliestrowych umieszczonym na ściankach \\\hline
+				3. & Zaślepiona & Ćwierćkoliste otwory zaślepione elementami ze sklejki o~grubości \SI{6,4}{\milli\metre}, przyklejonymi do ścianki, w~której zamocowany jest głośnik niskotonowy\\\hline
 				\hline
 				4. & Jeden głośnik & Jeden głośnik niskotonowy zamocowany w~obudowie, otwór na drugi zaślepiony kołem ze sklejki; zamocowany głośnik wysokotonowy \\\hline
 				5. & Dwa głośniki & Obydwa głośniki niskotonowe oraz głośnik wysokotonowy zamocowane w~obudowie\\\hline
@@ -259,7 +259,7 @@ backend=biber
 				\hline
 					\textbf{Oznaczenie} & \textbf{Jednostka} & \textbf{Opis parametru}\\\hline\hline
 					\multicolumn{3}{|c|}{Parametry wyznaczane z pojedynczego pomiaru} \\\hline\hline
-					$F_s$ & \si{\Hz} & Częstotliwość rezonansowa \\\hline
+					$F_s$ & \si{\hertz} & Częstotliwość rezonansowa \\\hline
 					$Z_{max}$ & \si{\ohm} & Impedancja w~rezonansie \\\hline
 					$R_e$ & \si{\ohm} & Rezystancja dla napięcia stałego \\\hline
 					\gape{$r_0=\frac{Z_{max}}{R_e}$} & --- & Stosunek impedancji cewki do rezystancji \\\hline
@@ -267,7 +267,7 @@ backend=biber
 					\hline
 					$Q_{ms}$ & --- & Dobroć mechaniczna \\\hline
 					$Q_{es}$ & --- & Dobroć elektryczna \\\hline
-					\gape{$Q_{ts}=\frac{Q_{ms}\cdot Q_{es}}{Q_{ms}+Q_{es}}$} & --- & Dobroć całowita \\\hline
+					\gape{$Q_{ts}=\frac{Q_{ms}\cdot Q_{es}}{Q_{ms}+Q_{es}}$} & --- & Dobroć całkowita \\\hline
 					\hline
 					\multicolumn{3}{|c|}{Parametry wyznaczane z dwóch pomiarów (samej membrany i z dodaną masą)} \\\hline\hline
 					$V_{as}$ & \si{\litre} & Równoważna objętość podatności głośnika \\\hline
@@ -284,7 +284,7 @@ backend=biber
 			\end{table}
 
 			
-			Pomiar wykonano z~użyciem sygnału sinusoidalnego z~krokiem $1/24$~oktawy w~zakresie \range{}{}~\si{\Hz}.
+			Pomiar wykonano z~użyciem sygnału sinusoidalnego z~krokiem $1/24$~oktawy w~zakresie \range{}{}~\si{\hertz}.
 			
 % 			Zmierzono impedancję głośnika niskotonowego w~odgrodzie, jednego głośnika w~obudowie oraz obu głośników w~obudowie.
 			Zmierzono impedancję głośnika niskotonowego w~odgrodzie oraz głośników w~obudowie z~zastosowanymi różnymi modyfikacjami. 
@@ -293,21 +293,22 @@ backend=biber
 			
 		\subsubsection{Charakterystyka skuteczności}
 			
-			Do pomiarów wykorzystano analizator SVAN~912~E; głośnik pobudzano szumem różowym z~generatora o~wartości skutecznej \SI{1}{\watt}. Analizę prowadzono w~odległości \SI{2}{\metre} w~pasmach $1/3$-oktawowych w~zakresie \range{25}{8000}~\si{\Hz}.
+			Do pomiarów wykorzystano analizator SVAN~912~E; głośnik pobudzano szumem różowym z~generatora o~wartości skutecznej \SI{1}{\watt}. Analizę prowadzono w~odległości \SI{2}{\metre} w~pasmach $1/3$-oktawowych w~zakresie \range{50}{5000}~\si{\hertz}.
 			
 		\subsubsection{Skuteczność}
-			Podczas pomiarów 
+		
+			\comment{ewentualnie w całość char + jednoliczbowa}
+			
 		\subsubsection{Charakterystyki kierunkowości}
 			
 			Wykonano dwie serie pomiarów, dla głośnika wysoko- i~niskotonowego. W~pierwszej serii zmierzono głośniki w~obudowie bez wypełnienia, w~drugiej -- wypełnione materiałem dźwiękochłonnym.
 			
-			Pomiar charakterystyki kierunkowości odbywał się w~komorze bezechowej przy użyciu stolika obrotowego, na którym umieszczony był zestaw głośnikowy. W~osi akustycznej mierzonego głośnika ustawiono mikrofon GRAS 46AE; następnie głośnik obracano z~krokiem \SI{10}{\degree}, każdorazowo zatrzymując i~wykonując pomiar trwający \SI{3}{\s}. Sygnałem podawanym na głośnik był szum różowy, pomiar wykonano w~pasmach $1/6$~oktawy, w~zakresie \range{40}{20000}~\si{\Hz}. \comment{Filtrowaliśmy???}
-
+			Pomiar charakterystyki kierunkowości odbywał się w~komorze bezechowej przy użyciu stolika obrotowego, na którym umieszczony był zestaw głośnikowy. W~osi akustycznej mierzonego głośnika ustawiono mikrofon GRAS 46AE; następnie głośnik obracano z~krokiem \SI{10}{\degree}, każdorazowo zatrzymując i~wykonując pomiar trwający \SI{3}{\s}. Sygnałem podawanym na głośnik był szum różowy, pomiar wykonano w~pasmach $1/6$~oktawy, w~zakresie \range{40}{20000}~\si{\hertz}.
 			
 		\subsubsection{Drgania obudowy}
 			
 			Pomiar drgań obudowy miał na celu sprawdzenie, w~jakim stopniu charakterystyka częstotliwościowa zestawu jest związana z~właściwościami obudowy. Badany zestaw głośnikowy umieszczono w~komorze bezechowej; w~wybranych punktach naklejono taśmę odblaskową, na którą padała wiązka lasera; zastosowanie taśmy było niezbędne dla uzyskania odpowiedniego odbicia światła od badanych powierzchni. %Wibrometr umieszczono w~odpowiedniej odległości, tak aby uniknąć przesterowania sygnału. 
-			Sygnałem pomiarowym był szum różowy, rejestrowano jednocześnie przebieg drgań wibrometrem oraz sygnał akustyczny mikrofonem umieszczonym blisko bieżącego punktu pomiarowego (rys.~\ref{r:zdjecie_wibro}). Wibrometr umieszczono poza przestrzenią komory celem zapewnienia jego stabilnego usadowienia.
+			Sygnałem pomiarowym był szum różowy, rejestrowano jednocześnie przebieg drgań wibrometrem oraz sygnał akustyczny dwoma mikrofonami: jednym umieszczonym blisko bieżącego punktu pomiarowego (rys.~\ref{r:zdjecie_wibro}), a~drugim w~odległości~\SI{2}{\metre}. Wibrometr umieszczono poza przestrzenią komory celem zapewnienia jego stabilnego usadowienia.
 			
 			\begin{figure}[!ht]
 				\centering
@@ -317,7 +318,7 @@ backend=biber
 			\end{figure}
 
 	
-	\subsection{Dodatkowe pomiary}\label{ss:dodatkowe}
+% 	\subsection{Dodatkowe pomiary}\label{ss:dodatkowe}
 
 \section{Modelowanie}
 
@@ -364,7 +365,7 @@ backend=biber
 				\hline
 				\textbf{Parametr} & \makecell{\textbf{Karta katalogowa}\\ \textbf{($R=$~\SI{8}{\ohm})}} & \makecell{\textbf{Fabryczny}} & \textbf{Etap 1} & \textbf{Etap 2} \\\hline
 				\hline
-				$F_s$ [\si{\Hz}] & \num{47,0}  & \num{71,5} & \num{57,0} & \num{50,7}  \\\hline
+				$F_s$ [\si{\hertz}] & \num{47,0}  & \num{71,5} & \num{57,0} & \num{50,7}  \\\hline
 				$Z_{max}$ [\si{\ohm}] & --- & \num{54,2} & \num{55,7} & \num{64,0}  \\\hline
 				$R_e$ [\si{\ohm}] & \num{6,1}  & \num{10,4} & \num{10,0} & \num{10,2}  \\\hline
 				$r_0$ & ---  & \num{5,2} & \num{5,6} & \num{6,4} \\\hline
@@ -399,7 +400,7 @@ backend=biber
 		\multirow{2}{*}{\textbf{Parametr}} & \multicolumn{2}{c|}{\textbf{Etap 1, głośnik 1}} & \multicolumn{2}{|c|}{\textbf{Etap 2, głośnik 2}}\\\cline{2-5}
 		& \textbf{Masa \SI{5}{\gram}} & \multicolumn{2}{c|}{\textbf{Masa \SI{10}{\gram}}} & \textbf{Obudowa \SI{80}{\litre}}\\\hline
 		\hline
-		$F_s$ [\si{\Hz}] 		& \num{56,5} & \num{57,0} & \num{49,2} & \num{50,1} \\\hline
+		$F_s$ [\si{\hertz}] 		& \num{56,5} & \num{57,0} & \num{49,2} & \num{50,1} \\\hline
 		$Z_{max}$ [\si{\ohm}] 	& \num{57,2} & \num{55,7} & \num{77,5} & \num{73,7} \\\hline
 		$R_e$ [\si{\ohm}] 		& \num{10,0}  & \num{10,0} & \num{10,1} & \num{10,1} \\\hline
 		$r_0$ 					& \num{5,7} & \num{5,6} & \num{7,8} & \num{7,4}\\\hline
@@ -446,7 +447,30 @@ backend=biber
 		
 		% + kierunkowość, skuteczność
 	
-	\subsection{Porównanie wyników pomiaru, modelu i~parametrów teoretycznych}
+	\subsection{Drgania obudowy}
+		
+		%generalnie nie widać zależności
+		Spośród zarejestrowanych jednocześnie przebiegów przemieszczeń oraz ciśnienia akustycznego wybrano te, w~których można dostrzec zależności i~przedstawiono je na rysunkach~\ref{r:wibrometr_1-4} i~\ref{r:wibrometr_5}.
+		
+		W~punktach \range{1}{4} (rys.~\ref{r:wibrometr_1-4}) wyraźnie widoczny jest wzrost amplitudy przemieszczeń w~paśmie \SI{260}{\hertz}; jednocześnie w~tym samym paśmie zauważalny jest spadek poziomu ciśnienia akustycznego.
+		
+		\begin{figure}[!ht]
+			\centering
+			\adjincludegraphics[width=\textwidth,trim={2cm .5cm 2cm 1cm},clip]{pkt1_4.pdf}
+			\caption{Znormalizowane widma amplitudy przemieszczeń obudowy (góra) oraz poziomu ciśnienia akustycznego w~niewielkiej odległości od zestawu w~punktach pomiarowych~\range{1}{4}}
+			\label{r:wibrometr_1-4}
+		\end{figure}
+		
+		Na charakterystyce z~punktu~\num{5} (rys.~\ref{r:wibrometr_5}) widoczne jest lokalne maksimum amplitudy przemieszczeń dla częstotliwości~\SI{400}{\hertz}, co jednak nie znajduje odzwierciedlenia w~widmie poziomu ciśnienia akustycznego.
+		
+		\begin{figure}[!ht]
+		\centering
+		\adjincludegraphics[width=\textwidth,trim={2cm .5cm 2cm 1cm},clip]{pkt5.pdf}
+		\caption{Znormalizowane widma amplitudy przemieszczeń obudowy (góra) oraz poziomu ciśnienia akustycznego w~niewielkiej odległości od zestawu w~punkcie pomiarowym~\num{5}}
+		\label{r:wibrometr_5}
+		\end{figure}
+		
+		Otrzymane wyniki nie dają podstaw do jednoznacznego wskazania wpływu drgań obudowy na charakterystykę głośnika. Jednocześnie do dalszej analizy tej zależności wskazane jest wykonanie pomiarów w~większej liczbie punktów oraz obliczeń statystycznych.
 
 \section{Podsumowanie}
 
