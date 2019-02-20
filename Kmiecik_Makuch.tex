@@ -338,11 +338,11 @@ backend=biber
 	
 	\subsection{Wprowadzenie}
 	
-		Dzięki stworzeniu modelu komputerowego możliwe jest łatwe i~niewymagające wysokich kosztów testowanie różnych rozwiązań metodami numerycznymi. Takie rozwiązanie pozwala również na dużo prostszą obserwację zjawisk akustycznych i~mechanicznych zachodzących w~konstrukcji i~nie wymaga użycia zaplecza technicznego takiego jak komora bezechowa. 
+		Dzięki stworzeniu modelu komputerowego możliwe jest łatwe i~niewymagające wysokich kosztów testowanie różnych rozwiązań metodami numerycznymi. Takie rozwiązanie pozwala również na dużo prostszą obserwację zjawisk akustycznych i~mechanicznych zachodzących w~konstrukcji i~nie wymaga użycia zaplecza technicznego takiego jak np. komora bezechowa. 
 		
-		Jednak tworzenie skomplikowanych modeli wykorzystujących sprzężenie pomiędzy domeną mechaniczną opisującą zachowanie membrany i~zawieszenia głośnika, a~domeną akustyczną opisującą propagację dźwięku w~powietrzu, wymaga poznania właściwości materiałów, z których zbudowane są wszystkie elementy. Parametry materiałowe, takie jak moduł Younga, współczynnik Poissona \comment{co jeszcze}, ciężko jest zmierzyć dla każdego elementu modelu, a~jednocześnie odpowiadają za jego właściwości mechaniczne, a~co za tym idzie -- pośrednio -- akustyczne. W~praktyce zazwyczaj wykorzystuje się jako bazę właściwości materiałów dostępne w~literaturze~\cite{modelowanie}, a~następnie przeprowadza strojenie modelu -- dla znanego przypadku wykonuje się symulacje, zmieniając parametry tak, aby wyniki otrzymane w~modelu komputerowym były jak najbardziej zbliżone do wyników pomiaru.
+		Jednak tworzenie skomplikowanych modeli wykorzystujących sprzężenie pomiędzy domeną mechaniczną opisującą zachowanie membrany i~zawieszenia głośnika, a~domeną akustyczną opisującą propagację dźwięku w~powietrzu, wymaga poznania właściwości materiałów, z których zbudowane są wszystkie elementy. Parametry materiałowe, takie jak moduł Younga, współczynnik Poisson, gęstość \comment{co jeszcze}, ciężko jest zmierzyć dla każdego elementu modelu, a~jednocześnie odpowiadają za jego właściwości mechaniczne, a~co za tym idzie -- pośrednio -- akustyczne. W~praktyce zazwyczaj wykorzystuje się jako bazę właściwości materiałów dostępne w~literaturze~\cite{modelowanie}, a~następnie przeprowadza strojenie modelu -- dla znanego przypadku wykonuje się symulacje, zmieniając parametry tak, aby wyniki otrzymane w~modelu komputerowym były jak najbardziej zbliżone do wyników pomiaru.
 		
-		Dodatkowo problematyczne staje się stworzenie geometrii, dla której możliwe byłoby wygenerowanie siatki elementów, przy jednoczesnym odwzorowaniu kształtu w~sposób zapewniający rzeczywiste zachowanie elementów modelu. Na taki problem natknęli się autorzy przy tworzeniu kształtu zawieszenia, co można zaobserwować na rysunku~\ref{r:zawieszenie}, przedstawiającym przemieszczenia w~symulacji dla częstotliwości \SI{50}{\hertz}. Problem rozmiarów elementów siatki jest związany z~czasem obliczeń modelu. Dla wysokich częstotliwości i dużych modeli ilość węzłów staje się na tyle duża, że czas obliczeń nawet na komputerach dużych mocy jest bardzo duży przez co model jest bezużyteczny.
+		Dodatkowo problematyczne staje się stworzenie geometrii, dla której możliwe byłoby wygenerowanie siatki elementów, przy jednoczesnym odwzorowaniu kształtu w~sposób zapewniający rzeczywiste zachowanie elementów modelu. Na taki problem natknęli się autorzy przy tworzeniu kształtu zawieszenia, co można zaobserwować na rysunku~\ref{r:zawieszenie}, przedstawiającym przemieszczenia w~symulacji dla częstotliwości \SI{50}{\hertz}. Problem rozmiarów elementów siatki jest związany z~czasem obliczeń modelu. Dla wysokich częstotliwości i dużych modeli ilość węzłów staje się na tyle duża, że czas obliczeń nawet na komputerach dużych mocy jest bardzo długi przez co model jest bezużyteczny.
 		
 		\begin{figure}[!ht]
 			\centering
@@ -356,6 +356,8 @@ backend=biber
 		Aby zyskać możliwość wprowadzania modyfikacji obudowy, zdecydowano się na wykonanie modelu badanego zestawu. Geometrię przygotowano w~programie Autodesk Inventor; obliczenia prowadzono za pomocą metody elementów skończonych (MES) w~środowisku Comsol Mulitphysics, z~wykorzystaniem modułu akustycznego i~mechanicznego. Membranie przypisywano wartość siły obliczonej na podstawie \comment{uzupełnić,sprawdzić}. W~oparciu o~te dane program wyznaczał rozkład ciśnienia akustycznego i~przemieszczenia membrany.
 		
 		Parametry materiałowe modelu są korygowane w~procesie strojenia, celem jak najlepszego odzwierciedlenia właściwości badanego zestawu. Proces ten nie został jeszcze zakończony.
+		
+		
 		
 
 \section{Analiza wyników}
