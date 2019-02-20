@@ -225,14 +225,14 @@ Nowe technologie nie tylko pozwalają tworzyć coraz bardziej złożone modele k
 		
 		Oprócz modyfikacji obudowy, zmieniano także liczbę zamontowanych w~niej głośników, aby lepiej zbadać ich wzajemny wpływ. Wszystkie konfiguracje pomiarowe opisano w~tabeli~\ref{t:obudowa}.
 		
-		\begin{table}[H]
+		\begin{table}[!ht]
 			\centering
 			\caption{Opis konfiguracji obudowy i~głośników wykorzystanych podczas pomiarów \comment{Zostawiamy tak?!}}
 			\label{t:obudowa}
 			\begin{tabular}{|c|c|m{.6\textwidth}|}
 				\hline
 				\textbf{L.p.} & \makecell{\textbf{Oznaczenie}\\\textbf{(na wykresach)}} & \centering\textbf{Opis} \tabularnewline\hline
-				1. & Pusta & Obudowa w~podstawowej wersji (opisanej w~części~\ref{ss:opis}), z~otworami, bez wypełnienia \\\hline
+				1. & Podstawowa & Obudowa w~podstawowej wersji (opisanej w~części~\ref{ss:opis}), z~otworami, bez wypełnienia \\\hline
 				2. & Wypełniona & Wnętrze obudowy wypełnione materiałem dźwiękochłonnym z~włókien poliestrowych umieszczonym na ściankach \\\hline
 				3. & Zaślepiona & Ćwierćkoliste otwory zaślepione elementami ze sklejki o~grubości \SI{6,4}{\milli\metre}, przyklejonymi do ścianki, w~której zamocowany jest głośnik niskotonowy\\\hline
 				\hline
@@ -257,9 +257,9 @@ Nowe technologie nie tylko pozwalają tworzyć coraz bardziej złożone modele k
 			
 			Istnieją dwie metody pomiaru parametrów Thiele-Smalla: metoda dodanej masy oraz metoda dodanej objętości. Ze względów praktycznych zdecydowano się na wykonywanie większości pomiarów metodą dodanej masy, dla porównania wykonano też jeden pomiar metodą dodanej objętości.
 			
-			\begin{table}[H]
+			\begin{table}[!ht]
 				\centering
-				\caption{Porównanie parametrów Thiele-Smalla: odczytanych z~karty katalogowej oraz zmierzonych metodą dodanej masy ($m=$~\SI{10}{\gram}) dla różnych etapów pracy głośnika}
+				\caption{Opis parametrów Thiele-Smalla, za~\cite{BK_pulse_TS}~i~\cite{dobrucki}}
 				\label{t:TS_opis}
 				\begin{tabular}{|c|c|c|}
 				\hline
@@ -326,8 +326,18 @@ Nowe technologie nie tylko pozwalają tworzyć coraz bardziej złożone modele k
 
 \section{Modelowanie}
 	
-	Dzięki stworzeniu modelu komputerowego możliwe jest łatwe i~nie wymagające wysokich kosztów testowanie różnych rozwiązań metodą elementów skończonych. Takie rozwiązanie pozwala również na dużo prostszą obserwację zjawisk akustycznych i mechanicznych zachodzących w~konstrukcji. Analiza modeli jest dużo prostsza i nie wymaga użycia zaplecza takiego jak komora bezechowa. Jednak skomplikowane modele wykorzystujące sprzężenie pomiędzy domeną mechaniczną opisującą zachowanie membrany i zawieszenia głośnika, a~domeną akustyczną opisującą propagację dźwięku w~powietrzu wymaga poznania parametrów materiałowych, z których zbudowane są wszystkie elementy. Dodatkowo problematyczne staje się stworzenie geometrii, na której możliwe stanie się wykonanie siatki elementów przy jednoczesnym odwzorowaniu szczegółów w~sposób zapewniający dobre odwzorowanie zachowania elementów modelu w połączeniu z~odpowiednio przypisanymi parametrami materiałowymi. Na taki problem natknęli się autorzy przy tworzeniu kształtu zawieszenia.  
-	\comment{Opis modelu w Comsolu, co modelowaliśmy, metody (?).}
+	\subsection{Wprowadzenie}
+	
+		Dzięki stworzeniu modelu komputerowego możliwe jest łatwe i~niewymagające wysokich kosztów testowanie różnych rozwiązań metodami numerycznymi. Takie rozwiązanie pozwala również na dużo prostszą obserwację zjawisk akustycznych i~mechanicznych zachodzących w~konstrukcji i~nie wymaga użycia zaplecza technicznego takiego jak komora bezechowa. 
+		
+		Jednak tworzenie skomplikowanych modeli wykorzystujących sprzężenie pomiędzy domeną mechaniczną opisującą zachowanie membrany i~zawieszenia głośnika, a~domeną akustyczną opisującą propagację dźwięku w~powietrzu, wymaga poznania właściwości materiałów, z których zbudowane są wszystkie elementy. Parametry materiałowe, takie jak moduł Younga, współczynnik Poissona \comment{co jeszcze}, ciężko jest zmierzyć dla każdego elementu modelu, a~jednocześnie odpowiadają za jego właściwości mechaniczne, a~co za tym idzie -- pośrednio -- akustyczne. W~praktyce zazwyczaj wykorzystuje się jako bazę właściwości materiałów dostępne w~literaturze~\cite{modelowanie}, a~następnie przeprowadza strojenie modelu -- dla znanego przypadku wykonuje się symulacje, zmieniając parametry tak, aby wyniki otrzymane w~modelu komputerowym były jak najbardziej zbliżone do wyników pomiaru.
+		
+		Dodatkowo problematyczne staje się stworzenie geometrii, dla której możliwe byłoby wygenerowanie siatki elementów, przy jednoczesnym odwzorowaniu kształtu w~sposób zapewniający rzeczywiste zachowanie elementów modelu. Na taki problem natknęli się autorzy przy tworzeniu kształtu zawieszenia.
+		
+	\subsection{Wykonany model}
+	
+		Aby zyskać możliwość wprowadzania modyfikacji obudowy, zdecydowano się na wykonanie modelu badanego zestawu. Geometrię przygotowano w~programie Autodesk Inventor, \comment{... i co dalej?}
+		
 
 \section{Analiza wyników}
 
@@ -347,7 +357,7 @@ Nowe technologie nie tylko pozwalają tworzyć coraz bardziej złożone modele k
 			\label{r:metody}
 		\end{figure}
 		
-		\begin{table}[H]
+		\begin{table}[!ht]
 			\centering
 			\caption{Porównanie metod pomiaru parametrów Thiele-Smalla: dodanej masy oraz objętości}
 			\label{t:TS_metody}
@@ -406,7 +416,7 @@ Nowe technologie nie tylko pozwalają tworzyć coraz bardziej złożone modele k
 		
 		Porównanie obu głośników na tym samym etapie nie ukazuje wyraźnych różnic pomiędzy nimi.
 		
-		\begin{table}[h]
+		\begin{table}[!ht]
 			\centering
 			\caption{Porównanie parametrów Thiele-Smalla: odczytanych z~karty katalogowej~\cite{datasheet} oraz zmierzonych metodą dodanej masy ($m=$~\SI{10}{\gram}) dla różnych etapów pracy głośnika}
 			\label{t:TS_karta_etapy}
@@ -466,9 +476,9 @@ Nowe technologie nie tylko pozwalają tworzyć coraz bardziej złożone modele k
 		
 	\subsection{Skuteczność}
 		
+		W~tabeli~\ref{t:skutecznosc} przedstawiono parametry elektryczne układu podczas pomiaru skuteczności głośnika w~odgrodzie za pomocą analizatora SVAN 912E oraz wynik tego pomiaru.
 		
-		
-		\begin{table}[H]
+		\begin{table}[!ht]
 			\centering
 			\caption{Parametry pomiaru skuteczności}
 			\label{t:skutecznosc}
@@ -485,6 +495,8 @@ Nowe technologie nie tylko pozwalają tworzyć coraz bardziej złożone modele k
 		
 		Uzyskany poziom skuteczności (\SI{94,8}{\decibel}) jest zbliżony do deklarowanego przez producenta (\SI{95}{\decibel}).
 		
+		Rysunek~\ref{r:skutecznosc} przedstawia charakterystyki głośnika niskotonowego w~odgrodzie oraz głośników nisko- i~wysokotonowego na osi akustycznej zestawu, w~pasmach $1/6$~oktawy. Na ich podstawie charakterystyk można wyznaczyć punkt podziału częstotliwości między głośnik wysoko- i~niskotonowy -- proponowana wartość to \SI{500}{\hertz}.
+		
 		\begin{figure}[H]
 			\centering
 			\includegraphics[width=.8\textwidth,trim={2cm .5cm 2cm 1cm},clip]{skutecznosci_stolik.pdf}
@@ -492,7 +504,7 @@ Nowe technologie nie tylko pozwalają tworzyć coraz bardziej złożone modele k
 			\label{r:skutecznosc}
 		\end{figure}
 		
-		Na podstawie charakterystyk przedstawionych na rysunku~\ref{r:skutecznosc} można wyznaczyć punkt podziału częstotliwości między głośnik wysoko- i~niskotonowy -- proponowana wartość to \SI{500}{\hertz}.
+		
 		
 	
 	\subsection{Drgania obudowy}
