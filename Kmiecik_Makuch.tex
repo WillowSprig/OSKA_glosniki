@@ -353,9 +353,9 @@ backend=biber
 		
 	\subsection{Wykonany model}
 	
-		Aby zyskać możliwość wprowadzania modyfikacji obudowy, zdecydowano się na wykonanie modelu badanego zestawu. Geometrię przygotowano w~programie Autodesk Inventor; obliczenia prowadzono za pomocą metody elementów skończonych (MES) w~środowisku Comsol Mulitphysics, z~wykorzystaniem modułu akustycznego i~mechanicznego. Membranie przypisywano wartość siły obliczonej na podstawie \comment{uzupełnić,sprawdzić}. W~oparciu o~te dane program wyznaczał rozkład ciśnienia akustycznego i~przemieszczenia membrany.
+		Aby zyskać możliwość wprowadzania modyfikacji obudowy, zdecydowano się na wykonanie modelu badanego zestawu. Geometrię przygotowano w~programie Autodesk Inventor; obliczenia prowadzono za pomocą metody elementów skończonych (MES) w~środowisku Comsol Mulitphysics, z~wykorzystaniem modułu akustycznego i~mechanicznego. Elementowi cewki przypisywano wartość siły obliczonej na podstawie \comment{uzupełnić,sprawdzić}. W~oparciu o~te dane program wyznacza przemieszczenia membrany, które dzięki sprzężeniu pomiędzy modułem akustycznym i~mechanicznym pozwalają na wyznaczenie rozkładu ciśnienia akustycznego w~powietrzu.
 		
-		Parametry materiałowe modelu są korygowane w~procesie strojenia, celem jak najlepszego odzwierciedlenia właściwości badanego zestawu. Proces ten nie został jeszcze zakończony.
+		Ze względu na brak możliwości zdobycia parametrów materiałów użytych przez producenta głośników. Zdecydowano się na próbę empirycznego skorygowania parametrów zaczerpniętych z~literatury \cite{modelowanie} poprzez dostrojenie modelu. Wszystko to w~celu najlepszego odzwierciedlenia właściwości badanego zestawu. Proces ten nie został jeszcze zakończony.
 		
 		
 		
@@ -365,7 +365,7 @@ backend=biber
 	\subsection{Pomiary impedancji}
 		
 	%Z~przyczyn technicznych parametry T-S dla tego pomiaru zostały obliczone na podstawie dostępnych materiałów (\cite{dobrucki},), a~nie wyznaczone przy pomocy systemu Pulse.
-		Parametry Thiele-Smalla zostały wyznaczone z~zarejestrowanych krzywych impedancji przy pomocy skryptu w~środowisku Matlab na podstawie~\cite{dobrucki}. Następnie działanie skryptu zostało zweryfikowane w~oparciu o~parametry wyznaczone w~narzędziu Pulse. 
+		Parametry Thiele-Smalla zostały wyznaczone z~zarejestrowanych krzywych impedancji przy pomocy skryptu w~środowisku Matlab na podstawie~\cite{dobrucki}. Następnie działanie skryptu zostało zweryfikowane w~oparciu o~parametry wyznaczone w~narzędziu B&K Pulse. 
 		
 		W~wynikach wszystkich pomiarów wykonanych w~odgrodzie widoczny jest wpływ odgrody -- charakterystyka załamuje się w~okolicach częstotliwości \SI{54}{\hertz}. Prawdopodobnie związane jest to z~rezonansem płyty, występującym ze względu na jej skończone wymiary.
 		
@@ -415,7 +415,7 @@ backend=biber
 			\unboldmath
 		\end{table}
 		
-		Ze względu na rozbieżności między parametrami katalogowymi oraz różnych egzemplarzy tego samego modelu głośnika~\cite{aes_roznice} wykonano pomiary pozwalające na porównanie obu wykorzystywanych egzemplarzy oraz sprawdzenie, jak zmieniają się parametry głośnika podczas jego eksploatacji. Pomiary wykonano na fabrycznie nowym przetworniku oraz na tym samym egzemplarzu poddanym procesowi zużycia poprzez dostarczenie w dwóch etapach sygnału szumu różowego o~mocy \SI{60}{\watt} przez czas \SI{10}{\min}. Krzywe impedancji głośników w~odgrodzie po każdym etapie przedstawiono na rysunku~\ref{r:wygrzewanie}, a~parametry Thiele-Smalla w~tabeli~\ref{t:TS_karta_etapy}. Natomiast porównanie obu głośników na etapie~1 przedstawiono na rysunku~\ref{r:2glosniki}.
+		Ze względu na rozbieżności między parametrami katalogowymi oraz różnych egzemplarzy tego samego modelu głośnika~\cite{aes_roznice} wykonano pomiary pozwalające na porównanie obu wykorzystywanych egzemplarzy oraz sprawdzenie, jak zmieniają się parametry głośnika podczas jego eksploatacji. Pomiary wykonano na fabrycznie nowym przetworniku oraz na tym samym egzemplarzu poddanym procesowi zużycia poprzez dostarczenie w dwóch etapach sygnału szumu różowego o~mocy \SI{40}{\watt} przez czas \SI{2}{\h} w pierwszym etapie i~\SI{60}{\watt} przez czas \SI{10}{\min} w drugim etapie. Krzywe impedancji głośników w~odgrodzie po każdym etapie przedstawiono na rysunku~\ref{r:wygrzewanie}, a~parametry Thiele-Smalla w~tabeli~\ref{t:TS_karta_etapy}. Natomiast porównanie obu głośników na etapie~1 przedstawiono na rysunku~\ref{r:2glosniki}.
 		
 		Należy zwrócić uwagę na fakt, że podane parametry z~karty katalogowej dotyczą głośnika o~rezystancji \SI{8}{\ohm}, podczas gdy badane egzemplarze mają rezystancję \SI{16}{\ohm}; autorom nie udało się jednak pozyskać karty katalogowej dla takiej wersji głośnika.
 		
