@@ -537,26 +537,26 @@ backend=biber
 			\label{r:skutecznosc}
 		\end{figure}
 		
-	\subsection{Charakterystyki kierunkowości}
+	\subsection{Charakterystyki kierunkowości} \label{ss:wyniki_kier}
 	
-	Otrzymane charakterystyki kierunkowości dla głośnika niskotonowego przedstawiono na rysunku~\ref{r:kierunkowosc_L}, a~dla zespołu głośnika wysokotonowego na rysunku~\ref{r:kierunkowosc_H}. 
-			
-		\begin{figure}[!ht]
-			\centering
-			\begin{subfigure}[b]{.52\textwidth}
-				\includegraphics[width=\textwidth]{poziom_L.png}
-				\caption{Płaszczyzna pozioma}
-				\label{r:C_poziom}
-			\end{subfigure}
-			~
-			\begin{subfigure}[b]{.46\textwidth}
-				\includegraphics[width=\textwidth]{pion_L.png}
-				\caption{Płaszczyzna pionowa}
-				\label{r:C_pion}
-			\end{subfigure}
-			\caption{Charakterystyki kierunkowości głośnika niskotonowego w~obudowie}
-			\label{r:kierunkowosc_L}
-		\end{figure}
+		Otrzymane charakterystyki kierunkowości dla głośnika niskotonowego przedstawiono na rysunku~\ref{r:kierunkowosc_L}, a~dla zespołu głośnika wysokotonowego na rysunku~\ref{r:kierunkowosc_H}. 
+				
+			\begin{figure}[!ht]
+				\centering
+				\begin{subfigure}[b]{.52\textwidth}
+					\includegraphics[width=\textwidth]{poziom_L.png}
+					\caption{Płaszczyzna pozioma}
+					\label{r:C_poziom}
+				\end{subfigure}
+				~
+				\begin{subfigure}[b]{.46\textwidth}
+					\includegraphics[width=\textwidth]{pion_L.png}
+					\caption{Płaszczyzna pionowa}
+					\label{r:C_pion}
+				\end{subfigure}
+				\caption{Charakterystyki kierunkowości głośnika niskotonowego w~obudowie}
+				\label{r:kierunkowosc_L}
+			\end{figure}
 		
 		Ze względu na kształt obudowy, kąt promieniowania głośnika niskotonowego w~płaszczyźnie pionowej jest większy, niż w~płaszczyźnie poziomej -- jest to widoczne dla pasma \range{250}{1000}~\si{\hertz}. Widoczne są też niepożądane listki boczne w~paśmie \SI{2000}{\hertz}.
 		
@@ -605,7 +605,7 @@ backend=biber
 		
 		Kolejnym punktem, dla którego zdecydowano się zaprezentować wyniki jest punkt~\num{5}, zlokalizowany na powierzchni wnęki uchwytu (na rysunku~\ref{r:wibro_pkt} po prawej stronie). Na widmie przemieszczeń (rysunek~\ref{r:wibrometr_5}) widoczne jest lokalne maksimum amplitudy dla częstotliwości~\SI{400}{\hertz}, co jednak nie znajduje odzwierciedlenia w~widmie poziomu ciśnienia akustycznego -- mimo że podbicie tej częstotliwości jest widoczne w~charakterystykach skuteczności (por. rys.~\ref{r:skutecznosc}).%Drgania obudowy mogą mieć wpływ na pole akustyczne wokół zestawu.
 		
-		\begin{figure}[!ht]
+		\begin{figure}[H]
 			\centering
 			\adjincludegraphics[width=.8\textwidth,trim={2cm .5cm 2cm 1cm},clip]{pkt5.pdf}
 			\caption{Znormalizowane widma amplitudy przemieszczeń obudowy (góra) oraz poziomu ciśnienia akustycznego w~niewielkiej odległości od zestawu w~punkcie pomiarowym~\num{5}}
@@ -618,9 +618,7 @@ backend=biber
 		
 		Dla wstępnie dostrojonego modelu przeprowadzono symulacje rozkładu ciśnienia akustycznego wokół zestawu oraz przemieszczenia membrany. Wyznaczono także charakterystykę skuteczności zestawu. 
 		
-		Na rysunku~\ref{r:C_rozklady} przedstawiono rozkłady ciśnienia akustycznego w~zestawieniu ze skutecznością zestawu. Podbicie charakterystyki w~okolicach \SI{500}{\hertz} znajduje odzwierciedlenie na rysunkach~\ref{r:C_500} i~\ref{r:C_560} -- fale dźwiękowe nakładają się w~taki sposób, że możliwa jest ich dalsza propagacja. Natomiast dla częstotliwości \SI{710}{\hertz}, dla której w~charakterystyce skuteczności widoczny jest nagły spadek, występuje zjawisko zwarcia akustycznego: głośnik i~otwór \textit{bass-reflex} emitują fale w~przeciwfazie, które wygaszają się wzajemnie przed głośnikiem (rysunek~\ref{r:C_710}).
-		
-		Rysunek \ref{r:C_przem_cisn} przedstawia kolejną z~przydatnych funkcjonalności jaką daje model zestawu głośnikowego analizowany metodą elementów skończonych. Dzięki możliwości sprzężenia domen możliwa stałą się szybka i~łatwa obserwacja odkształceń zawieszenia górnego głośnika. Taki układ zestawu powoduje nierównomierne obciążenie membrany głośnika i~wspomnianego zawieszenia. W obszarze blisko frontowej części zestawu (zawieszenie przedstawione w górnej części ilustracji) zawieszenie znajduje się pomiędzy obszarami o~przeciwnych wartościach ciśnienia akustycznego, dokładnie odwrotnie niż ma to miejsce w~wewnętrznej części zestawu. Tam różnica ciśnień akustycznych rozdzielonych zawieszeniem i membraną jest dużo mniejsza. Występowanie na obwodzie nierównomierności tego typy powoduje osiowo niesymetryczne ruchu membrany, przez to zwiększając poziom zniekształceń; niesymetryczne obciążenie zawieszenia przyczynia  przyczyniać się do jego szybszego zużycia a~przez to do awarii przetwornika.  
+		Na rysunku~\ref{r:C_rozklady} przedstawiono rozkłady ciśnienia akustycznego w~zestawieniu ze skutecznością zestawu. Podbicie charakterystyki w~okolicach \SI{500}{\hertz} znajduje odzwierciedlenie na rysunkach~\ref{r:C_500} i~\ref{r:C_560} -- fale dźwiękowe nakładają się w~taki sposób, że możliwa jest ich dalsza propagacja. Natomiast dla częstotliwości \SI{710}{\hertz}, dla której w~charakterystyce skuteczności widoczny jest nagły spadek, występuje zjawisko zwarcia akustycznego: głośnik i~otwór \textit{bass-reflex} emitują fale w~przeciwfazie, które wygaszają się wzajemnie przed głośnikiem (rysunek~\ref{r:C_710}). Można to zauważyć na rysunku~\ref{r:C_balony}, który przedstawia linie jednakowego ciśnienia wokół zestawu.
 		
 		\begin{figure}[!ht]
 		\centering
@@ -647,17 +645,9 @@ backend=biber
 				\caption{Rozkład ciśnienia akustycznego dla częstotliwości \SI{710}{\hertz}}
 				\label{r:C_710}
 			\end{subfigure}
-			
 % 			\caption{Wyniki uzyskane z~symulacji w~środowisku Comsol; dla rozkładów ciśnienia wartości powyżej \SI{1}{\pascal} i~poniżej \SI{-1}{\pascal} zostały zaokrąglone do tych wartości dla zwiększenia czytelności}
 			\caption{Wyniki uzyskane z~symulacji w~środowisku Comsol; dla rozkładów ciśnienia skala wyświetlania została zawężona do zakresu $[-1;1]$~\si{\pascal} w~celu zwiększenia czytelności}
 			\label{r:C_rozklady}
-		\end{figure}
-		
-		\begin{figure}[!ht]
-			\centering
-			\includegraphics[width=.6\textwidth]{disp_presure_1kHz.png}
-			\caption{Przemieszczenia membrany i~rozkład ciśnienia akustycznego (ciemne obszary oznaczają ujemne ciśnienie, jasne -- dodatnie)}
-			\label{r:C_przem_cisn}
 		\end{figure}
 		
 		\begin{figure}[!ht]
@@ -669,7 +659,7 @@ backend=biber
 			\end{subfigure}
 			~
 			\begin{subfigure}[b]{.49\textwidth}
-			\includegraphics[width=\textwidth]{absp_710Hz.png}
+				\includegraphics[width=\textwidth]{absp_710Hz.png}
 				\caption{Częstotliwość \SI{710}{\hertz}}
 				\label{r:C_710iz}
 			\end{subfigure}
@@ -678,6 +668,18 @@ backend=biber
 			\label{r:C_balony}
 		\end{figure}
 		
+		Rysunek \ref{r:C_przem_cisn} przedstawia kolejną z~przydatnych funkcjonalności jaką daje model zestawu głośnikowego analizowany metodą elementów skończonych: dzięki możliwości sprzężenia domen możliwa stała się szybka i~łatwa obserwacja odkształceń zawieszenia górnego głośnika. 
+		
+		Zastosowany układ zestawu powoduje nierównomierne obciążenie membrany głośnika i~wspomnianego zawieszenia. W obszarze blisko frontowej części zestawu (górna część ilustracji) zawieszenie znajduje się pomiędzy obszarami o~przeciwnych wartościach ciśnienia akustycznego, dokładnie odwrotnie niż ma to miejsce w~wewnętrznej części zestawu. Tam różnica ciśnień akustycznych rozdzielonych zawieszeniem i membraną jest dużo mniejsza. Występowanie na obwodzie nierównomierności tego typu powoduje osiowo niesymetryczne ruchu membrany, przez to zwiększając poziom zniekształceń; niesymetryczne obciążenie zawieszenia może przyczyniać się do jego szybszego zużycia, a~w~konsekwencji do awarii przetwornika.  
+		
+		\begin{figure}[!ht]
+			\centering
+			\includegraphics[width=.55\textwidth]{disp_presure_1kHz.png}
+			\caption{Przemieszczenia membrany i~rozkład ciśnienia akustycznego (ciemne obszary oznaczają ujemne ciśnienie, jasne -- dodatnie)}
+			\label{r:C_przem_cisn}
+		\end{figure}
+		
+		Oprócz rozkładu ciśnienia w~przestrzeni wyznaczono także charakterystyki kierunkowości (rysunek~\ref{r:C_kierunk}). Porównując ich kształt z~wynikami pomiarów (por. część~\ref{ss:wyniki_kier}) można zauważyć duże podobieństwo, zwłaszcza w~płaszczyźnie poziomej.
 		
 		\begin{figure}[!ht]
 			\centering
@@ -699,8 +701,11 @@ backend=biber
 		
 \section{Podsumowanie}
 	
+		Otrzymane dotychczas wyniki wskazują, iż optymalnym byłoby przyjęcie punktu podziału pasma około~\range{1000}{1200}\si{Hz}. Wymaga to jednak uwzględnienia charakterystyki fazowej głośników niskotonowych i zespołu głośnika wysokotonowego w~obudowie, po zastosowaniu możliwych rozwiązań poprawiających charakterystykę amplitudowo-częstotliwościową w~zakresie przetwarzanym przez głośniki niskotonowe. 
 	
-		Planowane jest wykonanie kolejnych pomiarów, obejmujących inne modyfikacje obudowy mających na celu poprawę charakterystyki amplitudowo-częstotliwościowej oraz równomierności charakterystyk kierunkowości. Otrzymane dotychczas wyniki wskazują, iż optymalnym byłoby przyjęcie punktu podziału pasma około~\range{1000}{1200}\si{Hz}. Wymaga to uwzględnienia jednak charakterystyki fazowej głośników niskotonowych i zespołu głośnika wysokotonowego w~obudowie po zastosowaniu możliwych rozwiązań poprawiających charakterystykę amplitudowo częstotliwościowa w zakresie przetwarzanym przez głośniki niskotonowe. Autorzy pracują także nad dostrojeniem modelu komputerowego, aby móc prowadzić dalsze badania na drodze symulacji. Pozwoliłoby to na określenie wpływu poszczególnych elementów konstrukcji na charakterystyki zestawu oraz rozwój wiedzy i umiejętności w~które mogą zostać wykorzystane no budowy zestawu od podstaw. 
+		Planowane jest wykonanie kolejnych pomiarów, obejmujących inne modyfikacje obudowy, mających na celu poprawę charakterystyki amplitudowo-częstotliwościowej oraz równomierności charakterystyk kierunkowości. 
+		
+		Autorzy pracują także nad dostrojeniem modelu komputerowego, aby móc prowadzić dalsze badania na drodze symulacji. Pozwoliłoby to na określenie wpływu poszczególnych elementów konstrukcji na charakterystyki zestawu oraz rozwój wiedzy i~umiejętności, które mogą zostać wykorzystane do budowy zestawu od podstaw. 
 		
 \printbibliography
 
