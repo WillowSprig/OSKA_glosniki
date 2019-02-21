@@ -210,7 +210,7 @@ backend=biber
 
 	\subsection{Opis konstrukcji}\label{ss:opis}
 	
-		Zestaw, którego parametry zdecydowano się zbadać, i~który poddano modyfikacjom, jest docelowo elementem systemu liniowego. Składa się z~falowodu z~wysokotonowym głośnikiem ciśnieniowym B\&C~DE800 umieszczonego centralnie oraz dwóch 16--omowych głośników nisko-średniotonowych Beyma~10WR300 umieszczonych po bokach i~nachylonych pod kątem \SI{67}{\degree} do osi głównej zastawu.
+		Zestaw, którego parametry zdecydowano się zbadać, i~który poddano modyfikacjom, jest docelowo elementem systemu liniowego. Składa się z~falowodu z~wysokotonowym głośnikiem ciśnieniowym B\&C~DE800 (zespół głośnika wysokotonowego) umieszczonego centralnie oraz dwóch 16--omowych głośników nisko-średniotonowych Beyma~10WR300 umieszczonych po bokach i~nachylonych pod kątem \SI{67}{\degree} do osi głównej zastawu.
 		
 		Kształt obudowy jest typowy dla systemu liniowego -- przekrój boczny ma kształt trapezu równoramiennego; konstrukcja wzorowana jest na rozwiązaniu stosowanym w~systemie liniowym uznanej firmy. Materiał korpusu to sklejka bałtycka o~grubości \SI{15}{\milli\metre}, dodatkowo z~przodu zamontowana jest maskownica ze stali o~grubości \SI{2}{\milli\metre}. Objętość wnętrza obudowy po odjęciu objętości głośników i~falowodu wynosi \SI{28,17}{\litre}.
 		
@@ -228,7 +228,7 @@ backend=biber
 		
 		\begin{figure}[!ht]
 			\centering
-			\adjincludegraphics[width=\textwidth,trim={{.1\width} {.25\height} {.17\width} {.12\height}},clip]{render_z_otworami_bez_tekstury.pdf}
+			\adjincludegraphics[width=.9\textwidth,trim={{.1\width} {.25\height} {.17\width} {.12\height}},clip]{render_z_otworami_bez_tekstury.pdf}
 			\caption{Przekrój modelu badanego zestawu głośnikowego w~płaszczyźnie poziomej}
 			\label{r:przekroj}
 		\end{figure}
@@ -250,8 +250,8 @@ backend=biber
 				1. & Podstawowa & Obudowa w~podstawowej wersji (opisanej w~części~\ref{ss:opis}), z~otworami, bez wypełnienia \\\hline
 				2. & Zaślepiona & Ćwierćkoliste otwory zaślepione elementami ze sklejki o~grubości \SI{6,4}{\milli\metre}, przyklejonymi do ścianki, w~której zamocowany jest głośnik niskotonowy\\\hline
 				\hline
-				3. & Jeden głośnik & Jeden głośnik niskotonowy zamocowany w~obudowie, otwór na drugi zaślepiony kołem ze sklejki; zamocowany głośnik wysokotonowy \\\hline
-				4. & Dwa głośniki & Obydwa głośniki niskotonowe oraz głośnik wysokotonowy zamocowane w~obudowie\\\hline
+				3. & Jeden głośnik & Jeden głośnik niskotonowy zamocowany w~obudowie, otwór na drugi zaślepiony kołem ze sklejki; zamocowany zespół głośnika wysokotonowego \\\hline
+				4. & Dwa głośniki & Obydwa głośniki niskotonowe oraz zespół głośnika wysokotonowego zamocowane w~obudowie\\\hline
 			\end{tabular}
 		\end{table}
 
@@ -268,6 +268,9 @@ backend=biber
 			Pomiary wykonano przy pomocy systemu Brüel\&Kjær Pulse, pozwalającego na pomiar charakterystyki impedancji oraz wyznaczenie na tej podstawie parametrów Thiele-Smalla.
 			
 			Do wyznaczenia tych parametrów wykorzystano metodę dodanej masy: wykonano pomiar impedancji głośnika, a~następnie do membrany dodano masę $m=\,$\SI{10}{\gram} i~wykonano kolejny pomiar. Na podstawie porównania dwóch charakterystyk impedancji, za pomocą dedykowanego oprogramowania Pulse Thiele Small Parameters Calculation BZ-5604 wyznaczano parametry Thiele-Smalla~\cite{BK_pulse_TS}, opisane w~tabeli~\ref{t:TS_opis}.
+			
+			Opracowano także skrypt w~środowisku Matlab wyznaczający te parametry z~zarejestrowanych charakterystyk impedancji na podstawie~\cite{dobrucki}; działanie skryptu zostało zweryfikowane w~oparciu o~parametry wyznaczone w narzędziu B\&K Pulse.
+			
 			
 			Istnieją dwie metody pomiaru parametrów Thiele-Smalla: metoda dodanej masy oraz metoda dodanej objętości. Ze względów praktycznych zdecydowano się na wykonywanie większości pomiarów metodą dodanej masy, dla porównania wykonano też jeden pomiar metodą dodanej objętości.
 			
@@ -306,9 +309,7 @@ backend=biber
 			\end{table}
 
 			
-			Pomiar wykonano z~użyciem sygnału sinusoidalnego z~krokiem $1/48$~oktawy w~zakresie \range{20}{8000}~\si{\hertz}.
-			
-			Zmierzono impedancję głośnika niskotonowego w~odgrodzie oraz głośników w~obudowie z~zastosowanymi różnymi modyfikacjami. 
+			Pomiar wykonano z~użyciem sygnału sinusoidalnego z~krokiem $1/48$~oktawy w~zakresie \range{20}{8000}~\si{\hertz}. Zmierzono impedancję głośnika niskotonowego w~odgrodzie oraz głośników w~obudowie z~zastosowanymi różnymi modyfikacjami. 
 			
 		\subsection{Charakterystyka skuteczności i~skuteczność}
 			
@@ -329,7 +330,7 @@ backend=biber
 			
 			\begin{figure}[!ht]
 				\centering
-				\includegraphics[width=.8\textwidth]{zdjecie_wibro.jpg}
+				\includegraphics[width=.7\textwidth]{zdjecie_wibro.jpg}
 				\caption{Fotografia wykonana podczas przygotowań do pomiaru z~użyciem wibrometru}
 				\label{r:wibro_zdjecie}
 			\end{figure}
@@ -341,13 +342,13 @@ backend=biber
 	
 		Dzięki stworzeniu modelu komputerowego możliwe jest łatwe i~niewymagające wysokich kosztów testowanie różnych rozwiązań metodami numerycznymi. Takie rozwiązanie pozwala również na dużo prostszą obserwację zjawisk akustycznych i~mechanicznych zachodzących w~konstrukcji i~nie wymaga użycia zaplecza technicznego takiego jak np. komora bezechowa. 
 		
-		Jednak tworzenie skomplikowanych modeli wykorzystujących sprzężenie pomiędzy domeną mechaniczną opisującą zachowanie membrany i~zawieszenia głośnika, a~domeną akustyczną opisującą propagację dźwięku w~powietrzu, wymaga poznania właściwości materiałów, z których zbudowane są wszystkie elementy. Parametry materiałowe, takie jak moduł Younga, współczynnik Poisson, gęstość \comment{co jeszcze}, ciężko jest zmierzyć dla każdego elementu modelu, a~jednocześnie odpowiadają za jego właściwości mechaniczne, a~co za tym idzie -- pośrednio -- akustyczne. W~praktyce zazwyczaj wykorzystuje się jako bazę właściwości materiałów dostępne w~literaturze~\cite{modelowanie}, a~następnie przeprowadza strojenie modelu -- dla znanego przypadku wykonuje się symulacje, zmieniając parametry tak, aby wyniki otrzymane w~modelu komputerowym były jak najbardziej zbliżone do wyników pomiaru.
+		Jednak tworzenie skomplikowanych modeli wykorzystujących sprzężenie pomiędzy domeną mechaniczną opisującą zachowanie membrany i~zawieszenia głośnika, a~domeną akustyczną opisującą propagację dźwięku w~powietrzu, wymaga poznania właściwości materiałów, z których zbudowane są wszystkie elementy. Parametry materiałowe, takie jak moduł Younga, współczynnik Poissona, czy gęstość, ciężko jest zmierzyć dla każdego elementu modelu, a~jednocześnie odpowiadają za jego właściwości mechaniczne, a~co za tym idzie -- pośrednio -- akustyczne. W~praktyce zazwyczaj wykorzystuje się jako bazę właściwości materiałów dostępne w~literaturze~\cite{modelowanie}, a~następnie przeprowadza strojenie modelu -- dla znanego przypadku wykonuje się symulacje, zmieniając parametry tak, aby wyniki otrzymane w~modelu komputerowym były jak najbardziej zbliżone do wyników pomiaru.
 		
 		Dodatkowo problematyczne staje się stworzenie geometrii, dla której możliwe byłoby wygenerowanie siatki elementów, przy jednoczesnym odwzorowaniu kształtu w~sposób zapewniający rzeczywiste zachowanie elementów modelu. Na taki problem natknęli się autorzy przy tworzeniu kształtu zawieszenia, co można zaobserwować na rysunku~\ref{r:zawieszenie}, przedstawiającym przemieszczenia w~symulacji dla częstotliwości \SI{50}{\hertz}. Problem rozmiarów elementów siatki jest związany z~czasem obliczeń modelu. Dla wysokich częstotliwości i dużych modeli ilość węzłów staje się na tyle duża, że czas obliczeń nawet na komputerach dużych mocy jest bardzo długi przez co model jest bezużyteczny.
 		
 		\begin{figure}[!ht]
 			\centering
-			\includegraphics[width=.8\textwidth]{disp_factor5_f50_02.png}
+			\includegraphics[width=.7\textwidth]{disp_factor5_f50_02.png}
 			\caption{Przemieszczenia górnego zawieszenia w~symulacji dla częstotliwości \SI{50}{\hertz}}
 			\label{r:zawieszenie}
 		\end{figure}
@@ -497,7 +498,7 @@ backend=biber
 			\includegraphics[width=.73\textwidth]{obrazki/winisd_screen2.png}\\
 				\setlength{\unitlength}{1mm}
 			\begin{picture}(0,0)
-				\put(-6,4){\texttt{f [Hz]}}
+				\put(-6,2){\texttt{f [Hz]}}
 				\put(-65,35){\rotatebox{90}{\texttt{Z$_e [\Omega]$}}}
 			\end{picture}
 			\caption{Wyniki symulacji impedancji dwóch głośników w~obudowie w~programie WinISD; \color{BrickRed}czerwony\color{Black}~--~dwa głośniki, obudowa z~otworami; \color{Dandelion}żółty\color{Black}~--~dwa głośniki, zaślepiona obudowa; \color{RoyalBlue}niebieski\color{Black}~--~jeden głośnik, obudowa z~otworami}
@@ -530,7 +531,7 @@ backend=biber
 		
 		Uzyskany poziom skuteczności (\SI{94,8}{\decibel}) jest zbliżony do deklarowanego przez producenta (\SI{95}{\decibel}).
 		
-		Rysunek~\ref{r:skutecznosc} przedstawia charakterystyki głośnika niskotonowego w~odgrodzie oraz głośników nisko- i~wysokotonowego na osi akustycznej zestawu, w~pasmach $1/6$~oktawy. Obudowa w~obecnej postaci wprowadza znaczącą nierównomierność charakterystyki w~zakresie \SI{490}{\hertz}. Wymagane jest rozwiązanie tego problemu.
+		Rysunek~\ref{r:skutecznosc} przedstawia charakterystyki głośnika niskotonowego w~odgrodzie, głośników niskotonowych i~zespołu głośnika wysokotonowego na osi akustycznej zestawu, w~pasmach $1/6$~oktawy. Obudowa w~obecnej postaci wprowadza znaczącą nierównomierność charakterystyki w~zakresie \SI{490}{\hertz}. Wymagane jest rozwiązanie tego problemu.
 		%Na ich podstawie charakterystyk można wyznaczyć punkt podziału częstotliwości między głośnik wysoko- i~niskotonowy -- wartość jest uzależniona od faktu czy uda się wyeliminować nierównomierność charakterystyki częstotliwościowej głośników niskotonowych  \SI{500}{\hertz}.
 		
 		\begin{figure}[!ht]
@@ -542,7 +543,7 @@ backend=biber
 		
 	\subsection{Charakterystyki kierunkowości}
 	
-	Otrzymane charakterystyki kierunkowości dla głośnika niskotonowego przedstawiono na rysunku~\ref{r:kierunkowosc_L}, a~dla wysokotonowego na rysunku~\ref{r:kierunkowosc_H}. 
+	Otrzymane charakterystyki kierunkowości dla głośnika niskotonowego przedstawiono na rysunku~\ref{r:kierunkowosc_L}, a~dla zespołu głośnika wysokotonowego na rysunku~\ref{r:kierunkowosc_H}. 
 			
 		\begin{figure}[!ht]
 			\centering
@@ -576,7 +577,7 @@ backend=biber
 				\caption{Płaszczyzna pionowa}
 				\label{r:C_pion}
 			\end{subfigure}
-			\caption{Charakterystyki kierunkowości głośnika wysokotonowego w~obudowie}
+			\caption{Charakterystyki kierunkowości zespołu głośnika wysokotonowego w~obudowie}
 			\label{r:kierunkowosc_H}
 		\end{figure}
 		
