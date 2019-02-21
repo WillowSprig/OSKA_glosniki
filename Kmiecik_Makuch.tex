@@ -492,7 +492,7 @@ backend=biber
 		\begin{figure}[!ht]
 			\centering
 			\includegraphics[width=.73\textwidth]{obrazki/winisd_screen2.png}\\
-				\setlength{\unitlength}{1mm}
+			\setlength{\unitlength}{1mm}
 			\begin{picture}(0,0)
 				\put(-6,2){\texttt{f [Hz]}}
 				\put(-65,35){\rotatebox{90}{\texttt{Z$_e [\Omega]$}}}
@@ -546,13 +546,13 @@ backend=biber
 				\begin{subfigure}[b]{.52\textwidth}
 					\includegraphics[width=\textwidth]{poziom_L.png}
 					\caption{Płaszczyzna pozioma}
-					\label{r:C_poziom}
+					\label{r:L_poziom}
 				\end{subfigure}
 				~
 				\begin{subfigure}[b]{.46\textwidth}
 					\includegraphics[width=\textwidth]{pion_L.png}
 					\caption{Płaszczyzna pionowa}
-					\label{r:C_pion}
+					\label{r:L_pion}
 				\end{subfigure}
 				\caption{Charakterystyki kierunkowości głośnika niskotonowego w~obudowie}
 				\label{r:kierunkowosc_L}
@@ -565,13 +565,13 @@ backend=biber
 			\begin{subfigure}[b]{.52\textwidth}
 				\includegraphics[width=\textwidth]{poziom_H.png}
 				\caption{Płaszczyzna pozioma}
-				\label{r:C_poziom}
+				\label{r:H_poziom}
 			\end{subfigure}
 			~
 			\begin{subfigure}[b]{.46\textwidth}
 				\includegraphics[width=\textwidth]{pion_H.png}
 				\caption{Płaszczyzna pionowa}
-				\label{r:C_pion}
+				\label{r:H_pion}
 			\end{subfigure}
 			\caption{Charakterystyki kierunkowości zespołu głośnika wysokotonowego w~obudowie}
 			\label{r:kierunkowosc_H}
@@ -684,18 +684,18 @@ backend=biber
 		\begin{figure}[!ht]
 			\centering
 			\begin{subfigure}[b]{.49\textwidth}
-				\includegraphics[width=\textwidth]{horyzontalna_axis_off.png}
+			\includegraphics[width=\textwidth,trim={4.6cm 2.6cm 5.8cm 2.7cm},clip]{Comsol_kier_osie_hor.pdf}
 				\caption{Płaszczyzna pozioma}
 				\label{r:C_poziom}
 			\end{subfigure}
 			~
 			\begin{subfigure}[b]{.49\textwidth}
-				\includegraphics[width=\textwidth]{vertykalna_axis_off.png}
+				\includegraphics[width=\textwidth,trim={4.6cm 2.6cm 5.8cm 2.7cm},clip]{Comsol_kier_osie_ver.pdf}
 				\caption{Płaszczyzna pionowa}
 				\label{r:C_pion}
 			\end{subfigure}
 			
-			\caption{Charakterystyki kierunkowości uzyskane z~symulacji w~środowisku Comsol [\textit{\range{40}{3150}~\si{\hertz}, będą dorysowane osie} -- przyp. aut.]}
+			\caption{Charakterystyki kierunkowości uzyskane z~symulacji w~środowisku Comsol}
 			\label{r:C_kierunk}
 		\end{figure}
 		
