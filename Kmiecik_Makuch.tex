@@ -197,11 +197,12 @@ backend=biber
 
 	\subsection{Cel pracy}
 
+		Prace mają na celu udoskonalenie konstrukcji obudowy zestawu głośnikowego będącego elementem systemu liniowego (ang.~\textit{line array system}) do wymagań, jakie stawiają przed nią dobrane przetworniki.
+		
 		Niniejsza praca ma na celu przybliżenie czytelnikowi problemów, wyników, a~także sposobów rozwiązania niektórych z~zagadnień napotkanych przez autorów na etapie analizy konstrukcji i~modelowania rzeczywistego zestawu głośnikowego.
 		
 		Autorzy postawili sobie za cel określenie, jakie z~zastosowanych modyfikacji obudowy zestawu głośnikowego wywierają wpływ na jego mierzone parametry oraz wybór najbardziej optymalnej konfiguracji, a~także wyznaczenie optymalnego punktu podziału pasma częstotliwości między głośniki.
 		
-		Prace mają na celu udoskonalenie konstrukcji obudowy zestawu głośnikowego będącego elementem systemu liniowego (ang.~\textit{line array system}) do wymagań, jakie stawiają przed nią dobrane przetworniki. \comment{Zweryfikować, czy jest spełniony!}
 		
 %	\subsection{Wprowadzenie teoretyczne}
 %\comment{O zależnościach (?) z inżynierki}
@@ -212,7 +213,7 @@ backend=biber
 	
 		Zestaw, którego parametry zdecydowano się zbadać, i~który poddano modyfikacjom, jest docelowo elementem systemu liniowego. Składa się z~falowodu z~wysokotonowym głośnikiem ciśnieniowym B\&C~DE800 (zespół głośnika wysokotonowego) umieszczonego centralnie oraz dwóch 16--omowych głośników nisko-średniotonowych Beyma~10WR300 umieszczonych po bokach i~nachylonych pod kątem \SI{67}{\degree} do osi głównej zastawu.
 		
-		Kształt obudowy jest typowy dla systemu liniowego -- przekrój boczny ma kształt trapezu równoramiennego; konstrukcja wzorowana jest na rozwiązaniu stosowanym w~systemie liniowym uznanej firmy. Materiał korpusu to sklejka bałtycka o~grubości \SI{15}{\milli\metre}, dodatkowo z~przodu zamontowana jest maskownica ze stali o~grubości \SI{2}{\milli\metre}. Objętość wnętrza obudowy po odjęciu objętości głośników i~falowodu wynosi \SI{28,17}{\litre}.
+		Kształt obudowy jest typowy dla systemu liniowego -- przekrój boczny ma kształt trapezu równoramiennego; konstrukcja wzorowana jest na rozwiązaniu stosowanym w~systemie liniowym uznanej firmy. Materiał korpusu to sklejka bałtycka o~grubości \SI{15}{\milli\metre}, dodatkowo z~przodu zamontowana jest maskownica ze stali o~grubości \SI{2}{\milli\metre}. Objętość wnętrza obudowy po odjęciu objętości głośników i~falowodu wynosi \SI{28,17}{\deci\metre\cubed}.
 		
 		Obudowa jest obudową wentylowaną, wyposażoną w~4~otwory o~kształcie ćwierćkolistym i~promieniu \SI{70}{\milli\metre}. Otwory te mają swe ujście do przestrzeni przed głośnikiem, tak jak przestawiono na rysunku~\ref{r:przekroj}. %Wnętrze obudowy jest połączone z~przestrzenią zewnętrzną półkolistymi otworami o~promieniu \SI{70}{\milli\metre} przy tylnej ściance.
 		Taki układ głośników i~otworów ma wpływ na charakterystyki kierunkowości głośnika w~płaszczyźnie horyzontalnej~\cite{kmiecik_inz}. %\comment{W części teoretycznej wzorek na chke kierunkowości w zależności od odległości źródeł i omówić temat!!!}
@@ -222,7 +223,7 @@ backend=biber
 		\begin{figure}[!ht]
 		\centering
 		\includegraphics[width=.8\textwidth]{zdjecie.jpg}
-		\caption{Fotografia badanego zestawu głośnikowego}
+		\caption{Badany zestaw głośnikowy}
 		\label{r:zdjecie}
 		\end{figure}
 		
@@ -277,7 +278,7 @@ backend=biber
 				\centering
 				\caption{Opis parametrów Thiele-Smalla, za~\cite{BK_pulse_TS}~i~\cite{dobrucki}}
 				\label{t:TS_opis}
-				\begin{tabular}{|c|c|c|}
+				\begin{tabular}{|l|c|c|}
 				\hline
 					\textbf{Oznaczenie} & \textbf{Jednostka} & \textbf{Opis parametru}\\\hline\hline
 					\multicolumn{3}{|c|}{Parametry wyznaczane z pojedynczego pomiaru} \\\hline\hline
@@ -292,7 +293,7 @@ backend=biber
 					\gape{$Q_{ts}=\frac{Q_{ms}\cdot Q_{es}}{Q_{ms}+Q_{es}}$} & --- & Dobroć całkowita \\\hline
 					\hline
 					\multicolumn{3}{|c|}{Parametry wyznaczane z dwóch pomiarów (samej membrany i z dodaną masą)} \\\hline\hline
-					$V_{as}$ & \si{\litre} & Równoważna objętość podatności głośnika \\\hline
+					$V_{as}$ & \si{\deci\metre\cubed} & Równoważna objętość podatności głośnika \\\hline
 					$M_{ms}$ & \si{\gram} & Masa mechaniczna membrany \\\hline
 					$C_{ms}$ & \si[per-mode=symbol]{\metre\per\newton} & Podatność mechaniczna zawieszenia \\\hline
 					$R_{ms}$ & \si[per-mode=symbol]{\metre\per\newton} & Rezystancja mechaniczna głośnika \\\hline
@@ -303,7 +304,7 @@ backend=biber
 					\hline
 					$\eta_0$ & \% & Sprawność głośnika \\\hline
 					$Bl$ & \si{\tesla\metre} & \makecell{Współczynnik przetwarzania elektromechanicznego\\(indeks siły)} \\\hline
-					$L_{e} (1\si{\kilo\hertz})$ & \si{\henry} & Indukcyjność cewki dla częstotliwości \SI{1}{\kilo\hertz} \\\hline
+					$L_{e}$ & \si{\henry} & Indukcyjność cewki dla częstotliwości \SI{1}{\kilo\hertz} \\\hline
 				\end{tabular}
 			\end{table}
 
@@ -391,10 +392,10 @@ backend=biber
 			\caption{Porównanie metod pomiaru parametrów Thiele-Smalla: dodanej masy oraz objętości}
 			\label{t:TS_metody}
 			\boldmath
-			\begin{tabular}{|c|c|c||c|c|}
+			\begin{tabular}{|l|c|c||c|c|}
 				\hline
 				\multirow{2}{*}{\textbf{Parametr}} & \multicolumn{2}{c|}{\textbf{Etap 1, głośnik 1}} & \multicolumn{2}{|c|}{\textbf{Etap 2, głośnik 2}}\\\cline{2-5}
-				& \textbf{Masa \SI{5}{\gram}} & \multicolumn{2}{c|}{\textbf{Masa \SI{10}{\gram}}} & \textbf{Obudowa \SI{80}{\litre}}\\\hline
+				& \textbf{Masa \SI{5}{\gram}} & \multicolumn{2}{c|}{\textbf{Masa \SI{10}{\gram}}} & \textbf{Obudowa \SI{80}{\deci\metre\cubed}}\\\hline
 				\hline
 				$F_s$ [\si{\hertz}] 	& \num{56,5} & \num{57,0} & \num{49,2} & \num{50,1} \\\hline
 				$Z_{max}$ [\si{\ohm}] 	& \num{57,2} & \num{55,7} & \num{77,5} & \num{73,7} \\\hline
@@ -406,7 +407,7 @@ backend=biber
 				$Q_{es}$ & \num{0,58} & \num{0,58} & \num{0,55} & \num{0,55}\\\hline
 				$Q_{ts}$ & \num{0,48} & \num{,048} & \num{0,48} & \num{0,48}\\\hline
 				\hline
-				$V_{as}$ [\si{\litre}] 								& \num{34,5} & \num{34,5} & \num{45,6} & \num{42,8}\\\hline
+				$V_{as}$ [\si{\deci\metre\cubed}] 								& \num{34,5} & \num{34,5} & \num{45,6} & \num{42,8}\\\hline
 				$M_{ms}$ [\si{\gram}] 								& \num{39,1} & \num{38,5}  & \num{39,1} & \num{40,2}\\\hline
 				$C_{ms}$ [\si[per-mode=symbol]{\metre\per\newton}] 	& \num{203e-6} & \num{203e-6} & \num{267e-6} & \num{251e-6}\\\hline
 				$R_{ms}$ [\si[per-mode=symbol]{\metre\per\newton}] 	& \num{5,1} & \num{5,2}  & \num{3,3} & \num{3,6}\\\hline
@@ -418,7 +419,7 @@ backend=biber
 				\hline
 				$\eta_0$ [\%] & \num{1,06} & \num{1,07} & \num{0,96} & \num{0,96}  \\\hline
 				$Bl$ [\si{\tesla\metre}] & \num{15,5} & \num{15,4} & \num{14,9} & \num{15,2}\\\hline
-				$L_{e} (1\si{\kilo\hertz})$ [\si{\henry}] & \num{890e-6} & \num{880e-6} & \num{853e-6} & \num{845e-6} \\\hline
+				$L_{e}$ [\si{\henry}] & \num{890e-6} & \num{880e-6} & \num{853e-6} & \num{845e-6} \\\hline
 			\end{tabular}
 			\unboldmath
 		\end{table}
@@ -448,7 +449,7 @@ backend=biber
 			\caption{Porównanie parametrów Thiele-Smalla: odczytanych z~karty katalogowej~\cite{datasheet} oraz zmierzonych metodą dodanej masy ($m=$~\SI{10}{\gram}) dla różnych etapów pracy głośnika}
 			\label{t:TS_karta_etapy}
 			\boldmath
-			\begin{tabular}{|c|c|c|c|c|}
+			\begin{tabular}{|l|c|c|c|c|}
 				\hline
 				\textbf{Parametr} & \makecell{\textbf{Karta katalogowa}\\ \textbf{($R=$~\SI{8}{\ohm})}} & \textbf{Fabryczny} & \textbf{Etap 1} & \textbf{Etap 2} \\\hline
 				\hline
@@ -462,7 +463,7 @@ backend=biber
 				$Q_{es}$ & \num{0,4}  & \num{0,8} & \num{0,6} & \num{0,5} \\\hline
 				$Q_{ts}$ & \num{0,3}  & \num{0,6} & \num{0,5} & \num{0,4} \\\hline
 				\hline
-				$V_{as}$ [\si{\litre}] 								& \num{50,9}  & \num{23,5} & \num{34,5} & \num{41,4} \\\hline
+				$V_{as}$ [\si{\deci\metre\cubed}] 								& \num{50,9}  & \num{23,5} & \num{34,5} & \num{41,4} \\\hline
 				$M_{ms}$ [\si{\gram}] 								& \num{39,0}  & \num{36,1}  & \num{38,5} & \num{40,6} \\\hline
 				$C_{ms}$ [\si[per-mode=symbol]{\metre\per\newton}] 	& \num{294e-6}  & \num{138e-6}  & \num{203e-6} & \num{243e-6} \\\hline
 				$R_{ms}$ [\si[per-mode=symbol]{\metre\per\newton}] 	& \num{2,9}  & \num{5,0}  & \num{5,2} & \num{4,6} \\\hline
@@ -474,7 +475,7 @@ backend=biber
 				\hline
 				$\eta_0$ [\%] & \num{1,5}  & \num{1,08} & \num{1,07} & \num{1,00}   \\\hline
 				$Bl$ [\si{\tesla\metre}] & \num{14,2} & \num{14,7} & \num{15,4} & \num{15,7}\\\hline
-				$L_{e} (1\si{\kilo\hertz})$ [\si{\henry}] & \num{1e-3} & \num{1,984e-3} & \num{880e-6} & \num{911e-6} \\\hline
+				$L_{e}$ [\si{\henry}] & \num{1e-3} & \num{1,984e-3} & \num{880e-6} & \num{911e-6} \\\hline
 			\end{tabular}
 			\unboldmath
 		\end{table}
@@ -614,7 +615,7 @@ backend=biber
 		
 		Otrzymane wyniki nie dają podstaw do jednoznacznego wskazania wpływu drgań obudowy na charakterystykę częstotliwościową zestawu. Jednocześnie do dalszej analizy tej zależności wskazane jest wykonanie pomiarów w~większej liczbie punktów oraz obliczeń statystycznych.
 		
-	\subsection{Symulacje}
+	\subsection{Symulacje numeryczne}
 		
 		Dla wstępnie dostrojonego modelu przeprowadzono symulacje rozkładu ciśnienia akustycznego wokół zestawu oraz przemieszczenia membrany. Wyznaczono także charakterystykę skuteczności zestawu. 
 		
@@ -629,19 +630,19 @@ backend=biber
 			\end{subfigure}
 			~
 			\begin{subfigure}[b]{.49\textwidth}
-				\includegraphics[width=\textwidth]{pres_sig_500Hz.png}
+				\includegraphics[width=\textwidth]{pres_sig_500Hz_02.png}
 				\caption{Rozkład ciśnienia akustycznego dla częstotliwości \SI{500}{\hertz}}
 				\label{r:C_500}
 			\end{subfigure}
 			
 			\begin{subfigure}[b]{.49\textwidth}
-			\includegraphics[width=\textwidth]{pres_sig_560Hz.png}
+			\includegraphics[width=\textwidth]{pres_sig_560Hz_02.png}
 				\caption{Rozkład ciśnienia akustycznego dla częstotliwości \SI{560}{\hertz}}
 				\label{r:C_560}
 			\end{subfigure}
 			~
 			\begin{subfigure}[b]{.49\textwidth}
-			\includegraphics[width=\textwidth]{pres_sig_710Hz.png}
+			\includegraphics[width=\textwidth]{pres_sig_710Hz_02.png}
 				\caption{Rozkład ciśnienia akustycznego dla częstotliwości \SI{710}{\hertz}}
 				\label{r:C_710}
 			\end{subfigure}
