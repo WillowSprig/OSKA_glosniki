@@ -541,14 +541,46 @@ backend=biber
 		
 	\subsection{Charakterystyki kierunkowości}
 	
-		Otrzymane charakterystyki kierunkowości przedstawiono na rysunku~\ref{r:kierunkowosc}. Ze względu na kształt obudowy kąt promieniowania w~płaszczyźnie pionowej jest większy, niż w~płaszczyźnie poziomej -- jest to widoczne dla pasma \range{250}{1000}~\si{\hertz}. Widoczne są też niepożądane listki boczne w~paśmie \SI{2000}{\hertz}.
+	Otrzymane charakterystyki kierunkowości dla głośnika niskotonowego przedstawiono na rysunku~\ref{r:kierunkowosc_L}, a~dla wysokotonowego na rysunku~\ref{r:kierunkowosc_H}. 
+			
+		\begin{figure}[!ht]
+			\centering
+			\begin{subfigure}[b]{.52\textwidth}
+				\includegraphics[width=\textwidth]{poziom_L.png}
+				\caption{Płaszczyzna pozioma}
+				\label{r:C_poziom}
+			\end{subfigure}
+			~
+			\begin{subfigure}[b]{.46\textwidth}
+				\includegraphics[width=\textwidth]{pion_L.png}
+				\caption{Płaszczyzna pionowa}
+				\label{r:C_pion}
+			\end{subfigure}
+			\caption{Charakterystyki kierunkowości głośnika niskotonowego w~obudowie}
+			\label{r:kierunkowosc_L}
+		\end{figure}
+		
+		Ze względu na kształt obudowy, kąt promieniowania głośnika niskotonowego w~płaszczyźnie pionowej jest większy, niż w~płaszczyźnie poziomej -- jest to widoczne dla pasma \range{250}{1000}~\si{\hertz}. Widoczne są też niepożądane listki boczne w~paśmie \SI{2000}{\hertz}.
 		
 		\begin{figure}[!ht]
 			\centering
-			\includegraphics[width=\textwidth,trim={0 .5cm 0 1.7cm},clip]{kierunkowosc.png}
-			\caption{Charakterystyki kierunkowości głośnika niskotonowego w~obudowie (lewa -- w~poziomie, prawa -- w~pionie)}
-			\label{r:kierunkowosc}
+			\begin{subfigure}[b]{.52\textwidth}
+				\includegraphics[width=\textwidth]{poziom_H.png}
+				\caption{Płaszczyzna pozioma}
+				\label{r:C_poziom}
+			\end{subfigure}
+			~
+			\begin{subfigure}[b]{.46\textwidth}
+				\includegraphics[width=\textwidth]{pion_H.png}
+				\caption{Płaszczyzna pionowa}
+				\label{r:C_pion}
+			\end{subfigure}
+			\caption{Charakterystyki kierunkowości głośnika wysokotonowego w~obudowie}
+			\label{r:kierunkowosc_H}
 		\end{figure}
+		
+		Z~kolei głośnik wysokotonowy charakteryzuje się bardzo równomierną charakterystyką kierunkową w~płaszczyźnie poziomej, co związane jest z~kształtem wylotu falowodu, wygiętego na boki.
+
 
 	
 	\subsection{Drgania obudowy}
@@ -626,7 +658,7 @@ backend=biber
 			\label{r:C_przem_cisn}
 		\end{figure}
 		
-		\begin{figure}
+		\begin{figure}[!ht]
 			\centering
 			\begin{subfigure}[b]{.49\textwidth}
 				\includegraphics[width=\textwidth]{absp_560Hz.png}
@@ -641,6 +673,25 @@ backend=biber
 			\end{subfigure}
 			
 			\caption{Izofony uzyskane z~symulacji w~środowisku Comsol}
+			\label{r:Comsol}
+		\end{figure}
+		
+		
+		\begin{figure}[!ht]
+			\centering
+			\begin{subfigure}[b]{.49\textwidth}
+				\includegraphics[width=\textwidth]{horyzontalna_axis_off.png}
+				\caption{Płaszczyzna pozioma}
+				\label{r:C_poziom}
+			\end{subfigure}
+			~
+			\begin{subfigure}[b]{.49\textwidth}
+				\includegraphics[width=\textwidth]{vertykalna_axis_off.png}
+				\caption{Płaszczyzna pionowa}
+				\label{r:C_pion}
+			\end{subfigure}
+			
+			\caption{Charakterystyki kierunkowości uzyskane z~symulacji w~środowisku Comsol [\textit{\range{40}{3150}~\si{\hertz}, będą dorysowane osie} -- przyp. aut.]}
 			\label{r:Comsol}
 		\end{figure}
 		
