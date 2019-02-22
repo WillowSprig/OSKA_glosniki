@@ -207,9 +207,9 @@ backend=biber
 	%	\subsection{Wprowadzenie teoretyczne}
 	%\comment{O zależnościach (?) z inżynierki}
 	
-	\section{Badany zestaw głośnikowy}
+	\section{Badany zestaw głośnikowy}\label{ss:opis}
 	
-	\subsection{Opis konstrukcji}\label{ss:opis}
+%	\subsection{Opis konstrukcji}
 	
 	Zestaw, którego parametry zdecydowano się zbadać, i~który poddano modyfikacjom, jest docelowo elementem systemu liniowego. Składa się z~falowodu z~wysokotonowym głośnikiem ciśnieniowym B\&C~DE800 (zespół głośnika wysokotonowego, 2) umieszczonego centralnie oraz dwóch 16-omowych, 10-calowych głośników nisko-średniotonowych Beyma~10WR300~\cite{datasheet} umieszczonych po bokach i~nachylonych pod kątem \SI{67}{\degree} do osi głównej zestawu~(1).
 	
@@ -325,13 +325,13 @@ backend=biber
 	
 	\subsection{Skuteczność}
 	
-	W celu weryfikacji skuteczności podawanej przez producenta wykonano pomiar poziomu dźwięku $L_{eq}$ w~odległości \SI{2}{\metre}. Do pomiarów wykorzystano analizator SVAN 912E; głośnik pobudzano szumem różowym w~paśmie \range{50}{5000}~\si{\hertz} o~wartości skutecznej \SI{1}{\watt}. 
+	W celu weryfikacji skuteczności podawanej przez producenta wykonano pomiar poziomu dźwięku $L_{eq}$ w~odległości \SI{2}{\metre} w~warunkach pola swobodnego. Do pomiarów wykorzystano analizator SVAN 912E; głośnik pobudzano szumem różowym w~paśmie \range{50}{5000}~\si{\hertz} o~wartości skutecznej \SI{1}{\watt}. 
 	
 	\subsection{Charakterystyki kierunkowości}
 	
 	% 			Wykonano dwie serie pomiarów, dla głośnika wysoko- i~niskotonowego. W~pierwszej serii zmierzono głośniki w~obudowie bez wypełnienia, w~drugiej -- wypełnione materiałem dźwiękochłonnym.
 	
-	Pomiar charakterystyki kierunkowości odbywał się w~komorze bezechowej przy użyciu stolika obrotowego, na którym umieszczony był zestaw głośnikowy. W~osi akustycznej mierzonego głośnika ustawiono mikrofon GRAS 46AE; następnie głośnik obracano z~krokiem \SI{10}{\degree}, każdorazowo zatrzymując i~wykonując pomiar trwający \SI{3}{\s}. Sygnałem podawanym na głośnik był szum różowy, pomiar wykonano w~pasmach $1/6$~oktawy, w~zakresie \range{40}{20000}~\si{\hertz}.
+	Pomiar charakterystyki kierunkowości odbywał się w~komorze bezechowej przy użyciu stolika obrotowego, na którym umieszczony był zestaw głośnikowy. W~osi akustycznej mierzonego głośnika ustawiono mikrofon GRAS 46AE; następnie głośnik obracano z~krokiem \SI{10}{\degree}, każdorazowo zatrzymując i~wykonując pomiar trwający \SI{3}{\s}. Sygnałem podawanym na głośnik był szum różowy, pomiar wykonano w~pasmach $1/6$~oktawy, w~zakresie \range{40}{5000}~\si{\hertz}.
 	
 	\subsection{Drgania obudowy}
 	
@@ -341,7 +341,7 @@ backend=biber
 	\begin{figure}[!ht]
 		\centering
 		\includegraphics[width=.7\textwidth]{zdjecie_wibro.jpg}
-		\caption{Fotografia wykonana podczas przygotowań do pomiaru z~użyciem wibrometru}
+		\caption{Przygotowania do pomiaru z~użyciem wibrometru}
 		\label{r:wibro_zdjecie}
 	\end{figure}
 	
@@ -352,7 +352,7 @@ backend=biber
 	
 	Dzięki stworzeniu modelu komputerowego możliwe jest łatwe i~niewymagające wysokich kosztów testowanie różnych rozwiązań metodami numerycznymi. Takie rozwiązanie pozwala również na dużo prostszą obserwację zjawisk akustycznych i~mechanicznych zachodzących w~konstrukcji i~nie wymaga użycia zaplecza technicznego takiego jak np. komora bezechowa. 
 	
-	Jednak tworzenie skomplikowanych modeli wykorzystujących sprzężenie pomiędzy domeną mechaniczną opisującą zachowanie membrany i~zawieszenia głośnika, a~domeną akustyczną opisującą propagację dźwięku w~powietrzu, wymaga poznania właściwości materiałów, z których zbudowane są wszystkie elementy. Parametry materiałowe, takie jak moduł Younga, współczynnik Poissona, czy gęstość, ciężko jest zmierzyć dla każdego elementu modelu, a~jednocześnie odpowiadają za jego właściwości mechaniczne, a~co za tym idzie -- pośrednio -- akustyczne. W~praktyce zazwyczaj wykorzystuje się jako bazę właściwości materiałów dostępne w~literaturze~\cite{modelowanie}, a~następnie przeprowadza strojenie modelu -- dla znanego przypadku wykonuje się symulacje, zmieniając parametry tak, aby wyniki otrzymane w~modelu komputerowym były jak najbardziej zbliżone do wyników pomiaru.
+	Jednak tworzenie skomplikowanych modeli wykorzystujących sprzężenie pomiędzy domeną mechaniczną opisującą zachowanie membrany i~zawieszenia głośnika, a~domeną akustyczną opisującą propagację dźwięku w~powietrzu, wymaga poznania właściwości materiałów, z których zbudowane są wszystkie elementy. Parametry materiałowe, takie jak moduł Younga, współczynnik Poissona, czy gęstość, ciężko jest zmierzyć dla każdego elementu modelu; jednocześnie odpowiadają za jego właściwości mechaniczne, a~co za tym idzie -- pośrednio -- akustyczne. W~praktyce zazwyczaj wykorzystuje się jako bazę właściwości materiałów dostępne w~literaturze~\cite{modelowanie}, a~następnie przeprowadza strojenie modelu -- dla znanego przypadku wykonuje się symulacje, zmieniając parametry tak, aby wyniki otrzymane w~modelu komputerowym były jak najbardziej zbliżone do wyników pomiaru.
 	
 	Dodatkowo problematyczne staje się stworzenie geometrii, dla której możliwe byłoby wygenerowanie siatki elementów, przy jednoczesnym odwzorowaniu kształtu w~sposób zapewniający rzeczywiste zachowanie elementów modelu. Na taki problem natknęli się autorzy przy tworzeniu kształtu zawieszenia, co można zaobserwować na rysunku~\ref{r:zawieszenie}, przedstawiającym przemieszczenia w~symulacji dla częstotliwości \SI{50}{\hertz} -- widoczne jest przemieszczenie membrany w~dół i~przemieszczenie zawieszenia w~sposób nieadekwatny do ruchu membrany.
 	Związany z~tym jest problem rozmiarów elementów siatki, który z~kolei wpływa na czas obliczeń modelu. Dla wysokich częstotliwości i dużych modeli ilość węzłów staje się na tyle duża, że czas obliczeń nawet na komputerach o~dużej mocy obliczeniowej jest bardzo długi, przez co model jest bezużyteczny.
@@ -366,7 +366,7 @@ backend=biber
 	
 	\subsection{Wykonany model}
 	
-	Aby zyskać możliwość wprowadzania modyfikacji obudowy, zdecydowano się na wykonanie modelu badanego zestawu. Geometrię przygotowano w~programie Autodesk Inventor; obliczenia prowadzono za pomocą metody elementów skończonych (MES) w~środowisku Comsol Multiphysics, z~wykorzystaniem modułu akustycznego i~mechanicznego. Elementowi cewki przypisywano wartość siły obliczonej na podstawie zależności~\eqref{eq:sila}:
+	Aby zyskać możliwość wprowadzania modyfikacji obudowy, zdecydowano się na wykonanie modelu badanego zestawu. Geometrię przygotowano w~programie Autodesk Inventor; obliczenia prowadzono za pomocą metody elementów skończonych (MES) w~środowisku Comsol Multiphysics, z~wykorzystaniem modułu akustycznego i~mechanicznego. Elementowi cewki zostało nadane wymuszenie, którego wartość siły została obliczona na podstawie zależności~\eqref{eq:sila}:
 	
 	\begin{equation}
 	F_e=\frac{BlV_0}{Z_b}-\nu\frac{(Bl)^2}{Z_b} \quad, \label{eq:sila}
@@ -401,7 +401,7 @@ backend=biber
 	
 	\begin{table}[!ht]
 		\centering
-		\caption{Porównanie metod pomiaru parametrów Thiele-Smalla: dodanej masy oraz objętości na etapie~2, oraz różnych wartości masy na etapie~1}
+		\caption{Porównanie metod pomiaru parametrów Thiele-Smalla: dodanej masy oraz objętości etapie~2, oraz różnych wartości masy po etapie~1}
 		\label{t:TS_metody}
 		\boldmath
 		\begin{tabular}{|l|}
@@ -493,9 +493,9 @@ backend=biber
 		\end{tabular}
 	\end{table}
 	
-	Wyniki pomiarów potwierdzają, że zużycie głośnika wpływa na jego parametry. Krzywe impedancji głośników w~odgrodzie po każdym etapie przedstawiono na rysunku~\ref{r:wygrzewanie}. Natomiast porównanie obu głośników na etapie~1 przedstawiono na rysunku~\ref{r:2glosniki}.
+	Wyniki pomiarów potwierdzają, że zużycie głośnika wpływa na jego parametry. Krzywe impedancji głośników w~odgrodzie po każdym etapie przedstawiono na rysunku~\ref{r:wygrzewanie}. Natomiast porównanie obu głośników po etapie~1 przedstawiono na rysunku~\ref{r:2glosniki}.
 	
-	W~tabeli~\ref{t:TS_karta_etapy} zestawiono wartości parametrów Thiele-Smalla na każdym etapie zużycia głośnika oraz podane w~karcie katalogowej. Należy zwrócić uwagę na fakt, że podane parametry z~karty katalogowej dotyczą głośnika o~rezystancji \SI{8}{\ohm}, podczas gdy badane egzemplarze mają rezystancję \SI{16}{\ohm}; autorom nie udało się jednak pozyskać karty katalogowej dla takiej wersji głośnika.
+	W~tabeli~\ref{t:TS_karta_etapy} zestawiono wartości parametrów Thiele-Smalla zmierzonych po każdym etapie zużycia głośnika oraz podane w~karcie katalogowej. Należy zwrócić uwagę na fakt, że podane parametry z~karty katalogowej dotyczą głośnika o~impedancji znamionowej~\SI{8}{\ohm}, podczas gdy badane egzemplarze są w~wersji \SI{16}{\ohm}; autorom nie udało się jednak pozyskać karty katalogowej dla takiej wersji głośnika.
 	
 	\begin{figure}[!ht]
 	\centering
@@ -506,12 +506,12 @@ backend=biber
 	
 	\begin{table}[!ht]
 	\centering
-	\caption{Porównanie parametrów Thiele-Smalla: odczytanych z~karty katalogowej~\cite{datasheet} oraz zmierzonych metodą dodanej masy ($m=$~\SI{10}{\gram}) dla różnych etapów pracy głośnika}
+	\caption{Porównanie parametrów Thiele-Smalla: odczytanych z~karty katalogowej~\cite{datasheet} oraz zmierzonych metodą dodanej masy ($m=$~\SI{10}{\gram}) dla różnych etapów zużycia głośnika}
 	\label{t:TS_karta_etapy}
 	\boldmath
 	\begin{tabular}{|l|c|c|c|c|}
 	\hline
-	\textbf{Parametr} & \makecell{\textbf{Karta katalogowa}\\ \textbf{($R=$~\SI{8}{\ohm})}} & \textbf{Nowy} & \textbf{Etap 1} & \textbf{Etap 2} \\\hline
+	\textbf{Parametr} & \makecell{\textbf{Karta katalogowa}\\ \textbf{($Z_{nom})=$~\SI{8}{\ohm})}} & \textbf{Nowy} & \textbf{Etap 1} & \textbf{Etap 2} \\\hline
 	\hline
 	$F_s$ [\si{\hertz}] & \num{47,0}  & \num{71,5} & \num{57,0} & \num{50,7}  \\\hline
 	$Z_{max}$ [\si{\ohm}] & --- & \num{54,2} & \num{55,7} & \num{64,0}  \\\hline
@@ -549,7 +549,7 @@ backend=biber
 	\label{r:2glosniki}
 	\end{figure}
 	
-	W~celu sprawdzenia wpływu modyfikacji obudowy na charakterystyki impedancji wykonano pomiar dla obudowy w~wariancie „podstawowym” (opisanym w~części~\ref{ss:opis}) oraz z~zaślepionymi otworami (por. tab.~\ref{t:obudowa}). Wyniki przedstawiono na rysunku~\ref{r:obudowa_otwory}. 
+	W~celu sprawdzenia wpływu modyfikacji obudowy na charakterystyki impedancji wykonano pomiar dla obudowy w~wariancie „podstawowym” (opisanym w~części~\ref{ss:opis}) oraz z~zaślepionymi otworami. Wyniki przedstawiono na rysunku~\ref{r:obudowa_otwory}. 
 	Dodatkowo, dla porównania zasymulowano obie obudowy w~programie WinISD, przy czym zaślepienie otworów zostało zamodelowane jako obudowa zamknięta. Otrzymane charakterystyki znajdują się na rysunku~\ref{r:winisd}.
 	
 	\begin{figure}[!ht]
@@ -573,7 +573,7 @@ backend=biber
 	
 	Na wykresach dla dwóch głośników w~obudowie z~otworami widoczne są dwa rezonanse: pierwszy z~nich to rezonans powietrza w~obudowie, charakterystyczny dla obudowy typu \textit{bass-reflex}; drugi to rezonans głośnika, przesunięty w~kierunku wyższych częstotliwości.
 	
-	Połączenie dwóch głośników oprócz spadku impedancji spowodowało obniżenie pierwszej częstotliwości rezonansowej, a~wzrost drugiej.  Symulacje wskazują, że zamiana obudowy na zamkniętą powinna skutkować obniżeniem częstotliwości drugiego rezonansu i~wyeliminowaniem pierwszego. W~wynikach pomiarów faktycznie można zauważyć zanik pierwszego rezonansu; częstotliwość drugiego obniża się bardzo nieznacznie.
+	Połączenie dwóch głośników oprócz spadku impedancji spowodowało obniżenie pierwszej częstotliwości rezonansowej, a~wzrost drugiej.  Symulacje wskazują, że zamiana obudowy na zamkniętą powinna skutkować obniżeniem częstotliwości drugiego rezonansu i~wyeliminowaniem pierwszego. W~wynikach pomiarów można zauważyć zanik pierwszego rezonansu; częstotliwość drugiego obniża się bardzo nieznacznie.
 	
 	
 	\subsection{Skuteczność}
@@ -597,7 +597,7 @@ backend=biber
 	
 	Uzyskany poziom skuteczności (\SI{94,8}{\decibel}) jest zbliżony do deklarowanego przez producenta (\SI{95}{\decibel}).
 	
-	Rysunek~\ref{r:skutecznosc} przedstawia charakterystyki głośnika niskotonowego w~odgrodzie, głośników niskotonowych i~zespołu głośnika wysokotonowego na osi akustycznej zestawu, w~pasmach $1/6$~oktawy. Na rysunku~\ref{r:skutecznosc_odgr} zestawiono charakterystyki głośnika niskotonowego w~odgrodzie i~głośników w~obudowie.
+	Rysunek~\ref{r:skutecznosc} przedstawia charakterystyki głośników niskotonowych i~zespołu głośnika wysokotonowego na osi akustycznej zestawu, w~pasmach $1/6$~oktawy. Na rysunku~\ref{r:skutecznosc_odgr} zestawiono charakterystyki głośnika niskotonowego w~odgrodzie i~głośników w~obudowie.
 	%Na ich podstawie charakterystyk można wyznaczyć punkt podziału częstotliwości między głośnik wysoko- i~niskotonowy -- wartość jest uzależniona od faktu czy uda się wyeliminować nierównomierność charakterystyki częstotliwościowej głośników niskotonowych  \SI{500}{\hertz}.
 	
 	\begin{figure}[!ht]
@@ -673,7 +673,7 @@ backend=biber
 		\label{r:wibrometr_1-4}
 	\end{figure}
 	
-	Wybrane punkty zlokalizowane są na dwóch różnych ściankach obudowy, jak pokazano na rysunku~\ref{r:wibro_pkt}; mimo tego maksimum amplitudy drgań przypada we wszystkich czterech punktach dokładnie dla tej samej częstotliwości. Analiza częstotliwości własnych przestrzeni powietrznej wewnątrz obudowy nie daje możliwości wskazania przyczyny takiego stanu; niezbędna staje się analiza częstotliwości drgań własnych obudowy. Nie jest to jednak wada która wpływa na charakterystykę częstotliwościową zestawu, co zostało potwierdzone poprzez pomiar mikrofonem w~odległości \SI{2}{\metre}.
+	Wybrane punkty zlokalizowane są na dwóch różnych ściankach obudowy, jak pokazano na rysunku~\ref{r:wibro_pkt}; mimo tego maksimum amplitudy drgań przypada we wszystkich czterech punktach dokładnie dla tej samej częstotliwości. Analiza częstotliwości własnych przestrzeni powietrznej wewnątrz obudowy nie daje możliwości wskazania przyczyny takiego stanu; niezbędna staje się analiza częstotliwości drgań własnych obudowy. Nie jest to jednak wada, która wpływa na charakterystykę częstotliwościową zestawu, co zostało potwierdzone poprzez pomiar mikrofonem w~odległości \SI{2}{\metre} na kierunku prostopadłym do płaszczyzny powierzchni mierzonej.
 	
 	\begin{figure}[!ht]
 		\centering
@@ -684,20 +684,20 @@ backend=biber
 	
 	Kolejnym punktem, dla którego zdecydowano się zaprezentować wyniki jest punkt~\num{5}, zlokalizowany na powierzchni wnęki uchwytu (na rysunku~\ref{r:wibro_pkt} po prawej stronie). Na widmie przemieszczeń (rysunek~\ref{r:wibrometr_5}) widoczne jest lokalne maksimum amplitudy dla częstotliwości~\SI{400}{\hertz}, co jednak nie znajduje odzwierciedlenia w~widmie poziomu ciśnienia akustycznego -- mimo że podbicie tej częstotliwości jest widoczne w~charakterystykach skuteczności (por. rys.~\ref{r:skutecznosc}).%Drgania obudowy mogą mieć wpływ na pole akustyczne wokół zestawu.
 	
-	\begin{figure}[H]
+	\begin{figure}[!ht]
 		\centering
 		\adjincludegraphics[width=.8\textwidth,trim={2cm .5cm 2cm 1cm},clip]{pkt5.pdf}
 		\caption{Znormalizowane widma amplitudy przemieszczeń obudowy (góra) oraz poziomu ciśnienia akustycznego w~niewielkiej odległości od zestawu w~punkcie pomiarowym~\num{5}}
 		\label{r:wibrometr_5}
 	\end{figure}
 	
-	Otrzymane wyniki nie dają podstaw do jednoznacznego wskazania wpływu drgań obudowy na charakterystykę częstotliwościową zestawu. Jednocześnie do dalszej analizy tej zależności wskazane jest wykonanie pomiarów w~większej liczbie punktów oraz obliczeń statystycznych.
+	Otrzymane wyniki nie dają podstaw do jednoznacznego wskazania wpływu drgań obudowy na charakterystykę częstotliwościową zestawu. Jednocześnie do dalszej analizy tej zależności wskazane jest wykonanie pomiarów w~większej liczbie punktów i dodatkowych analiz.
 	
 	\subsection{Symulacje numeryczne}
 	
 	Dla wstępnie dostrojonego modelu przeprowadzono symulacje rozkładu ciśnienia akustycznego wokół zestawu oraz przemieszczenia membrany. Wyznaczono także charakterystykę skuteczności zestawu. 
 	
-	Na rysunku~\ref{r:C_rozklady} przedstawiono rozkłady ciśnienia akustycznego w~zestawieniu ze skutecznością zestawu. Podbicie charakterystyki w~okolicach \SI{500}{\hertz} znajduje odzwierciedlenie na rysunkach~\ref{r:C_500} i~\ref{r:C_560} -- fale dźwiękowe nakładają się w~taki sposób, że możliwa jest ich dalsza propagacja. Natomiast dla częstotliwości \SI{710}{\hertz}, dla której w~charakterystyce skuteczności widoczny jest nagły spadek, występuje zjawisko zwarcia akustycznego: głośnik i~otwór \textit{bass-reflex} emitują fale w~przeciwfazie, które wygaszają się wzajemnie przed głośnikiem (rysunek~\ref{r:C_710}). Można to zauważyć na rysunku~\ref{r:C_balony}, który przedstawia linie jednakowego ciśnienia wokół zestawu.
+	Na rysunku~\ref{r:C_rozklady} przedstawiono rozkłady ciśnienia akustycznego w~zestawieniu z~skutecznością zestawu. Podbicie charakterystyki w~okolicach \SI{500}{\hertz} znajduje odzwierciedlenie na rysunkach~\ref{r:C_500} i~\ref{r:C_560} -- fale dźwiękowe nakładają się w~taki sposób, że możliwa jest ich dalsza propagacja. Natomiast dla częstotliwości \SI{710}{\hertz}, dla której w~charakterystyce skuteczności widoczny jest nagły spadek, występuje zjawisko zwarcia akustycznego: głośnik i~otwór \textit{bass-reflex} emitują fale w~przeciwfazie, które wygaszają się wzajemnie przed głośnikiem (rysunek~\ref{r:C_710}). Można to zauważyć na rysunku~\ref{r:C_balony}, który przedstawia linie jednakowego ciśnienia wokół zestawu.
 	
 	\begin{figure}[!ht]
 		\centering
@@ -747,9 +747,9 @@ backend=biber
 		\label{r:C_balony}
 	\end{figure}
 	
-	Rysunek \ref{r:C_przem_cisn} przedstawia kolejną z~przydatnych funkcjonalności jaką daje model zestawu głośnikowego analizowany metodą elementów skończonych: dzięki możliwości sprzężenia domen możliwa stała się szybka i~łatwa obserwacja odkształceń zawieszenia górnego głośnika. 
+	Rysunek \ref{r:C_przem_cisn} przedstawia kolejną z~przydatnych funkcjonalności jaką daje model zestawu głośnikowego analizowany metodą elementów skończonych: dzięki możliwości sprzężenia domen możliwa stała się szybka i~łatwa obserwacja naprężeń membrany i zawieszenia górnego głośnika. Ze względu na znaczne różnice parametrów materiałowych opowiedzianych za sztywność elementów membrany i zawieszenia występują znaczne różnice wartości naprężeń. To pociąga za sobą potrzebę przedstawienia ich w dwóch różnych skalach, aby lepiej zobrazować rozkład naprężeń w~każdym z~analizowanych elementów.
 	
-	Zastosowany układ zestawu powoduje nierównomierne obciążenie membrany głośnika i~wspomnianego zawieszenia. W obszarze blisko frontowej części zestawu (górna część ilustracji) zawieszenie znajduje się pomiędzy obszarami o~przeciwnych wartościach ciśnienia akustycznego, dokładnie odwrotnie niż ma to miejsce w~wewnętrznej części zestawu. Tam różnica ciśnień akustycznych rozdzielonych zawieszeniem i membraną jest dużo mniejsza. Występowanie na obwodzie nierównomierności tego typu powoduje osiowo niesymetryczne ruchu membrany, przez to zwiększając poziom zniekształceń; niesymetryczne obciążenie zawieszenia może przyczyniać się do jego szybszego zużycia, a~w~konsekwencji do awarii przetwornika.  
+	Zastosowany układ głośników i~otworów \textit{bass-reflex} powoduje nierównomierne obciążenie membrany głośnika i~wspomnianego zawieszenia. W obszarze blisko frontowej części zestawu (górna część ilustracji) zawieszenie znajduje się pomiędzy obszarami o~przeciwnych wartościach ciśnienia akustycznego, odwrotnie niż ma to miejsce w~wewnętrznej części zestawu, gdzie różnica ciśnień akustycznych rozdzielonych zawieszeniem i membraną jest dużo mniejsza. Występowanie na obwodzie nierównomierności tego typu może powodować zwiększenie poziomu zniekształceń; niesymetryczne obciążenie zawieszenia może przyczyniać się do jego szybszego zużycia, a~w~konsekwencji do uszkodzenia przetwornika.  
 	
 	\begin{figure}[!ht]
 		\centering
@@ -778,6 +778,7 @@ backend=biber
 		\label{r:C_kierunk}
 	\end{figure}
 	
+	\newpage
 	\section{Podsumowanie}
 	
 	Otrzymane dotychczas wyniki wskazują, iż optymalnym byłoby przyjęcie częstotliwości granicznych dla głośnika wysoko- i niskotonowego w~przedziale ~\range{1000}{1200}\si{Hz}. Wymaga to jednak uwzględnienia charakterystyki fazowej głośników niskotonowych i zespołu głośnika wysokotonowego w~obudowie, po zastosowaniu możliwych rozwiązań poprawiających charakterystykę amplitudowo-częstotliwościową w~zakresie przetwarzanym przez głośniki niskotonowe. 
@@ -785,6 +786,11 @@ backend=biber
 	Planowane jest wykonanie kolejnych pomiarów, obejmujących inne modyfikacje obudowy, mających na celu poprawę charakterystyki amplitudowo-częstotliwościowej oraz równomierności charakterystyk kierunkowości. 
 	
 	Autorzy pracują także nad dostrojeniem modelu komputerowego, aby móc prowadzić dalsze badania na drodze symulacji. Pozwoliłoby to na określenie wpływu poszczególnych elementów konstrukcji na charakterystyki zestawu oraz rozwój wiedzy i~umiejętności, które mogą zostać wykorzystane do budowy zestawu od podstaw. 
+	
+	\section*{Podziękowania}
+	
+	Praca została wykonana z wykorzystaniem Infrastruktury PLGrid.
+	
 	
 	\printbibliography
 	
