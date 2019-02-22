@@ -197,11 +197,11 @@ backend=biber
 	
 	\subsection{Cel pracy}
 	
-	Prace mają na celu udoskonalenie konstrukcji obudowy zestawu głośnikowego będącego elementem systemu liniowego (ang.~\textit{line array system}). Pożądane jest osiągniecie maksymalnie płaskiej charakterystyki amplitudowo-częstotliwościowej, niskiego poziomu zniekształceń, wysokiej sprawności oraz możliwości generowania wysokich maksymalnych poziomów akustycznych przy zachowaniu jak najmniejszych rozmiarów. Zastawy wykorzystywane w~takich systemach powinny cechować się równomierną charakterystyką kierunkowości w płaszczyźnie poziomej.
+	Prace mają na celu udoskonalenie konstrukcji obudowy zestawu głośnikowego będącego elementem systemu liniowego (ang.~\textit{line array system}). Pożądane jest osiągniecie maksymalnie płaskiej charakterystyki amplitudowo-częstotliwościowej, wysokiej sprawności przy zachowaniu jak najmniejszych rozmiarów. Zastawy wykorzystywane w~takich systemach powinny cechować się równomierną charakterystyką kierunkowości w płaszczyźnie poziomej.
 	
 	Niniejsza praca ma na celu przybliżenie czytelnikowi problemów, wyników, a~także sposobów rozwiązania niektórych z~zagadnień napotkanych przez autorów na etapie analizy konstrukcji i~modelowania rzeczywistego zestawu głośnikowego.
 	
-	Autorzy postawili sobie za cel określenie, jakie z~zastosowanych modyfikacji obudowy zestawu głośnikowego wywierają wpływ na jego mierzone parametry oraz wybór najbardziej optymalnej konfiguracji, a~także wyznaczenie optymalnego punktu podziału pasma częstotliwości między głośniki.
+	Autorzy postawili sobie za cel określenie, jakie z~zastosowanych modyfikacji obudowy zestawu głośnikowego wywierają wpływ na jego parametry oraz wybór najbardziej optymalnej konfiguracji.
 	
 	
 	%	\subsection{Wprowadzenie teoretyczne}
@@ -216,7 +216,7 @@ backend=biber
 	Kształt obudowy jest typowy dla systemu liniowego -- przekrój boczny ma kształt trapezu równoramiennego; konstrukcja wzorowana jest na rozwiązaniu stosowanym w~systemie liniowym uznanej firmy. Materiał korpusu to sklejka bałtycka o~grubości \SI{15}{\milli\metre}, dodatkowo z~przodu zamontowana jest maskownica ze stali o~grubości \SI{2}{\milli\metre}. Objętość wnętrza obudowy po odjęciu objętości głośników i~falowodu wynosi \SI{28,17}{\deci\metre\cubed}.
 	
 	Obudowa jest obudową wentylowaną, wyposażoną w~4~otwory~(3) o~kształcie ćwierćkolistym i~promieniu \SI{70}{\milli\metre}. Otwory te mają swe ujście do przestrzeni przed głośnikiem, tak jak przestawiono na rysunku~\ref{r:przekroj}. %Wnętrze obudowy jest połączone z~przestrzenią zewnętrzną półkolistymi otworami o~promieniu \SI{70}{\milli\metre} przy tylnej ściance.
-	Taki układ głośników i~otworów ma wpływ na charakterystyki kierunkowości głośnika w~płaszczyźnie horyzontalnej~\cite{kmiecik_inz}. %\comment{W części teoretycznej wzorek na chke kierunkowości w zależności od odległości źródeł i omówić temat!!!}
+	Taki układ głośników i~otworów ma wpływ na charakterystyki kierunkowości głośnika w~płaszczyźnie poziomej~\cite{kmiecik_inz}. %\comment{W części teoretycznej wzorek na chke kierunkowości w zależności od odległości źródeł i omówić temat!!!}
 	
 	%	Przekrój zestawu w~płaszczyźnie poziomej ukazano na rysunku~\ref{r:przekroj}, a~fotografię na rysunku~\ref{r:zdjecie}.
 	
@@ -268,7 +268,7 @@ backend=biber
 	
 	\section{Metodyka pomiarów}
 	
-	W~celu możliwie dokładnego zbadania parametrów zestawu, ze szczególnym uwzględnieniem obudowy, zaplanowano szereg pomiarów: impedancji elektrycznej głośnika w~odgrodzie z~wyznaczeniem parametrów Thiele-Smalla, charakterystyki skuteczności, charakterystyk kierunkowości oraz pomiar drgań obudowy przy pomocy wibrometru laserowego.
+	W~celu możliwie dokładnego zbadania parametrów zestawu, ze szczególnym uwzględnieniem obudowy, zaplanowano szereg pomiarów: impedancji elektrycznej głośnika w~odgrodzie z~wyznaczeniem parametrów Thiele-Smalla, charakterystyki amplitudowo-częstotliwościowej, charakterystyk kierunkowości oraz pomiar drgań obudowy przy pomocy wibrometru laserowego.
 	
 	Ze względu na zaobserwowane znaczące rozbieżności między wynikami uzyskanymi dla głośników niskotonowych, a~parametrami podanymi przez producenta w~karcie katalogowej, zdecydowano się na wykonanie dodatkowych pomiarów, uwzględniających zużycie głośnika.
 	
@@ -280,7 +280,7 @@ backend=biber
 	
 	Istnieją dwie metody pomiaru tych parametrów: metoda dodanej masy oraz metoda dodanej objętości. Ze względów praktycznych zdecydowano się na wykonywanie większości pomiarów metodą dodanej masy, dla porównania wykonano też jeden pomiar metodą dodanej objętości.
 	
-	Procedura pomiaru metodą dodanej masy wyglądała następująco: wykonano pomiar charakterystyki impedancji głośnika, a~następnie do membrany dodano masę $m=\,$\SI{10}{\gram} i~wykonano kolejny pomiar. Na podstawie porównania dwóch charakterystyk impedancji, za pomocą dedykowanego oprogramowania Pulse Thiele Small Parameters Calculation BZ-5604 wyznaczano parametry Thiele-Smalla~\cite{BK_pulse_TS}, opisane w~tabeli~\ref{t:TS_opis}.
+	Procedura pomiaru metodą dodanej masy wyglądała następująco: wykonano pomiar charakterystyki impedancji głośnika umieszczonego w~odgrodzie znormalizowanej, a~następnie do membrany dodano masę $m=\,$\SI{10}{\gram} i~wykonano kolejny pomiar. Na podstawie porównania dwóch charakterystyk impedancji, za pomocą dedykowanego oprogramowania Pulse Thiele Small Parameters Calculation BZ-5604 wyznaczano parametry Thiele-Smalla~\cite{BK_pulse_TS}, opisane w~tabeli~\ref{t:TS_opis}. Pomiar odbywał się w~warunkach pola swobodnego.
 	
 	Opracowano także skrypt w~środowisku Matlab wyznaczający te parametry z~zarejestrowanych charakterystyk impedancji na podstawie~\cite{dobrucki}; działanie skryptu zostało zweryfikowane w~oparciu o~parametry wyznaczone w narzędziu B\&K Pulse.
 	
@@ -323,11 +323,9 @@ backend=biber
 	
 	Ze względu na rozbieżności między parametrami katalogowymi a~rzeczywistymi oraz dla różnych egzemplarzy tego samego modelu głośnika~\cite{aes_roznice}, wykonano pomiary pozwalające na porównanie obu wykorzystywanych egzemplarzy oraz sprawdzenie, jak zmieniają się parametry głośnika podczas jego eksploatacji. Pomiary wykonano na fabrycznie nowym przetworniku oraz na tym samym egzemplarzu poddanym procesowi zużycia poprzez dostarczenie w dwóch etapach sygnału szumu różowego: o~mocy \SI{40}{\watt} przez czas \SI{2}{\hour} w~pierwszym etapie i~\SI{60}{\watt} przez czas \SI{10}{\min} w drugim etapie.
 	
-	\subsection{Charakterystyka skuteczności i~skuteczność}
+	\subsection{Skuteczność}
 	
-	Do pomiarów wykorzystano analizator SVAN 912E; głośnik pobudzano szumem różowym z~generatora o~wartości skutecznej \SI{1}{\watt}. Analizę prowadzono w~odległości \SI{2}{\metre} w~pasmach $1/3$-oktawowych w~zakresie \range{50}{5000}~\si{\hertz}.
-	
-	W celu weryfikacji skuteczności podawanej przez producenta wykonano też pomiar poziomu dźwięku $L_{eq}$ przy użyciu tego samego analizatora. 
+	W celu weryfikacji skuteczności podawanej przez producenta wykonano pomiar poziomu dźwięku $L_{eq}$ w~odległości \SI{2}{\metre}. Do pomiarów wykorzystano analizator SVAN 912E; głośnik pobudzano szumem różowym w~paśmie \range{50}{5000}~\si{\hertz} o~wartości skutecznej \SI{1}{\watt}. 
 	
 	\subsection{Charakterystyki kierunkowości}
 	
