@@ -211,11 +211,11 @@ backend=biber
 	
 	\subsection{Opis konstrukcji}\label{ss:opis}
 	
-	Zestaw, którego parametry zdecydowano się zbadać, i~który poddano modyfikacjom, jest docelowo elementem systemu liniowego. Składa się z~falowodu z~wysokotonowym głośnikiem ciśnieniowym B\&C~DE800 (zespół głośnika wysokotonowego) umieszczonego centralnie oraz dwóch 16--omowych głośników nisko-średniotonowych Beyma~10WR300 umieszczonych po bokach i~nachylonych pod kątem \SI{67}{\degree} do osi głównej zastawu.
+	Zestaw, którego parametry zdecydowano się zbadać, i~który poddano modyfikacjom, jest docelowo elementem systemu liniowego. Składa się z~falowodu z~wysokotonowym głośnikiem ciśnieniowym B\&C~DE800 (zespół głośnika wysokotonowego, 2) umieszczonego centralnie oraz dwóch 16-omowych, 10-calowych głośników nisko-średniotonowych Beyma~10WR300~\cite{datasheet} umieszczonych po bokach i~nachylonych pod kątem \SI{67}{\degree} do osi głównej zestawu~(1).
 	
 	Kształt obudowy jest typowy dla systemu liniowego -- przekrój boczny ma kształt trapezu równoramiennego; konstrukcja wzorowana jest na rozwiązaniu stosowanym w~systemie liniowym uznanej firmy. Materiał korpusu to sklejka bałtycka o~grubości \SI{15}{\milli\metre}, dodatkowo z~przodu zamontowana jest maskownica ze stali o~grubości \SI{2}{\milli\metre}. Objętość wnętrza obudowy po odjęciu objętości głośników i~falowodu wynosi \SI{28,17}{\deci\metre\cubed}.
 	
-	Obudowa jest obudową wentylowaną, wyposażoną w~4~otwory o~kształcie ćwierćkolistym i~promieniu \SI{70}{\milli\metre}. Otwory te mają swe ujście do przestrzeni przed głośnikiem, tak jak przestawiono na rysunku~\ref{r:przekroj}. %Wnętrze obudowy jest połączone z~przestrzenią zewnętrzną półkolistymi otworami o~promieniu \SI{70}{\milli\metre} przy tylnej ściance.
+	Obudowa jest obudową wentylowaną, wyposażoną w~4~otwory~(3) o~kształcie ćwierćkolistym i~promieniu \SI{70}{\milli\metre}. Otwory te mają swe ujście do przestrzeni przed głośnikiem, tak jak przestawiono na rysunku~\ref{r:przekroj}. %Wnętrze obudowy jest połączone z~przestrzenią zewnętrzną półkolistymi otworami o~promieniu \SI{70}{\milli\metre} przy tylnej ściance.
 	Taki układ głośników i~otworów ma wpływ na charakterystyki kierunkowości głośnika w~płaszczyźnie horyzontalnej~\cite{kmiecik_inz}. %\comment{W części teoretycznej wzorek na chke kierunkowości w zależności od odległości źródeł i omówić temat!!!}
 	
 	%	Przekrój zestawu w~płaszczyźnie poziomej ukazano na rysunku~\ref{r:przekroj}, a~fotografię na rysunku~\ref{r:zdjecie}.
@@ -244,27 +244,27 @@ backend=biber
 		\label{r:przekroj}
 	\end{figure}
 	
-	\subsection{Modyfikacja obudowy}
+% 	\subsection{Modyfikacja obudowy}
+% 	
+% 	% 		W~celu określenia wpływu konstrukcji obudowy na parametry zestawu głośnikowego zastosowano wybrane rodzaje jej modyfikacji. Wybrano modyfikacje możliwe do faktycznego zastosowania, a~jednocześnie takie, które nie wymagają nieodwracalnej ingerencji w~obudowę.
+% 	W~celu określenia wpływu konstrukcji obudowy na parametry zestawu głośnikowego zastosowano modyfikację polegającą na zaślepieniu otworów \textit{bass-reflex}. Taka zmiana znacząco zmienia charakter obudowy (na zamkniętą), a~jednocześnie nie wymaga nieodwracalnej ingerencji w~jej konstrukcję.
+% 	
+% 	Oprócz modyfikacji obudowy, zmieniano także liczbę zamontowanych w~niej głośników, aby lepiej zbadać ich wzajemny wpływ. %Wszystkie konfiguracje pomiarowe opisano w~tabeli~\ref{t:obudowa}.
 	
-	% 		W~celu określenia wpływu konstrukcji obudowy na parametry zestawu głośnikowego zastosowano wybrane rodzaje jej modyfikacji. Wybrano modyfikacje możliwe do faktycznego zastosowania, a~jednocześnie takie, które nie wymagają nieodwracalnej ingerencji w~obudowę.
-	W~celu określenia wpływu konstrukcji obudowy na parametry zestawu głośnikowego zastosowano modyfikację polegającą na zaślepieniu otworów \textit{bass-reflex}. Taka zmiana znacząco zmienia charakter obudowy (na zamkniętą), a~jednocześnie nie wymaga nieodwracalnej ingerencji w~jej konstrukcję.
-	
-	Oprócz modyfikacji obudowy, zmieniano także liczbę zamontowanych w~niej głośników, aby lepiej zbadać ich wzajemny wpływ. Wszystkie konfiguracje pomiarowe opisano w~tabeli~\ref{t:obudowa}.
-	
-	\begin{table}[!ht]
-		\centering
-		\caption{Opis konfiguracji obudowy i~głośników wykorzystanych podczas pomiarów}
-		\label{t:obudowa}
-		\begin{tabular}{|c|c|m{.6\textwidth}|}
-			\hline
-			\textbf{L.p.} & \makecell{\textbf{Oznaczenie}\\\textbf{(na wykresach)}} & \centering\textbf{Opis} \tabularnewline\hline
-			1. & Podstawowa & Obudowa w~podstawowej wersji (opisanej w~części~\ref{ss:opis}), z~otworami, bez wypełnienia \\\hline
-			2. & Zaślepiona & Ćwierćkoliste otwory zaślepione elementami ze sklejki o~grubości \SI{6,4}{\milli\metre}, przyklejonymi do ścianki, w~której zamocowany jest głośnik niskotonowy\\\hline
-			\hline
-			3. & Jeden głośnik & Jeden głośnik niskotonowy zamocowany w~obudowie, otwór na drugi zaślepiony kołem ze sklejki; zamocowany zespół głośnika wysokotonowego \\\hline
-			4. & Dwa głośniki & Obydwa głośniki niskotonowe oraz zespół głośnika wysokotonowego zamocowane w~obudowie\\\hline
-		\end{tabular}
-	\end{table}
+% 	\begin{table}[!ht]
+% 		\centering
+% 		\caption{Opis konfiguracji obudowy i~głośników wykorzystanych podczas pomiarów}
+% 		\label{t:obudowa}
+% 		\begin{tabular}{|c|c|m{.6\textwidth}|}
+% 			\hline
+% 			\textbf{L.p.} & \makecell{\textbf{Oznaczenie}\\\textbf{(na wykresach)}} & \centering\textbf{Opis} \tabularnewline\hline
+% 			1. & Podstawowa & Obudowa w~podstawowej wersji (opisanej w~części~\ref{ss:opis}), z~otworami, bez wypełnienia \\\hline
+% 			2. & Zaślepiona & Ćwierćkoliste otwory zaślepione elementami ze sklejki o~grubości \SI{6,4}{\milli\metre}, przyklejonymi do ścianki, w~której zamocowany jest głośnik niskotonowy\\\hline
+% 			\hline
+% 			3. & Jeden głośnik & Jeden głośnik niskotonowy zamocowany w~obudowie, otwór na drugi zaślepiony kołem ze sklejki; zamocowany zespół głośnika wysokotonowego \\\hline
+% 			4. & Dwa głośniki & Obydwa głośniki niskotonowe oraz zespół głośnika wysokotonowego zamocowane w~obudowie\\\hline
+% 		\end{tabular}
+% 	\end{table}
 	
 	\section{Metodyka pomiarów}
 	
