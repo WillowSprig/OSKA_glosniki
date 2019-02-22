@@ -389,39 +389,96 @@ backend=biber
 		
 		\begin{table}[!ht]
 			\centering
-			\caption{Porównanie metod pomiaru parametrów Thiele-Smalla: dodanej masy oraz objętości}
+			\caption{Porównanie metod pomiaru parametrów Thiele-Smalla: dodanej masy oraz objętości na etapie~2, oraz różnych wartości masy na etapie~1}
 			\label{t:TS_metody}
 			\boldmath
-			\begin{tabular}{|l|c|c||c|c|}
+			\begin{tabular}{|l|}
 				\hline
-				\multirow{2}{*}{\textbf{Parametr}} & \multicolumn{2}{c|}{\textbf{Etap 1, głośnik 1}} & \multicolumn{2}{|c|}{\textbf{Etap 2, głośnik 2}}\\\cline{2-5}
-				& \textbf{Masa \SI{5}{\gram}} & \multicolumn{2}{c|}{\textbf{Masa \SI{10}{\gram}}} & \textbf{Obudowa \SI{80}{\deci\metre\cubed}}\\\hline
+				\multirow{2}{*}{\textbf{Parametr}} 	\\
+				\\\hline
+				\hline                              							
+				$F_s$ [\si{\hertz}] \\\hline
+				$Z_{max}$ [\si{\ohm}] \\\hline
+				$R_e$ [\si{\ohm}] \\\hline
+				$r_0$ \\\hline
+				$S$ [\%]\\\hline
+				\hline                              							
+				$Q_{ms}$ 	\\\hline
+				$Q_{es}$ \\\hline	
+				$Q_{ts}$ \\\hline
+				\hline                                                  		
+				$V_{as}$ [\si{\deci\metre\cubed}] \\\hline
+				$M_{ms}$ [\si{\gram}] 	\\\hline
+				$C_{ms}$ [\si[per-mode=symbol]{\metre\per\newton}] 	\\\hline
+				$R_{ms}$ [\si[per-mode=symbol]{\metre\per\newton}] 	\\\hline
 				\hline
-				$F_s$ [\si{\hertz}] 	& \num{56,5} & \num{57,0} & \num{49,2} & \num{50,1} \\\hline
-				$Z_{max}$ [\si{\ohm}] 	& \num{57,2} & \num{55,7} & \num{77,5} & \num{73,7} \\\hline
-				$R_e$ [\si{\ohm}] 		& \num{10,0}  & \num{10,0} & \num{10,1} & \num{10,1} \\\hline
-				$r_0$ 					& \num{5,7} & \num{5,6} & \num{7,8} & \num{7,4}\\\hline
-				$S$ [\%]				& \num{4,29} & \num{3,35}  & \num{0,80} & \num{0,56}\\\hline
+				$M_{as}$ [\si[per-mode=symbol]{\kilo\gram\per\metre\tothe{4}}] 	\\\hline
+				$C_{as}$ [\si[per-mode=symbol]{\metre\tothe{5}\per\newton}] \\\hline	
+				$R_{as}$ [\si[per-mode=symbol]{\newton\s\per\metre\tothe{5}}] 	\\\hline
 				\hline
-				$Q_{ms}$ & \num{2,7} & \num{2,7} & \num{3,7} & \num{3,5}\\\hline
-				$Q_{es}$ & \num{0,58} & \num{0,58} & \num{0,55} & \num{0,55}\\\hline
-				$Q_{ts}$ & \num{0,48} & \num{,048} & \num{0,48} & \num{0,48}\\\hline
-				\hline
-				$V_{as}$ [\si{\deci\metre\cubed}] 								& \num{34,5} & \num{34,5} & \num{45,6} & \num{42,8}\\\hline
-				$M_{ms}$ [\si{\gram}] 								& \num{39,1} & \num{38,5}  & \num{39,1} & \num{40,2}\\\hline
-				$C_{ms}$ [\si[per-mode=symbol]{\metre\per\newton}] 	& \num{203e-6} & \num{203e-6} & \num{267e-6} & \num{251e-6}\\\hline
-				$R_{ms}$ [\si[per-mode=symbol]{\metre\per\newton}] 	& \num{5,1} & \num{5,2}  & \num{3,3} & \num{3,6}\\\hline
-				\hline
-				$M_{as}$ [\si[per-mode=symbol]{\kilo\gram\per\metre\tothe{4}}] 	& \num{32,6} & \num{32,1}  & \num{32,6} & \num{33,5}\\\hline
-				$C_{as}$ [\si[per-mode=symbol]{\metre\tothe{5}\per\newton}] 	& \num{0,2e-6} & \num{0,2e-6} & \num{0,3e-6} & \num{0,3e-6} \\\hline
-				% 				$C_{as}$ [\si[per-mode=symbol]{\metre\tothe{5}\per\newton}] & \num{360e-9} & \num{165e-9} & \num{243e-9} & \num{292e-9} \\\hline
-				$R_{as}$ [\si[per-mode=symbol]{\newton\s\per\metre\tothe{5}}] 	& \num{4254} & \num{4323} & \num{2726} & \num{3011}\\\hline
-				\hline
-				$\eta_0$ [\%] & \num{1,06} & \num{1,07} & \num{0,96} & \num{0,96}  \\\hline
-				$Bl$ [\si{\tesla\metre}] & \num{15,5} & \num{15,4} & \num{14,9} & \num{15,2}\\\hline
-				$L_{e}$ [\si{\henry}] & \num{890e-6} & \num{880e-6} & \num{853e-6} & \num{845e-6} \\\hline
+				$\eta_0$ [\%] 	\\\hline
+				$Bl$ [\si{\tesla\metre}]	\\\hline
+				$L_{e}$ [\si{\henry}] 	\\\hline
 			\end{tabular}
 			\unboldmath
+			~ \quad
+			\begin{tabular}{|c|c|}
+				\hline
+				\multicolumn{2}{|c|}{\textbf{Etap 1, głośnik 1}} \\\hline
+				\textbf{Masa \SI{5}{\gram}} & \textbf{Masa \SI{10}{\gram}} \\\hline
+				\hline
+				\num{56,5} 	& \num{57,0} 	 \\\hline
+				\num{57,2} 	& \num{55,7} 	 \\\hline
+				\num{10,0}  	& \num{10,0} \\\hline	
+				\num{5,7}  	& \num{5,6} 	 \\\hline
+				\num{4,29} 	& \num{3,35}     \\\hline
+				\hline
+				\num{2,7}  	& \num{2,7} 	 \\\hline
+				\num{0,58} 	& \num{0,58} 	 \\\hline
+				\num{0,48} 	& \num{,048} 	 \\\hline
+				\hline
+				\num{34,5} 	& \num{34,5} 	 \\\hline
+				\num{39,1} 	& \num{38,5}     \\\hline
+				\num{203e-6} 	& \num{203e-6}\\\hline
+				\num{5,1} 	& \num{5,2}  	  \\\hline
+				\hline
+				\num{32,6} 	& \num{32,1}      \\\hline
+				\num{0,2e-6} 	& \num{0,2e-6}\\\hline
+				\num{4254} 	& \num{4323} 	  \\\hline
+				\hline
+				\num{1,06} 	& \num{1,07} 	  \\\hline
+				\num{15,5} 	& \num{15,4} 	  \\\hline
+				\num{890e-6} 	& \num{880e-6}\\\hline
+			\end{tabular}
+			~ \quad
+			\begin{tabular}{|c|c|}
+				\hline
+				\multicolumn{2}{|c|}{\textbf{Etap 2, głośnik 2}}\\\hline
+				\textbf{Masa \SI{10}{\gram}} & \textbf{Obudowa \SI{80}{\deci\metre\cubed}}\\\hline
+				\hline
+				\num{49,2} 	& \num{50,1} \\\hline
+				\num{77,5} 	& \num{73,7} \\\hline
+				\num{10,1} 	& \num{10,1} \\\hline
+				\num{7,8} 	& \num{7,4}\\\hline
+				\num{0,80} 	& \num{0,56}\\\hline
+				\hline
+				\num{3,7} 	& \num{3,5}\\\hline
+				\num{0,55} 	& \num{0,55}\\\hline
+				\num{0,48} 	& \num{0,48}\\\hline
+				\hline
+				\num{45,6} 	& \num{42,8}\\\hline
+				\num{39,1} 	& \num{40,2}\\\hline
+				\num{267e-6} 	& \num{251e-6}\\\hline
+				\num{3,3} 	& \num{3,6}\\\hline
+				\hline
+				\num{32,6} 	& \num{33,5}\\\hline
+				\num{0,3e-6} 	& \num{0,3e-6} \\\hline
+				\num{2726} 	& \num{3011}\\\hline
+				\hline
+				\num{0,96} 	& \num{0,96}  \\\hline
+				\num{14,9} 	& \num{15,2}\\\hline
+				\num{853e-6} 	& \num{845e-6} \\\hline
+			\end{tabular}
 		\end{table}
 		
 		Ze względu na rozbieżności między parametrami katalogowymi oraz dla różnych egzemplarzy tego samego modelu głośnika~\cite{aes_roznice} wykonano pomiary pozwalające na porównanie obu wykorzystywanych egzemplarzy oraz sprawdzenie, jak zmieniają się parametry głośnika podczas jego eksploatacji. Pomiary wykonano na fabrycznie nowym przetworniku oraz na tym samym egzemplarzu poddanym procesowi zużycia poprzez dostarczenie w dwóch etapach sygnału szumu różowego: o~mocy \SI{40}{\watt} przez czas \SI{2}{\hour} w~pierwszym etapie i~\SI{60}{\watt} przez czas \SI{10}{\min} w drugim etapie. Krzywe impedancji głośników w~odgrodzie po każdym etapie przedstawiono na rysunku~\ref{r:wygrzewanie}, a~parametry Thiele-Smalla w~tabeli~\ref{t:TS_karta_etapy}. Natomiast porównanie obu głośników na etapie~1 przedstawiono na rysunku~\ref{r:2glosniki}.
@@ -451,7 +508,7 @@ backend=biber
 			\boldmath
 			\begin{tabular}{|l|c|c|c|c|}
 				\hline
-				\textbf{Parametr} & \makecell{\textbf{Karta katalogowa}\\ \textbf{($R=$~\SI{8}{\ohm})}} & \textbf{Fabryczny} & \textbf{Etap 1} & \textbf{Etap 2} \\\hline
+				\textbf{Parametr} & \makecell{\textbf{Karta katalogowa}\\ \textbf{($R=$~\SI{8}{\ohm})}} & \textbf{Nowy} & \textbf{Etap 1} & \textbf{Etap 2} \\\hline
 				\hline
 				$F_s$ [\si{\hertz}] & \num{47,0}  & \num{71,5} & \num{57,0} & \num{50,7}  \\\hline
 				$Z_{max}$ [\si{\ohm}] & --- & \num{54,2} & \num{55,7} & \num{64,0}  \\\hline
