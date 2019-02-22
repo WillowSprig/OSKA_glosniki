@@ -229,8 +229,18 @@ backend=biber
 	
 	\begin{figure}[!ht]
 		\centering
-		\adjincludegraphics[width=.9\textwidth,trim={{.1\width} {.25\height} {.17\width} {.12\height}},clip]{render_z_otworami_bez_tekstury.pdf}
-		\caption{Przekrój modelu badanego zestawu głośnikowego w~płaszczyźnie poziomej}
+		\adjincludegraphics[width=.9\textwidth,trim={{.1\width} {.25\height} {.17\width} {.12\height}},clip]{render_z_otworami_bez_tekstury.pdf}\\
+% 		\setlength{\unitlength}{1cm}
+% 		\begin{picture}(0,0)
+% 			\thicklines
+% 			\put(-2,3){\line(-1,1)}
+% 			\put(-3){1}
+% % 			\put(-6,2){\line}
+% % 			\put(){2}
+% % 			\put(-6,2){\line}
+% % 			\put(){3}
+% 		\end{picture}
+		\caption{Przekrój modelu badanego zestawu głośnikowego w~płaszczyźnie poziomej; 1~--~głośniki niskotonowe, 2~--~zespół głośnika wysoktonowego, 3~--~otwór \textit{bass-reflex}}
 		\label{r:przekroj}
 	\end{figure}
 	
@@ -589,15 +599,24 @@ backend=biber
 	
 	Uzyskany poziom skuteczności (\SI{94,8}{\decibel}) jest zbliżony do deklarowanego przez producenta (\SI{95}{\decibel}).
 	
-	Rysunek~\ref{r:skutecznosc} przedstawia charakterystyki głośnika niskotonowego w~odgrodzie, głośników niskotonowych i~zespołu głośnika wysokotonowego na osi akustycznej zestawu, w~pasmach $1/6$~oktawy. Obudowa w~obecnej postaci wprowadza znaczącą nierównomierność charakterystyki w~zakresie \SI{490}{\hertz}; wymagane jest rozwiązanie tego problemu.
+	Rysunek~\ref{r:skutecznosc} przedstawia charakterystyki głośnika niskotonowego w~odgrodzie, głośników niskotonowych i~zespołu głośnika wysokotonowego na osi akustycznej zestawu, w~pasmach $1/6$~oktawy. Na rysunku~\ref{r:skutecznosc_odgr} zestawiono charakterystyki głośnika niskotonowego w~odgrodzie i~głośników w~obudowie.
 	%Na ich podstawie charakterystyk można wyznaczyć punkt podziału częstotliwości między głośnik wysoko- i~niskotonowy -- wartość jest uzależniona od faktu czy uda się wyeliminować nierównomierność charakterystyki częstotliwościowej głośników niskotonowych  \SI{500}{\hertz}.
 	
 	\begin{figure}[!ht]
 		\centering
-		\includegraphics[width=.8\textwidth,trim={2cm .5cm 2cm 1cm},clip]{skutecznosci_stolik.pdf}
-		\caption{Charakterystyki amplitudowe-częstotliwościowe badanego zestawu  oraz głośnika niskotonowego zamontowanego w~odgrodzie}
+		\includegraphics[width=.8\textwidth,trim={2cm .5cm 2cm 1cm},clip]{stolik_skutecznosci.pdf}
+		\caption{Charakterystyki amplitudowe-częstotliwościowe badanego zestawu}
 		\label{r:skutecznosc}
 	\end{figure}
+	
+	\begin{figure}[!ht]
+		\centering
+		\includegraphics[width=.8\textwidth,trim={2cm .5cm 2cm 1cm},clip]{stolik_obudowa_odgroda.pdf}
+		\caption{Charakterystyki amplitudowe-częstotliwościowe głośników niskotonowych w~obudowie i~głośnika w~odgrodzie}
+		\label{r:skutecznosc_odgr}
+	\end{figure}
+	
+	Dla głośników niskotonowych umieszczonych w~obudowie widoczna jest znaczącą nierównomierność charakterystyki w~zakresie \SI{490}{\hertz}. która nie jest widoczna w~charakterystyce głośnika w~odgrodzie. Należy więc przypuszczać, że wprowadza ją obudowa w~obecnej postaci; wymagane jest rozwiązanie tego problemu.
 	
 	\subsection{Charakterystyki kierunkowości} \label{ss:wyniki_kier}
 	
