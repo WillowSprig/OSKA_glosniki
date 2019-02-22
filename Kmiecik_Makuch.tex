@@ -309,7 +309,9 @@ backend=biber
 	\end{table}
 	
 	
-	Pomiar wykonano z~użyciem sygnału sinusoidalnego z~krokiem $1/48$~oktawy w~zakresie \range{20}{8000}~\si{\hertz}. Zmierzono impedancję głośnika niskotonowego w~odgrodzie oraz głośników w~obudowie z~zastosowanymi różnymi modyfikacjami. 
+	Pomiar wykonano z~użyciem sygnału sinusoidalnego z~krokiem $1/48$~oktawy w~zakresie \range{20}{8000}~\si{\hertz}. Zmierzono impedancję głośnika niskotonowego w~odgrodzie oraz głośników w~obudowie z~zastosowanymi różnymi modyfikacjami.
+	
+	Ze względu na rozbieżności między parametrami katalogowymi a~rzeczywistymi oraz dla różnych egzemplarzy tego samego modelu głośnika~\cite{aes_roznice}, wykonano pomiary pozwalające na porównanie obu wykorzystywanych egzemplarzy oraz sprawdzenie, jak zmieniają się parametry głośnika podczas jego eksploatacji. Pomiary wykonano na fabrycznie nowym przetworniku oraz na tym samym egzemplarzu poddanym procesowi zużycia poprzez dostarczenie w dwóch etapach sygnału szumu różowego: o~mocy \SI{40}{\watt} przez czas \SI{2}{\hour} w~pierwszym etapie i~\SI{60}{\watt} przez czas \SI{10}{\min} w drugim etapie.
 	
 	\subsection{Charakterystyka skuteczności i~skuteczność}
 	
@@ -378,12 +380,14 @@ backend=biber
 	
 	W~wynikach wszystkich pomiarów wykonanych w~odgrodzie widoczny jest jej wpływ -- charakterystyka załamuje się w~okolicach częstotliwości \SI{54}{\hertz}. Prawdopodobnie związane jest to z~rezonansem płyty, występującym ze względu na jej skończone wymiary.
 	
-	Na rysunku \ref{r:metody} przedstawione zostały przebiegi impedancji w~funkcji częstotliwości zmierzone dla obu metod. Widoczne jest przesunięcie częstotliwości rezonansowej w~dół po dodaniu masy i~w~górę po dodaniu objętości, natomiast w~tabeli~\ref{t:TS_metody} przedstawiono parametry Thiele-Smalla uzyskane obiema metodami (kolumna 4~i~5). Przyjmują one podobne wartości dla obu metod, nie widać też znaczących różnic w~symetrii $S$ -- dla obu pomiarów parametr ten jest wystarczająco niski.
+	Na rysunku \ref{r:metody} przedstawione zostały przebiegi impedancji w~funkcji częstotliwości zmierzone dla obu metod. Widoczne jest przesunięcie częstotliwości rezonansowej w~dół po dodaniu masy i~w~górę po dodaniu objętości, natomiast w~tabeli~\ref{t:TS_metody} przedstawiono parametry Thiele-Smalla uzyskane obiema metodami (kolumna 4~i~5). Przyjmują one podobne wartości dla obu metod, nie widać też znaczących różnic w~symetrii $S$ -- dla obu pomiarów parametr ten jest wystarczająco niski. 
+	
+	Porównano także wyniki pomiaru metodą dodanej masy dla tego samego głośnika po pierwszym etapie: masa wynosiła \SI{5}{\gram} i~\SI{10}{\gram}. Wyniki wskazują, że wartość \SI{5}{\gram} może być zbyt mała -- różnica częstotliwości rezonansowych nie jest wystarczająco duża, a~co za tym idzie, wyznaczone parametry nie są wiarygodne, co potwierdza zbyt duża wartość symetrii $S$ (powyżej \SI{3,5}{\%}).
 	
 	\begin{figure}[!ht]
 		\centering
 		\includegraphics[width=.8\textwidth,trim={2cm .5cm 2cm 1cm},clip]{metody_2glosnik.pdf}
-		\caption{Charakterystyki impedancji głośnika w~odgrodzie oraz głośnika przy pomiarze każdą z~metod (dodanej masy i~dodanej objętości)}
+		\caption{Charakterystyki impedancji głośnika w~odgrodzie oraz głośnika przy pomiarze każdą z~metod (dodanej masy i~dodanej objętości) po drugim etapie zużycia}
 		\label{r:metody}
 	\end{figure}
 	
@@ -481,61 +485,61 @@ backend=biber
 		\end{tabular}
 	\end{table}
 	
-	Ze względu na rozbieżności między parametrami katalogowymi oraz dla różnych egzemplarzy tego samego modelu głośnika~\cite{aes_roznice} wykonano pomiary pozwalające na porównanie obu wykorzystywanych egzemplarzy oraz sprawdzenie, jak zmieniają się parametry głośnika podczas jego eksploatacji. Pomiary wykonano na fabrycznie nowym przetworniku oraz na tym samym egzemplarzu poddanym procesowi zużycia poprzez dostarczenie w dwóch etapach sygnału szumu różowego: o~mocy \SI{40}{\watt} przez czas \SI{2}{\hour} w~pierwszym etapie i~\SI{60}{\watt} przez czas \SI{10}{\min} w drugim etapie. Krzywe impedancji głośników w~odgrodzie po każdym etapie przedstawiono na rysunku~\ref{r:wygrzewanie}, a~parametry Thiele-Smalla w~tabeli~\ref{t:TS_karta_etapy}. Natomiast porównanie obu głośników na etapie~1 przedstawiono na rysunku~\ref{r:2glosniki}.
+	Wyniki pomiarów potwierdzają, że zużycie głośnika wpływa na jego parametry. Krzywe impedancji głośników w~odgrodzie po każdym etapie przedstawiono na rysunku~\ref{r:wygrzewanie}. Natomiast porównanie obu głośników na etapie~1 przedstawiono na rysunku~\ref{r:2glosniki}.
 	
-	Należy zwrócić uwagę na fakt, że podane parametry z~karty katalogowej dotyczą głośnika o~rezystancji \SI{8}{\ohm}, podczas gdy badane egzemplarze mają rezystancję \SI{16}{\ohm}; autorom nie udało się jednak pozyskać karty katalogowej dla takiej wersji głośnika.
+	W~tabeli~\ref{t:TS_karta_etapy} zestawiono wartości parametrów Thiele-Smalla na każdym etapie zużycia głośnika oraz podane w~karcie katalogowej. Należy zwrócić uwagę na fakt, że podane parametry z~karty katalogowej dotyczą głośnika o~rezystancji \SI{8}{\ohm}, podczas gdy badane egzemplarze mają rezystancję \SI{16}{\ohm}; autorom nie udało się jednak pozyskać karty katalogowej dla takiej wersji głośnika.
 	
 	\begin{figure}[!ht]
-		\centering
-		\includegraphics[width=.8\textwidth,trim={2cm .5cm 2cm 1cm},clip]{odgroda_wygrzewanie.pdf}
-		\caption{Charakterystyki impedancji głośnika na różnych etapach zużycia}
-		\label{r:wygrzewanie}
+	\centering
+	\includegraphics[width=.8\textwidth,trim={2cm .5cm 2cm 1cm},clip]{odgroda_wygrzewanie.pdf}
+	\caption{Charakterystyki impedancji głośnika na różnych etapach zużycia}
+	\label{r:wygrzewanie}
 	\end{figure}
+	
+	\begin{table}[!ht]
+	\centering
+	\caption{Porównanie parametrów Thiele-Smalla: odczytanych z~karty katalogowej~\cite{datasheet} oraz zmierzonych metodą dodanej masy ($m=$~\SI{10}{\gram}) dla różnych etapów pracy głośnika}
+	\label{t:TS_karta_etapy}
+	\boldmath
+	\begin{tabular}{|l|c|c|c|c|}
+	\hline
+	\textbf{Parametr} & \makecell{\textbf{Karta katalogowa}\\ \textbf{($R=$~\SI{8}{\ohm})}} & \textbf{Nowy} & \textbf{Etap 1} & \textbf{Etap 2} \\\hline
+	\hline
+	$F_s$ [\si{\hertz}] & \num{47,0}  & \num{71,5} & \num{57,0} & \num{50,7}  \\\hline
+	$Z_{max}$ [\si{\ohm}] & --- & \num{54,2} & \num{55,7} & \num{64,0}  \\\hline
+	$R_e$ [\si{\ohm}] & \num{6,1}  & \num{10,4} & \num{10,0} & \num{10,2}  \\\hline
+	$r_0$ & ---  & \num{5,2} & \num{5,6} & \num{6,4} \\\hline
+	$S$ [\%] & ---  & \num{3,44}  & \num{3,35} & \num{0,55} \\\hline
+	\hline
+	$Q_{ms}$ & \num{3,9}  & \num{3,3} & \num{2,7} & \num{2,8} \\\hline
+	$Q_{es}$ & \num{0,4}  & \num{0,8} & \num{0,6} & \num{0,5} \\\hline
+	$Q_{ts}$ & \num{0,3}  & \num{0,6} & \num{0,5} & \num{0,4} \\\hline
+	\hline
+	$V_{as}$ [\si{\deci\metre\cubed}] 								& \num{50,9}  & \num{23,5} & \num{34,5} & \num{41,4} \\\hline
+	$M_{ms}$ [\si{\gram}] 								& \num{39,0}  & \num{36,1}  & \num{38,5} & \num{40,6} \\\hline
+	$C_{ms}$ [\si[per-mode=symbol]{\metre\per\newton}] 	& \num{294e-6}  & \num{138e-6}  & \num{203e-6} & \num{243e-6} \\\hline
+	$R_{ms}$ [\si[per-mode=symbol]{\metre\per\newton}] 	& \num{2,9}  & \num{5,0}  & \num{5,2} & \num{4,6} \\\hline
+	\hline
+	$M_{as}$ [\si[per-mode=symbol]{\kilo\gram\per\metre\tothe{4}}] 	& \num{31,8}  & \num{30,1}  & \num{32,1} & \num{33,8} \\\hline
+	$C_{as}$ [\si[per-mode=symbol]{\metre\tothe{5}\per\newton}] 	& \num{0,4e-6}  & \num{0,2e-6} & \num{0,2e-6} & \num{0,3e-6}  \\\hline
+	% 				$C_{as}$ [\si[per-mode=symbol]{\metre\tothe{5}\per\newton}] & \num{360e-9} & \num{165e-9} & \num{243e-9} & \num{292e-9} \\\hline
+	$R_{as}$ [\si[per-mode=symbol]{\newton\s\per\metre\tothe{5}}] 	& \num{2367}  & \num{4123}  & \num{4323} & \num{3790} \\\hline
+	\hline
+	$\eta_0$ [\%] & \num{1,5}  & \num{1,08} & \num{1,07} & \num{1,00}   \\\hline
+	$Bl$ [\si{\tesla\metre}] & \num{14,2} & \num{14,7} & \num{15,4} & \num{15,7}\\\hline
+	$L_{e}$ [\si{\henry}] & \num{1e-3} & \num{1,984e-3} & \num{880e-6} & \num{911e-6} \\\hline
+	\end{tabular}
+	\unboldmath
+	\end{table}
 	
 	Wyraźnie widoczny jest spadek częstotliwości rezonansowej głośnika wraz z~jego zużyciem, maleje również sprawność referencyjna $\eta_0$ oraz symetria $S$, pomiar jest więc bardziej miarodajny; rośnie natomiast indeks siły $Bl$. Porównanie obu głośników na tym samym etapie nie ukazuje wyraźnych różnic pomiędzy nimi.
 	
 	\begin{figure}[!ht]
-		\centering
-		\includegraphics[width=.8\textwidth,trim={2cm .5cm 2cm 1cm},clip]{porownanie_glosnikow.pdf}
-		\caption{Charakterystyki impedancji obu badanych egzemplarzy głośników w~odgrodzie}
-		\label{r:2glosniki}
+	\centering
+	\includegraphics[width=.8\textwidth,trim={2cm .5cm 2cm 1cm},clip]{porownanie_glosnikow.pdf}
+	\caption{Charakterystyki impedancji obu badanych egzemplarzy głośników w~odgrodzie po pierwszym etapie zużycia}
+	\label{r:2glosniki}
 	\end{figure}
-	
-	\begin{table}[!ht]
-		\centering
-		\caption{Porównanie parametrów Thiele-Smalla: odczytanych z~karty katalogowej~\cite{datasheet} oraz zmierzonych metodą dodanej masy ($m=$~\SI{10}{\gram}) dla różnych etapów pracy głośnika}
-		\label{t:TS_karta_etapy}
-		\boldmath
-		\begin{tabular}{|l|c|c|c|c|}
-			\hline
-			\textbf{Parametr} & \makecell{\textbf{Karta katalogowa}\\ \textbf{($R=$~\SI{8}{\ohm})}} & \textbf{Nowy} & \textbf{Etap 1} & \textbf{Etap 2} \\\hline
-			\hline
-			$F_s$ [\si{\hertz}] & \num{47,0}  & \num{71,5} & \num{57,0} & \num{50,7}  \\\hline
-			$Z_{max}$ [\si{\ohm}] & --- & \num{54,2} & \num{55,7} & \num{64,0}  \\\hline
-			$R_e$ [\si{\ohm}] & \num{6,1}  & \num{10,4} & \num{10,0} & \num{10,2}  \\\hline
-			$r_0$ & ---  & \num{5,2} & \num{5,6} & \num{6,4} \\\hline
-			$S$ [\%] & ---  & \num{3,44}  & \num{3,35} & \num{0,55} \\\hline
-			\hline
-			$Q_{ms}$ & \num{3,9}  & \num{3,3} & \num{2,7} & \num{2,8} \\\hline
-			$Q_{es}$ & \num{0,4}  & \num{0,8} & \num{0,6} & \num{0,5} \\\hline
-			$Q_{ts}$ & \num{0,3}  & \num{0,6} & \num{0,5} & \num{0,4} \\\hline
-			\hline
-			$V_{as}$ [\si{\deci\metre\cubed}] 								& \num{50,9}  & \num{23,5} & \num{34,5} & \num{41,4} \\\hline
-			$M_{ms}$ [\si{\gram}] 								& \num{39,0}  & \num{36,1}  & \num{38,5} & \num{40,6} \\\hline
-			$C_{ms}$ [\si[per-mode=symbol]{\metre\per\newton}] 	& \num{294e-6}  & \num{138e-6}  & \num{203e-6} & \num{243e-6} \\\hline
-			$R_{ms}$ [\si[per-mode=symbol]{\metre\per\newton}] 	& \num{2,9}  & \num{5,0}  & \num{5,2} & \num{4,6} \\\hline
-			\hline
-			$M_{as}$ [\si[per-mode=symbol]{\kilo\gram\per\metre\tothe{4}}] 	& \num{31,8}  & \num{30,1}  & \num{32,1} & \num{33,8} \\\hline
-			$C_{as}$ [\si[per-mode=symbol]{\metre\tothe{5}\per\newton}] 	& \num{0,4e-6}  & \num{0,2e-6} & \num{0,2e-6} & \num{0,3e-6}  \\\hline
-			% 				$C_{as}$ [\si[per-mode=symbol]{\metre\tothe{5}\per\newton}] & \num{360e-9} & \num{165e-9} & \num{243e-9} & \num{292e-9} \\\hline
-			$R_{as}$ [\si[per-mode=symbol]{\newton\s\per\metre\tothe{5}}] 	& \num{2367}  & \num{4123}  & \num{4323} & \num{3790} \\\hline
-			\hline
-			$\eta_0$ [\%] & \num{1,5}  & \num{1,08} & \num{1,07} & \num{1,00}   \\\hline
-			$Bl$ [\si{\tesla\metre}] & \num{14,2} & \num{14,7} & \num{15,4} & \num{15,7}\\\hline
-			$L_{e}$ [\si{\henry}] & \num{1e-3} & \num{1,984e-3} & \num{880e-6} & \num{911e-6} \\\hline
-		\end{tabular}
-		\unboldmath
-	\end{table}
 	
 	W~celu sprawdzenia wpływu modyfikacji obudowy na charakterystyki impedancji wykonano pomiar dla obudowy w~wariancie „podstawowym” (opisanym w~części~\ref{ss:opis}) oraz z~zaślepionymi otworami (por. tab.~\ref{t:obudowa}). Wyniki przedstawiono na rysunku~\ref{r:obudowa_otwory}. 
 	Dodatkowo, dla porównania zasymulowano obie obudowy w~programie WinISD, przy czym zaślepienie otworów zostało zamodelowane jako obudowa zamknięta. Otrzymane charakterystyki znajdują się na rysunku~\ref{r:winisd}.
@@ -722,7 +726,7 @@ backend=biber
 			\label{r:C_710iz}
 		\end{subfigure}
 		
-		\caption{Izofony uzyskane z~symulacji w~środowisku Comsol}
+		\caption{Izobary uzyskane z~symulacji w~środowisku Comsol}
 		\label{r:C_balony}
 	\end{figure}
 	
