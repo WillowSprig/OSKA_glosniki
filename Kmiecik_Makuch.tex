@@ -333,7 +333,7 @@ backend=biber
 	
 	% 			Wykonano dwie serie pomiarów, dla głośnika wysoko- i~niskotonowego. W~pierwszej serii zmierzono głośniki w~obudowie bez wypełnienia, w~drugiej -- wypełnione materiałem dźwiękochłonnym.
 	
-	Pomiar charakterystyki kierunkowości odbywał się w~komorze bezechowej przy użyciu stolika obrotowego, na którym umieszczony był zestaw głośnikowy. W~osi akustycznej mierzonego głośnika ustawiono mikrofon GRAS 46AE; następnie głośnik obracano z~krokiem \SI{10}{\degree}, każdorazowo zatrzymując i~wykonując pomiar trwający \SI{3}{\s}. Sygnałem podawanym na głośnik był szum różowy, pomiar wykonano w~pasmach $1/6$~oktawy, w~zakresie \range{40}{5000}~\si{\hertz}.
+	Pomiar charakterystyki kierunkowości odbywał się w~komorze bezechowej przy użyciu stolika obrotowego, na którym umieszczony był zestaw głośnikowy. W~jego osi akustycznej ustawiono mikrofon GRAS 46AE; następnie zestaw obracano z~krokiem \SI{10}{\degree}, każdorazowo zatrzymując i~wykonując pomiar trwający \SI{3}{\s}. Sygnałem podawanym na głośniki był szum różowy, pomiar wykonano w~pasmach $1/6$~oktawy, w~zakresie \range{40}{5000}~\si{\hertz} dla głośnika niskotonowego i~\range{200}{16000}~\si{\hertz} dla zespołu głośnika wysokotonowego.
 	
 	\subsection{Drgania obudowy}
 	
@@ -597,10 +597,9 @@ backend=biber
 		\end{tabular}
 	\end{table}
 	
-	Uzyskany poziom skuteczności (\SI{94,8}{\decibel}) jest zbliżony do deklarowanego przez producenta (\SI{95}{\decibel}).
+	Zmierzony w~odległości \SI{2}{\metre} poziom ciśnienia akustycznego $L_{p,2m}$ dla mocy~\SI{1}{\watt} przeliczono zgodnie z~zasadą propagacji fali sferycznej w~polu swobodnym (\SI{-6}{\decibel} z~podwojeniem odległości). Uzyskany w~ten sposób poziom skuteczności $L_{s}=94,8\si{\decibel}$ jest zbliżony do deklarowanego przez producenta (\SI{95}{\decibel}).
 	
 	Rysunek~\ref{r:skutecznosc} przedstawia charakterystyki głośników niskotonowych i~zespołu głośnika wysokotonowego na osi akustycznej zestawu, w~pasmach $1/6$~oktawy. Na rysunku~\ref{r:skutecznosc_odgr} zestawiono charakterystyki głośnika niskotonowego w~odgrodzie i~głośników w~obudowie.
-	%Na ich podstawie charakterystyk można wyznaczyć punkt podziału częstotliwości między głośnik wysoko- i~niskotonowy -- wartość jest uzależniona od faktu czy uda się wyeliminować nierównomierność charakterystyki częstotliwościowej głośników niskotonowych  \SI{500}{\hertz}.
 	
 	\begin{figure}[!ht]
 		\centering
@@ -608,7 +607,9 @@ backend=biber
 		\caption{Charakterystyki amplitudowe-częstotliwościowe badanego zestawu}
 		\label{r:skutecznosc}
 	\end{figure}
-	
+
+    Na podstawie charakterystyk przedstawionych na rysunku~\ref{r:skutecznosc} można stwierdzić, że zespół głośnika wysokotonowego zachowuje równomierność charakterystyki amplitudowej dla częstotliwości powyżej~\SI{600}{\hertz}. Zalecana przez producenta dolna częstotliwość graniczna dla tego zespołu to~\SI{1200}{\hertz}.
+    
 	\begin{figure}[!ht]
 		\centering
 		\includegraphics[width=.8\textwidth,trim={2cm .5cm 2cm 1cm},clip]{stolik_obudowa_odgroda.pdf}
@@ -616,7 +617,7 @@ backend=biber
 		\label{r:skutecznosc_odgr}
 	\end{figure}
 	
-	Dla głośników niskotonowych umieszczonych w~obudowie widoczna jest znaczącą nierównomierność charakterystyki w~zakresie \SI{490}{\hertz}. która nie jest widoczna w~charakterystyce głośnika w~odgrodzie. Należy więc przypuszczać, że wprowadza ją obudowa w~obecnej postaci; wymagane jest rozwiązanie tego problemu.
+	Na rysunku~\ref{r:skutecznosc_odgr} dla głośników niskotonowych umieszczonych w~obudowie widoczna jest znaczącą nierównomierność charakterystyki około \SI{490}{\hertz}, która nie występuje w~charakterystyce głośnika w~odgrodzie. Należy więc przypuszczać, że wprowadza ją obudowa w~obecnej postaci; wymagane jest rozwiązanie tego problemu.
 	
 	\subsection{Charakterystyki kierunkowości} \label{ss:wyniki_kier}
 	
@@ -658,7 +659,7 @@ backend=biber
 		\label{r:kierunkowosc_H}
 	\end{figure}
 	
-	Z~kolei głośnik wysokotonowy charakteryzuje się bardzo równomierną charakterystyką kierunkową w~płaszczyźnie poziomej (rysunek~\ref{r:H_poziom}) powyżej częstotliwości około \SI{1000}{Hz}.
+	Z~kolei głośnik wysokotonowy charakteryzuje się bardzo równomierną charakterystyką kierunkową w~płaszczyźnie poziomej (rysunek~\ref{r:H_poziom}) powyżej częstotliwości \SI{1100}{Hz}. W~płaszczyźnie pionowej występuje nierównomierność charakterystyki w~zakresie \range{2000}{4000}~\si{\hertz}.
 	
 	
 	
