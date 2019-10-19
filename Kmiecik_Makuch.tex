@@ -368,7 +368,7 @@ backend=biber
 	
 	\subsection{Wykonany model}
 	
-	Aby zyskać możliwość wprowadzania modyfikacji obudowy, zdecydowano się na wykonanie modelu badanego zestawu. Geometrię przygotowano w~programie Autodesk Inventor; obliczenia prowadzono za pomocą metody elementów skończonych (MES) w~środowisku Comsol Multiphysics, z~wykorzystaniem modułu akustycznego i~mechanicznego. Elementowi cewki zostało nadane wymuszenie, którego wartość siły została obliczona na podstawie zależności~\eqref{eq:sila}:
+	Aby zyskać możliwość wprowadzania modyfikacji obudowy, zdecydowano się na wykonanie modelu badanego zestawu. Skupiono się na sekcji niskotonowej, przybliżając zespół głośnika wysokotonowego jako bryłę, z~zachowaniem kształtu układu (jak pokazano na rysunku~\ref{r:przekroj}). Geometrię przygotowano w~programie Autodesk Inventor; obliczenia prowadzono za pomocą metody elementów skończonych (MES) w~środowisku Comsol Multiphysics, z~wykorzystaniem modułu akustycznego i~mechanicznego. Elementowi cewki zostało nadane wymuszenie, którego wartość siły została obliczona na podstawie zależności~\eqref{eq:sila}:
 	
 	\begin{equation}
 	F_e=\frac{BlV_0}{Z_b}-\nu\frac{(Bl)^2}{Z_b} \quad, \label{eq:sila}
@@ -640,7 +640,7 @@ backend=biber
 		\label{r:kierunkowosc_L}
 	\end{figure}
 	
-	Ze względu na kształt obudowy, kąt promieniowania głośnika niskotonowego w~płaszczyźnie pionowej (rysunek~\ref{r:L_pion}) jest większy, niż w~płaszczyźnie poziomej (rysunek~\ref{r:L_poziom}) -- jest to widoczne dla pasma \range{250}{1000}~\si{\hertz}. Widoczne są też niepożądane listki boczne w~paśmie \SI{2000}{\hertz}.
+	Ze względu na kształt obudowy, kąt promieniowania głośnika niskotonowego w~płaszczyźnie pionowej (rysunek~\ref{r:L_pion}) jest większy, niż w~płaszczyźnie poziomej (rysunek~\ref{r:L_poziom}) -- jest to widoczne dla pasma \range{250}{1000}~\si{\hertz}. Widoczne są też niepożądane listki boczne w~paśmie \SI{2000}{\hertz}. W~związku z~tym, uwzględniając zakres częstotliwości pracy zespołu głośnika wysokotonowego, zasadne byłoby przyjęcie punktu podziału częstotliwości między głośnik wysoko- i~niskotonowy poniżej~\SI{1500}{\hertz}.
 	
 	\begin{figure}[!ht]
 		\centering
@@ -659,7 +659,7 @@ backend=biber
 		\label{r:kierunkowosc_H}
 	\end{figure}
 	
-	Z~kolei głośnik wysokotonowy charakteryzuje się bardzo równomierną charakterystyką kierunkową w~płaszczyźnie poziomej (rysunek~\ref{r:H_poziom}) powyżej częstotliwości \SI{1100}{Hz}. W~płaszczyźnie pionowej występuje nierównomierność charakterystyki w~zakresie \range{2000}{4000}~\si{\hertz}.
+	Z~kolei zespół głośnika wysokotonowego charakteryzuje się bardzo równomierną charakterystyką kierunkową w~płaszczyźnie poziomej (rysunek~\ref{r:H_poziom}) powyżej częstotliwości \SI{1100}{Hz}. W~płaszczyźnie pionowej (rysunek~\ref{r:H_pion}) występuje nierównomierność charakterystyki w~zakresie \range{2000}{4000}~\si{\hertz}.
 	
 	
 	
@@ -777,14 +777,14 @@ backend=biber
 			\label{r:C_pion}
 		\end{subfigure}
 		
-		\caption{Charakterystyki kierunkowości uzyskane z~symulacji w~środowisku Comsol}
+		\caption{Charakterystyki kierunkowości sekcji niskotonowej zestawu uzyskane z~symulacji w~środowisku Comsol}
 		\label{r:C_kierunk}
 	\end{figure}
 	
 	\newpage
 	\section{Podsumowanie}
 	
-	Otrzymane dotychczas wyniki wskazują, iż optymalnym byłoby przyjęcie częstotliwości granicznych dla głośnika wysoko- i niskotonowego w~przedziale ~\range{1000}{1200}\si{Hz}. Wymaga to jednak uwzględnienia charakterystyki fazowej głośników niskotonowych i zespołu głośnika wysokotonowego w~obudowie, po zastosowaniu możliwych rozwiązań poprawiających charakterystykę amplitudowo-częstotliwościową w~zakresie przetwarzanym przez głośniki niskotonowe. 
+	Otrzymane wyniki wskazują, iż najbardziej właściwe byłoby przyjęcie częstotliwości granicznych dla głośnika wysoko- i niskotonowego w~przedziale ~\range{1000}{1200}\si{Hz}. Wymaga to jednak uwzględnienia charakterystyki fazowej głośników niskotonowych i zespołu głośnika wysokotonowego w~obudowie, po zastosowaniu możliwych rozwiązań poprawiających charakterystykę amplitudowo-częstotliwościową w~zakresie przetwarzanym przez głośniki niskotonowe. 
 	
 	Planowane jest wykonanie kolejnych pomiarów, obejmujących inne modyfikacje obudowy, mających na celu poprawę charakterystyki amplitudowo-częstotliwościowej oraz równomierności charakterystyk kierunkowości. 
 	
