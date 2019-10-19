@@ -388,11 +388,11 @@ backend=biber
 	%Z~przyczyn technicznych parametry T-S dla tego pomiaru zostały obliczone na podstawie dostępnych materiałów (\cite{dobrucki},), a~nie wyznaczone przy pomocy systemu Pulse.
 	Parametry Thiele-Smalla zostały wyznaczone z~zarejestrowanych krzywych impedancji przy pomocy skryptu w~środowisku Matlab na podstawie pracy~\cite{dobrucki}. Następnie działanie skryptu zostało zweryfikowane w~oparciu o~parametry wyznaczone w~narzędziu B\&K Pulse. 
 	
-	W~wynikach wszystkich pomiarów wykonanych w~odgrodzie widoczny jest jej wpływ -- charakterystyka załamuje się w~okolicach częstotliwości \SI{54}{\hertz}. Prawdopodobnie związane jest to z~rezonansem płyty, występującym ze względu na jej skończone wymiary.
+	W~wynikach wszystkich pomiarów wykonanych w~odgrodzie widoczny jest jej wpływ -- charakterystyka załamuje się w~okolicach częstotliwości \SI{54}{\hertz} (rysunki~\ref{r:metody}--\ref{r:2glosniki}). Prawdopodobnie związane jest to z~rezonansem płyty, występującym ze względu na jej skończone wymiary.
 	
 	Na rysunku \ref{r:metody} przedstawione zostały przebiegi impedancji w~funkcji częstotliwości zmierzone dla obu metod. Widoczne jest przesunięcie częstotliwości rezonansowej w~dół po dodaniu masy i~w~górę po dodaniu objętości, natomiast w~tabeli~\ref{t:TS_metody} przedstawiono parametry Thiele-Smalla uzyskane obiema metodami (kolumna 4~i~5). Przyjmują one podobne wartości dla obu metod, nie widać też znaczących różnic w~symetrii $S$ -- dla obu pomiarów parametr ten jest wystarczająco niski. 
 	
-	Porównano także wyniki pomiaru metodą dodanej masy dla tego samego głośnika po pierwszym etapie: masa wynosiła \SI{5}{\gram} i~\SI{10}{\gram}. Wyniki wskazują, że wartość \SI{5}{\gram} może być zbyt mała -- różnica częstotliwości rezonansowych nie jest wystarczająco duża, a~co za tym idzie, wyznaczone parametry nie są wiarygodne, co potwierdza zbyt duża wartość symetrii $S$ (powyżej \SI{3,5}{\%}).
+	Porównano także wyniki pomiaru metodą dodanej masy dla tego samego głośnika po pierwszym etapie: masa wynosiła \SI{5}{\gram} i~\SI{10}{\gram}. Przedstawione w~tabeli~\ref{t:TS_metody} wyniki wskazują, że wartość \SI{5}{\gram} może być zbyt mała -- różnica częstotliwości rezonansowych nie jest wystarczająco duża, a~co za tym idzie, wyznaczone parametry nie są wiarygodne, co potwierdza zbyt duża wartość symetrii $S$ (powyżej~\SI{3,5}{\%}).
 	
 	\begin{figure}[!ht]
 		\centering
@@ -403,7 +403,7 @@ backend=biber
 	
 	\begin{table}[!ht]
 		\centering
-		\caption{Porównanie metod pomiaru parametrów Thiele-Smalla: dodanej masy oraz objętości etapie~2, oraz różnych wartości masy po etapie~1}
+		\caption{Porównanie metod pomiaru parametrów Thiele-Smalla: dodanej masy oraz objętości po etapie~2, oraz różnych wartości masy po etapie~1}
 		\label{t:TS_metody}
 		\boldmath
 		\begin{tabular}{|l|}
@@ -542,7 +542,7 @@ backend=biber
 	\unboldmath
 	\end{table}
 	
-	Na podstawie danych w~tabeli~\ref{t:TS_karta_etapy}, wyraźnie widoczny jest spadek częstotliwości rezonansowej głośnika wraz z~jego zużyciem, maleje również sprawność referencyjna $\eta_0$ oraz symetria $S$, pomiar jest więc bardziej miarodajny; rośnie natomiast indeks siły $Bl$. Porównanie obu głośników na tym samym etapie nie ukazuje wyraźnych różnic pomiędzy nimi.
+	Na podstawie danych w~tabeli~\ref{t:TS_karta_etapy}, wyraźnie widoczny jest spadek częstotliwości rezonansowej głośnika wraz z~jego zużyciem, co można zauważyć także na rysunku~\ref{r:wygrzewanie}. Maleje również sprawność referencyjna $\eta_0$ oraz symetria $S$, pomiar jest więc bardziej miarodajny; rośnie natomiast indeks siły $Bl$. Porównanie obu głośników na tym samym etapie nie ukazuje wyraźnych różnic pomiędzy nimi (rysunek~\ref{r:2glosniki}).
 	
 	\begin{figure}[!ht]
 	\centering
