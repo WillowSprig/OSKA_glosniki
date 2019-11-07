@@ -191,9 +191,9 @@ backend=biber
 	
 	Szybki rozwój technologii oraz ciągły postęp w~dziedzinie przetwarzania sygnałów stawia przed konstruktorami zestawów głośnikowych nowe wyzwania związane z~ciągłą poprawą jakości przetwarzania dźwięku; daje również nowe możliwości w~zakresie prototypowania. 
 	
-	Nowe technologie nie tylko pozwalają tworzyć coraz bardziej złożone modele komputerowe, ale także dają możliwość tworzenia układów o~złożonych i~wymagających precyzji wykonania elementach konstrukcyjnych tworzonych w~technologii druku 3D czy obróbki~CNC. Pojawiają się również nowe materiały o~parametrach znacznie doskonalszych pod kątem budowy przetworników elektroakustycznych. Najbardziej pożądaną cechą jest niska masa (gęstość) materiału przy jednoczesnym zachowaniu dużej sztywności. Dodatkowo, układy zawieszenia wymagają zachowania liniowości funkcji sprężystości celem redukcji zniekształceń przetwarzania. Z~pomocą przychodzi również optymalizacja kształtu elementów za pomocą algorytmów optymalizacyjnych oraz możliwość analizy naprężeń metodami numerycznymi~\cite{naprezenia}.
+	Nowe technologie nie tylko pozwalają tworzyć coraz bardziej złożone modele komputerowe, ale także dają możliwość tworzenia układów o~złożonych i~wymagających precyzji wykonania elementach konstrukcyjnych tworzonych w~technologii druku 3D czy obróbki~CNC. Pojawiają się również nowe materiały o~parametrach znacznie doskonalszych pod kątem budowy przetworników elektroakustycznych. Najbardziej pożądaną cechą jest niska masa (gęstość) materiału przy jednoczesnym zachowaniu dużej sztywności. Dodatkowo, układy zawieszenia wymagają zachowania liniowości funkcji sprężystości celem redukcji zniekształceń przetwarzania. Z~pomocą przychodzi również dostosowanie kształtu elementów za pomocą algorytmów optymalizacyjnych oraz możliwość analizy naprężeń metodami numerycznymi~\cite{naprezenia}.
 	
-	Obecnie bardzo dobrze poznane są modele akusto-mechano-elektryczne głośników i~obudów, które pozwalają na osiągnięcie dobrych wyników dla konstrukcji typowych -- takich które da się w~prosty sposób przedstawić za pomocą parametrów skupionych, jak masa, podatność, współczynnik tarcia. Jednak opis układów mechano-akustycznych o~nietrywialnych kształtach i~połączeniach jest trudny, a~często nawet niemożliwy z~praktycznego punktu widzenia.
+	Obecnie bardzo dobrze poznane są modele akusto-mechano-elektryczne głośników i~obudów, które pozwalają na osiągnięcie dobrych wyników modelowania dla konstrukcji typowych -- takich które da się w~prosty sposób przedstawić za pomocą parametrów skupionych, jak masa, podatność, współczynnik tarcia. Jednak opis układów mechano-akustycznych o~nietrywialnych kształtach i~połączeniach jest trudny, a~często nawet niemożliwy z~praktycznego punktu widzenia.
 	
 	\subsection{Cel pracy}
 	
@@ -270,7 +270,7 @@ backend=biber
 	
 	\section{Metodyka pomiarów}
 	
-	W~celu możliwie dokładnego zbadania parametrów zestawu, ze szczególnym uwzględnieniem obudowy, zaplanowano pomiary impedancji elektrycznej głośnika w~odgrodzie z~wyznaczeniem parametrów Thiele-Smalla, charakterystyki amplitudowo-częstotliwościowej, charakterystyk kierunkowości oraz pomiar drgań obudowy przy pomocy wibrometru laserowego.
+	W~celu możliwie dokładnego zbadania parametrów zestawu, ze szczególnym uwzględnieniem obudowy, zaplanowano pomiary impedancji elektrycznej głośnika z~wyznaczeniem parametrów Thiele-Smalla, charakterystyk amplitudowo-częstotliwościowych, charakterystyk kierunkowości oraz pomiary drgań obudowy przy pomocy wibrometru laserowego.
 	
 	Ze względu na zaobserwowane znaczące rozbieżności między wynikami uzyskanymi dla głośników niskotonowych, a~parametrami podanymi przez producenta w~karcie katalogowej, zdecydowano się na wykonanie dodatkowych pomiarów, uwzględniających zużycie głośnika.
 	
@@ -305,7 +305,7 @@ backend=biber
 			\gape{$Q_{ts}=\frac{Q_{ms}\cdot Q_{es}}{Q_{ms}+Q_{es}}$} & --- & Dobroć całkowita \\\hline
 			\hline
 			\multicolumn{3}{|c|}{Parametry wyznaczane z dwóch pomiarów (samej membrany i z dodaną masą)} \\\hline\hline
-			$V_{as}$ & \si{\deci\metre\cubed} & Równoważna objętość podatności głośnika \\\hline
+			$V_{as}$ & \si{\deci\metre\cubed} & Objętość równoważna podatności głośnika \\\hline
 			$M_{ms}$ & \si{\gram} & Masa mechaniczna membrany \\\hline
 			$C_{ms}$ & \si[per-mode=symbol]{\metre\per\newton} & Podatność mechaniczna zawieszenia \\\hline
 			$R_{ms}$ & \si[per-mode=symbol]{\metre\per\newton} & Rezystancja mechaniczna głośnika \\\hline
@@ -352,17 +352,17 @@ backend=biber
 	
 	\subsection{Wprowadzenie}
 	
-	Dzięki stworzeniu modelu komputerowego możliwe jest łatwe i~niewymagające wysokich kosztów testowanie różnych rozwiązań metodami numerycznymi. Takie rozwiązanie pozwala również na dużo prostszą obserwację zjawisk akustycznych i~mechanicznych zachodzących w~konstrukcji i~nie wymaga użycia zaplecza technicznego takiego jak np. komora bezechowa. 
+	Dzięki stworzeniu modelu komputerowego możliwe jest łatwe i~niewymagające wysokich kosztów testowanie różnych rozwiązań metodami numerycznymi. Takie rozwiązanie pozwala również na dużo dogodniejszą obserwację zjawisk akustycznych i~mechanicznych zachodzących w~konstrukcji i~nie wymaga użycia zaplecza technicznego takiego jak np. komora bezechowa. 
 	
 	Jednak tworzenie skomplikowanych modeli wykorzystujących sprzężenie pomiędzy domeną mechaniczną, opisującą zachowanie membrany i~zawieszenia głośnika, a~domeną akustyczną, opisującą propagację dźwięku w~powietrzu, wymaga poznania właściwości materiałów, z których zbudowane są wszystkie elementy. Parametry materiałowe, takie jak moduł Younga, współczynnik Poissona, czy gęstość, ciężko jest zmierzyć dla każdego elementu modelu; jednocześnie odpowiadają one za jego właściwości mechaniczne, a~co za tym idzie -- pośrednio -- akustyczne. W~praktyce zazwyczaj wykorzystuje się jako bazę właściwości materiałów dostępne w~literaturze~\cite{modelowanie}, a~następnie przeprowadza strojenie modelu -- dla znanego przypadku wykonuje się symulacje, zmieniając parametry tak, aby wyniki otrzymane w~modelu komputerowym były jak najbardziej zbliżone do wyników pomiaru.
 	
-	Dodatkowo problematyczne staje się opracowanie geometrii, dla której możliwe byłoby wygenerowanie siatki elementów przy jednoczesnym odwzorowaniu kształtu w~sposób zapewniający rzeczywiste zachowanie elementów modelu. Na taki problem natknęli się autorzy przy tworzeniu kształtu zawieszenia, co można zaobserwować na rysunku~\ref{r:zawieszenie}, przedstawiającym symulację przemieszczenia dla częstotliwości \SI{50}{\hertz} -- widoczne jest przemieszczenie membrany w~dół i~przemieszczenie zawieszenia w~sposób nieadekwatny do ruchu membrany.
+	Dodatkowo problematyczne staje się opracowanie geometrii, dla której możliwe byłoby wygenerowanie siatki elementów przy jednoczesnym odwzorowaniu kształtu w~sposób zapewniający rzeczywiste zachowanie elementów modelu. Na taki problem natknęli się autorzy przy modelowaniu kształtu zawieszenia, co można zaobserwować na rysunku~\ref{r:zawieszenie}, przedstawiającym symulację przemieszczenia dla częstotliwości \SI{50}{\hertz} -- widoczne jest przemieszczenie membrany w~dół i~przemieszczenie zawieszenia w~sposób nieadekwatny do ruchu membrany.
 	Związany z~tym jest problem rozmiarów elementów siatki, który z~kolei wpływa na czas obliczeń modelu. Dla wysokich częstotliwości i dużych modeli ilość węzłów staje się na tyle duża, że czas obliczeń nawet na komputerach o~dużej mocy obliczeniowej jest bardzo długi, przez co model jest bezużyteczny.
 	
 	\begin{figure}[!ht]
 		\centering
 		\includegraphics[width=.7\textwidth]{disp_factor5_f50_02.png}
-		\caption{Przemieszczenia górnego zawieszenia w~symulacji dla częstotliwości \SI{50}{\hertz}}
+		\caption{Przemieszczenia górnego zawieszenia nieadekwatne do ruchu membrany w~symulacji dla częstotliwości \SI{50}{\hertz}}
 		\label{r:zawieszenie}
 	\end{figure}
 	
@@ -388,7 +388,7 @@ backend=biber
 	%Z~przyczyn technicznych parametry T-S dla tego pomiaru zostały obliczone na podstawie dostępnych materiałów (\cite{dobrucki},), a~nie wyznaczone przy pomocy systemu Pulse.
 	Parametry Thiele-Smalla zostały wyznaczone z~zarejestrowanych krzywych impedancji przy pomocy skryptu w~środowisku Matlab na podstawie pracy~\cite{dobrucki}, którego działanie zostało zweryfikowane w~oparciu o~parametry wyznaczone w~narzędziu B\&K Pulse. 
 	
-	W~wynikach wszystkich pomiarów wykonanych w~odgrodzie widoczny jest jej wpływ -- charakterystyka załamuje się w~okolicach częstotliwości \SI{54}{\hertz} (rysunki~\ref{r:metody}--\ref{r:2glosniki}). Prawdopodobnie związane jest to z~rezonansem płyty, występującym ze względu na jej skończone wymiary.
+	W~wynikach wszystkich pomiarów wykonanych w~odgrodzie widoczny jest jej wpływ -- charakterystyka załamuje się w~okolicach częstotliwości \SI{54}{\hertz} (rysunki~\ref{r:metody}--\ref{r:2glosniki}). Prawdopodobnie związane jest to z~rezonansem płyty, występującym ze względu na jej skończone wymiary i~sposób mocowania.
 	
 	Na rysunku \ref{r:metody} przedstawione zostały przebiegi impedancji w~funkcji częstotliwości zmierzone dla obu metod. Widoczne jest przesunięcie częstotliwości rezonansowej w~dół po dodaniu masy i~w~górę po dodaniu objętości, natomiast w~tabeli~\ref{t:TS_metody} przedstawiono parametry Thiele-Smalla uzyskane obiema metodami (kolumna 4~i~5). Przyjmują one podobne wartości dla obu metod, nie widać też znaczących różnic w~symetrii $S$ -- dla obu pomiarów parametr ten jest wystarczająco niski. 
 	
@@ -449,7 +449,7 @@ backend=biber
 			\hline
 			\num{2,7}  	& \num{2,7} 	 \\\hline
 			\num{0,58} 	& \num{0,58} 	 \\\hline
-			\num{0,48} 	& \num{,048} 	 \\\hline
+			\num{0,48} 	& \num{0,48} 	 \\\hline
 			\hline
 			\num{34,5} 	& \num{34,5} 	 \\\hline
 			\num{39,1} 	& \num{38,5}     \\\hline
@@ -537,7 +537,7 @@ backend=biber
 	\hline
 	$\eta_0$ [\%] & \num{1,5}  & \num{1,08} & \num{1,07} & \num{1,00}   \\\hline
 	$Bl$ [\si{\tesla\metre}] & \num{14,2} & \num{14,7} & \num{15,4} & \num{15,7}\\\hline
-	$L_{e}$ [\si{\henry}] & \num{1e-3} & \num{1,984e-3} & \num{880e-6} & \num{911e-6} \\\hline
+	$L_{e}$ [\si{\milli\henry}] & \num{1} & \num{1,984} & \num{0,880} & \num{0,911} \\\hline
 	\end{tabular}
 	\unboldmath
 	\end{table}
@@ -551,7 +551,7 @@ backend=biber
 	\label{r:2glosniki}
 	\end{figure}
 	
-	W~celu sprawdzenia wpływu modyfikacji obudowy na charakterystyki impedancji wykonano pomiar obudowy w~wariancie „podstawowym” (opisanym w~części~\ref{ss:opis}) oraz z~zaślepionymi otworami. Wyniki przedstawiono na rysunku~\ref{r:obudowa_otwory}. 
+	W~celu sprawdzenia wpływu modyfikacji obudowy na charakterystyki impedancji wykonano pomiar zestawu w~wariancie „podstawowym” (opisanym w~części~\ref{ss:opis}) oraz z~zaślepionymi otworami. Wyniki przedstawiono na rysunku~\ref{r:obudowa_otwory}. 
 	Dodatkowo, dla porównania zasymulowano obie obudowy w~programie WinISD, przy czym zaślepienie otworów zostało zamodelowane jako obudowa zamknięta. Otrzymane charakterystyki znajdują się na rysunku~\ref{r:winisd}.
 	
 	\begin{figure}[!ht]
@@ -665,7 +665,7 @@ backend=biber
 	
 	\subsection{Drgania obudowy}
 	
-	Analiza uzyskanych wyników pomiaru drgań obudowy nie dała podstaw do sformułowania zależności między obudową, a~charakterystykami amplitudowymi -- pomiędzy widmami sygnału z~wibrometru i~mikrofonów nie widać wyraźnych zależności. W~niektórych punktach pomiarowych można zauważyć zmiany kształtu charakterystyki dla tej samej częstotliwości, jednak są to raczej jednostkowe przypadki, na podstawie których nie można potwierdzić znaczącego wpływu na charakterystykę częstotliwościową zestawu.
+	Analiza uzyskanych wyników pomiaru drgań obudowy nie dała podstaw do sformułowania zależności między ich charakterystyką, a~charakterystykami amplitudowymi -- pomiędzy widmami sygnału z~wibrometru i~mikrofonów nie widać wyraźnych zależności. W~niektórych punktach pomiarowych można wyróżnić częstotliwości, dla których jednocześnie następuje zmiana charakterystyki drgań obudowy i~poziomu ciśnienia akustycznego, jednak są to raczej jednostkowe przypadki i~na ich podstawie nie można potwierdzić znaczącego wpływu drgań obudowy na charakterystykę amplitudowo-częstotliwościową zestawu.
 	
 	Spośród zarejestrowanych przebiegów wybrano punkty \range{1}{4}, między którymi można dostrzec pewne zależności i~zestawiono je na rysunku~\ref{r:wibrometr_1-4}. W~punktach tych wyraźnie widoczny jest wzrost amplitudy przemieszczeń bocznej płyty obudowy w~paśmie \SI{260}{\hertz}; jednocześnie w~tym samym paśmie zauważalny jest spadek poziomu ciśnienia akustycznego w~bliskim otoczeniu punktu (w~odległości \range{6}{10}~\si{\cm}).
 	
@@ -676,7 +676,7 @@ backend=biber
 		\label{r:wibrometr_1-4}
 	\end{figure}
 	
-	Wybrane punkty zlokalizowane są na dwóch różnych ściankach obudowy, jak pokazano na rysunku~\ref{r:wibro_pkt}; mimo tego maksimum amplitudy drgań przypada we wszystkich czterech punktach dokładnie dla tej samej częstotliwości. Analiza częstotliwości własnych przestrzeni powietrznej wewnątrz obudowy nie daje możliwości wskazania przyczyny takiego stanu; niezbędna staje się analiza częstotliwości drgań własnych obudowy. Nie jest to jednak wada, która wpływa na charakterystykę częstotliwościową zestawu, co zostało potwierdzone poprzez pomiar mikrofonem w~odległości \SI{2}{\metre} na kierunku prostopadłym do płaszczyzny powierzchni mierzonej.
+	Wybrane punkty zlokalizowane są na dwóch różnych ściankach obudowy, jak pokazano na rysunku~\ref{r:wibro_pkt}; mimo tego maksimum amplitudy drgań przypada we wszystkich czterech punktach dokładnie dla tej samej częstotliwości. Analiza częstotliwości własnych przestrzeni powietrznej wewnątrz obudowy nie daje możliwości wskazania przyczyny takiego stanu; niezbędna staje się analiza częstotliwości drgań własnych obudowy. Nie jest to jednak wada, która wpływa na charakterystykę częstotliwościową zestawu, co zostało potwierdzone poprzez pomiar mikrofonem w~odległości \SI{2}{\metre} na kierunku prostopadłym do płaszczyzny badanej powierzchni drgającej.
 	
 	\begin{figure}[!ht]
 		\centering
@@ -750,7 +750,7 @@ backend=biber
 		\label{r:C_balony}
 	\end{figure}
 	
-	Rysunek~\ref{r:C_przem_cisn} przedstawia kolejną z~przydatnych funkcjonalności jaką daje model zestawu głośnikowego analizowany metodą elementów skończonych: dzięki możliwości sprzężenia domen możliwa stała się szybka i~łatwa obserwacja naprężeń membrany i zawieszenia górnego głośnika. Ze względu na znaczne różnice parametrów materiałowych opowiedzianych za sztywność elementów membrany i zawieszenia występują znaczne różnice wartości naprężeń. To pociąga za sobą potrzebę przedstawienia ich w dwóch różnych skalach, aby lepiej zobrazować rozkład naprężeń w~każdym z~analizowanych elementów.
+	Rysunek~\ref{r:C_przem_cisn} przedstawia kolejną z~przydatnych funkcjonalności jaką daje model zestawu głośnikowego analizowany metodą elementów skończonych: sprzężenie domen umożliwiło szybką i~łatwą obserwację naprężeń membrany i~zawieszenia górnego głośnika. Ze względu na znaczne różnice parametrów materiałowych opowiedzianych za sztywność elementów membrany i~zawieszenia występują znaczne różnice wartości naprężeń. To pociąga za sobą potrzebę przedstawienia ich w~dwóch różnych skalach, aby lepiej zobrazować rozkład naprężeń w~każdym z~analizowanych elementów.
     
    	\begin{figure}[!ht]
         \centering
