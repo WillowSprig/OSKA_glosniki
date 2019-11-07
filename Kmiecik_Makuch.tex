@@ -193,7 +193,7 @@ backend=biber
 	
 	Nowe technologie nie tylko pozwalają tworzyć coraz bardziej złożone modele komputerowe, ale także dają możliwość tworzenia układów o~złożonych i~wymagających precyzji wykonania elementach konstrukcyjnych tworzonych w~technologii druku 3D czy obróbki~CNC. Pojawiają się również nowe materiały o~parametrach znacznie doskonalszych pod kątem budowy przetworników elektroakustycznych. Najbardziej pożądaną cechą jest niska masa (gęstość) materiału przy jednoczesnym zachowaniu dużej sztywności. Dodatkowo, układy zawieszenia wymagają zachowania liniowości funkcji sprężystości celem redukcji zniekształceń przetwarzania. Z~pomocą przychodzi również dostosowanie kształtu elementów za pomocą algorytmów optymalizacyjnych oraz możliwość analizy naprężeń metodami numerycznymi~\cite{naprezenia}.
 	
-	Obecnie bardzo dobrze poznane są modele akusto-mechano-elektryczne głośników i~obudów, które pozwalają na osiągnięcie dobrych wyników modelowania dla konstrukcji typowych -- takich które da się w~prosty sposób przedstawić za pomocą parametrów skupionych, jak masa, podatność, współczynnik tarcia. Jednak opis układów mechano-akustycznych o~nietrywialnych kształtach i~połączeniach jest trudny, a~często nawet niemożliwy z~praktycznego punktu widzenia.
+	Obecnie bardzo dobrze poznane są modele akusto-mechano-elektryczne głośników i~obudów, które pozwalają na osiągnięcie dobrych wyników modelowania dla konstrukcji typowych -- takich, które da się w~prosty sposób przedstawić za pomocą parametrów skupionych, jak masa, podatność, współczynnik tarcia. Jednak opis układów mechano-akustycznych o~nietrywialnych kształtach i~połączeniach jest trudny, a~często nawet niemożliwy z~praktycznego punktu widzenia.
 	
 	\subsection{Cel pracy}
 	
@@ -211,14 +211,33 @@ backend=biber
 	
 %	\subsection{Opis konstrukcji}
 	
-	Zestaw, którego parametry zdecydowano się zbadać, i~który poddano modyfikacjom, jest docelowo elementem systemu liniowego. Składa się z~falowodu z~wysokotonowym głośnikiem ciśnieniowym B\&C~DE800 (zespół głośnika wysokotonowego, 2) umieszczonego centralnie oraz dwóch 16-omowych, 10-calowych głośników nisko-średniotonowych Beyma~10WR300~\cite{datasheet} umieszczonych po bokach i~nachylonych pod kątem \SI{67}{\degree} do osi głównej zestawu~(1).
+	Zestaw, którego parametry zdecydowano się zbadać, i~który poddano modyfikacjom, jest docelowo elementem systemu liniowego. Budowę zestawu przedstawiono na rysunku~\ref{r:przekroj}; składa się on z~falowodu z~wysokotonowym głośnikiem ciśnieniowym B\&C~DE800 (zespół głośnika wysokotonowego, 2) umieszczonego centralnie oraz dwóch 16-omowych, 10-calowych głośników nisko-średniotonowych Beyma~10WR300~\cite{datasheet} umieszczonych po bokach i~nachylonych pod kątem \SI{67}{\degree} do osi głównej zestawu~(1).
 	
 	Kształt obudowy jest typowy dla systemu liniowego -- przekrój boczny ma kształt trapezu równoramiennego; konstrukcja wzorowana jest na rozwiązaniu stosowanym w~systemie liniowym uznanej firmy. Materiał korpusu to sklejka bałtycka o~grubości \SI{15}{\milli\metre}, dodatkowo z~przodu zamontowana jest maskownica ze stali o~grubości \SI{2}{\milli\metre}. Objętość wnętrza obudowy po odjęciu objętości głośników i~falowodu wynosi \SI{28,17}{\deci\metre\cubed}.
 	
 	Obudowa jest obudową wentylowaną, wyposażoną w~4~otwory~(3) o~kształcie ćwierćkolistym i~promieniu \SI{70}{\milli\metre}. Otwory te mają swe ujście do przestrzeni przed głośnikiem, tak jak przestawiono na rysunku~\ref{r:przekroj}. %Wnętrze obudowy jest połączone z~przestrzenią zewnętrzną półkolistymi otworami o~promieniu \SI{70}{\milli\metre} przy tylnej ściance.
-	Taki układ głośników i~otworów ma wpływ na charakterystyki kierunkowości głośnika w~płaszczyźnie poziomej~\cite{kmiecik_inz}. %\comment{W części teoretycznej wzorek na chke kierunkowości w zależności od odległości źródeł i omówić temat!!!}
+	Taki układ głośników i~otworów ma wpływ na charakterystyki kierunkowości głośnika w~płaszczyźnie poziomej~\cite{kmiecik_inz}. Poglądową fotografię zestawu przedstawiono na rysunku~\ref{r:zdjecie}. %\comment{W części teoretycznej wzorek na chke kierunkowości w zależności od odległości źródeł i omówić temat!!!}
 	
 	%	Przekrój zestawu w~płaszczyźnie poziomej ukazano na rysunku~\ref{r:przekroj}, a~fotografię na rysunku~\ref{r:zdjecie}.
+	
+		\begin{figure}[!ht]
+		\centering
+		\adjincludegraphics[width=.9\textwidth,trim={{.1\width} {.25\height} {.17\width} {.12\height}},clip]{render_z_otworami_bez_tekstury.pdf}\\
+		\setlength{\unitlength}{1cm}
+		\begin{picture}(0,0)
+		\thicklines
+		\put(-2,5.5){\line(-1,1){3}}
+		\put(-5.3,8.5){1}
+		\put(1.5,4){\line(2,-1){4}}
+		\put(5.7,1.7){2}
+		\put(5.2,4.3){\line(1,2){1}}
+		\put(6.5,6.3){3}
+		\put(-5,5.5){\line(-2,1){3}}
+		\put(-8.4,7){4}
+		\end{picture}
+		\caption{Przekrój modelu badanego zestawu głośnikowego w~płaszczyźnie poziomej; 1~--~głośniki niskotonowe, 2~--~zespół głośnika wysokotonowego, 3~--~otwór \textit{bass reflex}, 4~--wnęka uchwytu}
+		\label{r:przekroj}
+	\end{figure}
 	
 	\begin{figure}[!ht]
 		\centering
@@ -227,24 +246,7 @@ backend=biber
 		\label{r:zdjecie}
 	\end{figure}
 	
-	\begin{figure}[!ht]
-		\centering
-		\adjincludegraphics[width=.9\textwidth,trim={{.1\width} {.25\height} {.17\width} {.12\height}},clip]{render_z_otworami_bez_tekstury.pdf}\\
-		\setlength{\unitlength}{1cm}
-		\begin{picture}(0,0)
-			\thicklines
-			\put(-2,5.5){\line(-1,1){3}}
-			\put(-5.3,8.5){1}
-			\put(1.5,4){\line(2,-1){4}}
-			\put(5.7,1.7){2}
-			\put(5.2,4.3){\line(1,2){1}}
-			\put(6.5,6.3){3}
-			\put(-5,5.5){\line(-2,1){3}}
-			\put(-8.4,7){4}
-		\end{picture}
-		\caption{Przekrój modelu badanego zestawu głośnikowego w~płaszczyźnie poziomej; 1~--~głośniki niskotonowe, 2~--~zespół głośnika wysokotonowego, 3~--~otwór \textit{bass reflex}, 4~--wnęka uchwytu}
-		\label{r:przekroj}
-	\end{figure}
+
 	
 % 	\subsection{Modyfikacja obudowy}
 % 	
@@ -288,7 +290,7 @@ backend=biber
 	
 	\begin{table}[!ht]
 		\centering
-		\caption{Opis parametrów Thiele-Smalla, za~\cite{BK_pulse_TS}~i~\cite{dobrucki}}
+		\caption{Opis parametrów Thiele-Smalla, na podstawie publikacji~\cite{BK_pulse_TS}~i~\cite{dobrucki}}
 		\label{t:TS_opis}
 		\begin{tabular}{|l|c|c|}
 			\hline
@@ -308,7 +310,7 @@ backend=biber
 			$V_{as}$ & \si{\deci\metre\cubed} & Objętość równoważna podatności głośnika \\\hline
 			$M_{ms}$ & \si{\gram} & Masa mechaniczna membrany \\\hline
 			$C_{ms}$ & \si[per-mode=symbol]{\metre\per\newton} & Podatność mechaniczna zawieszenia \\\hline
-			$R_{ms}$ & \si[per-mode=symbol]{\metre\per\newton} & Rezystancja mechaniczna głośnika \\\hline
+			$R_{ms}$ & \si[per-mode=symbol]{\newton\s\per\m} & Rezystancja mechaniczna głośnika \\\hline
 			\hline
 			$M_{as}$ & \si[per-mode=symbol]{\kilo\gram\per\metre\tothe{4}} & Masa akustyczna membrany \\\hline
 			$C_{as}$ & \si[per-mode=symbol]{\metre\tothe{5}\per\newton} & Podatność akustyczna zawieszenia \\\hline
@@ -424,7 +426,7 @@ backend=biber
 			$V_{as}$ [\si{\deci\metre\cubed}] \\\hline
 			$M_{ms}$ [\si{\gram}] 	\\\hline
 			$C_{ms}$ [\si[per-mode=symbol]{\metre\per\newton}] 	\\\hline
-			$R_{ms}$ [\si[per-mode=symbol]{\metre\per\newton}] 	\\\hline
+			$R_{ms}$ [\si[per-mode=symbol]{\newton\s\per\m}] 	\\\hline
 			\hline
 			$M_{as}$ [\si[per-mode=symbol]{\kilo\gram\per\metre\tothe{4}}] 	\\\hline
 			$C_{as}$ [\si[per-mode=symbol]{\metre\tothe{5}\per\newton}] \\\hline	
@@ -528,7 +530,7 @@ backend=biber
 	$V_{as}$ [\si{\deci\metre\cubed}] 								& \num{50,9}  & \num{23,5} & \num{34,5} & \num{41,4} \\\hline
 	$M_{ms}$ [\si{\gram}] 								& \num{39,0}  & \num{36,1}  & \num{38,5} & \num{40,6} \\\hline
 	$C_{ms}$ [\si[per-mode=symbol]{\metre\per\newton}] 	& \num{294e-6}  & \num{138e-6}  & \num{203e-6} & \num{243e-6} \\\hline
-	$R_{ms}$ [\si[per-mode=symbol]{\metre\per\newton}] 	& \num{2,9}  & \num{5,0}  & \num{5,2} & \num{4,6} \\\hline
+	$R_{ms}$ [\si[per-mode=symbol]{\newton\s\per\m}] 	& \num{2,9}  & \num{5,0}  & \num{5,2} & \num{4,6} \\\hline
 	\hline
 	$M_{as}$ [\si[per-mode=symbol]{\kilo\gram\per\metre\tothe{4}}] 	& \num{31,8}  & \num{30,1}  & \num{32,1} & \num{33,8} \\\hline
 	$C_{as}$ [\si[per-mode=symbol]{\metre\tothe{5}\per\newton}] 	& \num{0,4e-6}  & \num{0,2e-6} & \num{0,2e-6} & \num{0,3e-6}  \\\hline
